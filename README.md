@@ -15,7 +15,7 @@ Desenvolvedores:
 
 Scrum Master:
 
-- 
+- [Gabriella Cruz e Silva](https://github.com/gabriellac2002)
 
 
 ## Tutorial de uso do repositório
@@ -23,8 +23,8 @@ Scrum Master:
 ### Primeira utilização
 
 - Entre na pasta onde irá guardar o projeto: `cd /caminho/para/a/pasta`
-- Clone o repositório: `git clone `
-- Entre na pasta criada pelo comando clone: ``cd ``
+- Clone o repositório: `git clone https://github.com/gabriellac2002/Artella.git`
+- Entre na pasta criada pelo comando clone: ``cd atella``
 - Crie sua branch usando como o padrão o nome da feature que você irá desenvolver
 - Exemplo de criação de branch de uma view do painel administrativo
   - Crie a branch da funcionalidade a ser implementada: `git checkout -b view-painel-adm`
