@@ -8,7 +8,7 @@ Projeto desenvolvido para o Trainee da [Code Jr](https://codejr.com.br/) que con
 ## Projeto Trainee, Code Jr, Grupo 1, 2022.1 
 
 Desenvolvedores:
-- shbdjsbd
+- 
 - 
 - 
 - 
