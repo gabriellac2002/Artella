@@ -16,12 +16,14 @@ nav{
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  background-image: linear-gradient(#d9d9d9, #dcdcdc);
 
 }
 
-.navbar-brand img{
+.logo{
+
     width:120px;
-    margin-left: 5vw;
+    
 }
 
 
@@ -29,6 +31,8 @@ nav{
 
   
   height:50px;
+  margin-left: 2vw;
+  margin-right: 2vw;
   
 
 }
@@ -52,6 +56,12 @@ nav{
 
 }
 
+.btn-singUp p{
+
+  margin: 0;padding: 0;
+
+}
+
 .btn-singUp:hover{
 
   color:#fff;
@@ -64,6 +74,11 @@ nav{
   border: 1px solid #000;
 
 }
+.btn-logIn p{
+
+  margin: 0;padding: 0;
+
+}
 
 .btn-logIn:hover{
 
@@ -71,3 +86,21 @@ nav{
   background-color:#000;
 
 }
+
+@media (max-width: 1240px){
+
+  nav{
+    font-size:16px;
+    margin: 0;
+  }
+  
+  .btn-logIn p, .btn-singUp p{
+    font-size:16px;
+  }
+ 
+}
+
+
+
+
+
