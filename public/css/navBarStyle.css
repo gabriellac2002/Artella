@@ -2,11 +2,11 @@
   margin:0;
   padding: 0;
 }
-/* nav{
-  background-color:;
-} */
+
 body{
+
   background-color: #dfdfdf;
+  
 }
 
 nav{
@@ -15,43 +15,43 @@ nav{
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
+  text-transform: uppercase;
 
 }
 
 .navbar-brand img{
     width:120px;
-    margin-left: 200px;
+    margin-left: 1em;
 }
-.ms-200{
-  margin-left: 200px !important;
-}
-.nav-link{
 
-  margin-left: 30px;
-  margin-right:30px;
+.ms-200{
+  margin-left: 50px !important;
+}
+.nav-menu-itens{
+
+  
   height:50px;
   
 
 }
-.nav-link:hover{
+.nav-menu-itens:hover{
 
   transform: translateY(-3px);
   border-bottom: 1px solid rgb(5,29,64);
   border-top: 1px solid rgb(5,29,64);
   background-color: #d3d3d3;
   
-  
 }
+
+.btn-singUp, .btn-logIn{
+  width:90px;
+}
+
 .btn-singUp{
 
   border: 1px solid #0d6efd;
   color:#0d6efd;
-  /* background-color:#fff; */
 
-}
-
-.btn-singUp, .btn-logIn{
-  width:100px;
 }
 
 .btn-singUp:hover{
@@ -69,7 +69,6 @@ nav{
 
 .btn-logIn:hover{
 
-  /* border: 1px solid #000; */
   color:#fff;
   background-color:#000;
 
