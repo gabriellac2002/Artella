@@ -11,7 +11,7 @@ Desenvolvedores:
 - shbdjsbd
 - 
 - 
-- 
+- Pedro Grimaldi Hansel
 
 Scrum Master:
 
