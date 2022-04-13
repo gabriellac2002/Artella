@@ -1,48 +1,50 @@
-*{
+* {
 
-  margin:0;
+  margin: 0;
   padding: 0;
 
 }
 
-body{
+body {
 
   background-color: #dfdfdf;
-  
+
 }
 
-.nav-voucher{
+.nav-voucher {
 
   background-color: #000;
 }
-.text-voucher{
 
-  margin:0;
-  padding:0;
+.text-voucher {
+
+  margin: 0;
+  padding: 0;
 
 }
-.text-voucher{
+
+.text-voucher {
 
   font: 12px 'Poppins', sans-serif;
   color: #d9d9d9;
   text-transform: uppercase;
   text-align: center;
-  margin:5px;
-  padding:5px;
+  margin: 5px;
+  padding: 5px;
   animation: cupom-animate 3s linear infinite;
-  
+
 }
 
-.text-voucher:hover{
+.text-voucher:hover {
 
   color: #d9d9d9;
   animation: none;
-  
+
 }
 
-nav{
+nav {
 
-  border-bottom: 1px solid rgba(5,29,64,0.5);
+  border-bottom: 1px solid rgba(5, 29, 64, 0.5);
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 100;
@@ -53,49 +55,50 @@ nav{
 
 
 
-.logo{
+.logo {
 
-    width:200px;
-    
+  width: 200px;
+
 }
 
-.nav-menu-itens{
+.nav-menu-itens {
 
-  height:50px;
- 
-  
+  height: 50px;
+
+
 }
-.nav-text-itens{
+
+.nav-text-itens {
 
   color: #d9d9d9 !important;
 
 }
 
-.nav-menu-itens:hover{
+.nav-menu-itens:hover {
 
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   transform: translateY(-3px);
-  
+
 }
 
-@keyframes cupom-animate{
+.after-none::after {
 
-  0%{
-    opacity:0.5;
-  }
-  50%{
-    opacity:1;
-  }
-  100%{
-    opacity:0.5;
-  }
+  content: none;
+
 }
 
+@keyframes cupom-animate {
 
+  0% {
+    opacity: 0.3;
+  }
 
+  50% {
+    opacity: 1;
+  }
 
-
-
-
-
+  100% {
+    opacity: 0.3;
+  }
+}
