@@ -1,11 +1,42 @@
 *{
+
   margin:0;
   padding: 0;
+
 }
 
 body{
 
   background-color: #dfdfdf;
+  
+}
+
+.nav-voucher{
+
+  background-color: #000;
+}
+.text-voucher{
+
+  margin:0;
+  padding:0;
+
+}
+.text-voucher{
+
+  font: 12px 'Poppins', sans-serif;
+  color: #d9d9d9;
+  text-transform: uppercase;
+  text-align: center;
+  margin:5px;
+  padding:5px;
+  animation: cupom-animate 3s linear infinite;
+  
+}
+
+.text-voucher:hover{
+
+  color: #d9d9d9;
+  animation: none;
   
 }
 
@@ -20,16 +51,16 @@ nav{
 
 }
 
+
+
 .logo{
 
     width:200px;
     
 }
 
-
 .nav-menu-itens{
 
-  
   height:50px;
   margin-left: 2vw;
   margin-right: 2vw;
@@ -52,6 +83,7 @@ nav{
 .btn-singUp, .btn-logIn{
 
   width:90px;
+  margin-left: 30px;
 
 }
 
@@ -62,10 +94,7 @@ nav{
 
 }
 
-.btn-singUp:hover{
 
- 
-}
 
 .btn-singUp p,.btn-logIn p{
 
@@ -82,10 +111,6 @@ nav{
 }
 
 
-.btn-logIn:hover{
-
-}
-
 @media (max-width: 1240px){
 
   nav{
@@ -101,9 +126,22 @@ nav{
     margin-right: 1vw;
     
   }
+  .text-voucher{
+    font-size: 10px;
+  }
  
 }
-
+@keyframes cupom-animate{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 
 
 
