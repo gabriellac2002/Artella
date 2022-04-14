@@ -4,12 +4,47 @@
     padding: 0;
 
 }
+.text-reset {
+
+    text-decoration: none;
+    
+}
 
 footer {
 
-    font-size: 20px;
-    color: #051d40;
     background-color: #d9d9d9;
     width: 100%;
+    font-weight: 500;
     
+}
+
+.footer-social-area{
+
+    padding: 10px;
+    text-align: justify;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+@media (max-width:768px){
+    
+    .footer-social-area{
+
+        text-align: center;
+
+    }
+
+    .container{
+        text-align: center;
+
+    }
+
+    .footer-text-area{
+
+        display: inline-block;
+        text-align: center;
+
+    }
+
+
 }
