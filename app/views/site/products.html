@@ -139,15 +139,105 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Filtros</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ...
+              <section class="filtersResponsive">
+                <h4>Filtros selecionados: (0)</h4>
+                <div class="filterSection">
+                  <h4>Tipo</h4>
+                  <ul class="filterUl" style="list-style: none;">
+                    <li>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>NFT</label>
+                      </div>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>Arte física</label>
+                      </div>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>Arte digital</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="filterSection">
+                  <h4>Categoria: </h4>
+                  <div class="filterSearch">
+                    <input type="text" value="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <ul class="filterUl" style="list-style: none;">
+                    <li>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>Aquarela</label>
+                      </div>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>Cubista</label>
+                      </div>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>Pintura a óleo</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="filterSection">
+                  <h4>Preço: </h4>
+                  <div class="filterSearch">
+                    <input type="text" value="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <ul class="filterUl" style="list-style: none;">
+                    <li>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>R$ 1 - R$ 150</label>
+                      </div>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>R$ 150 - R$ 250</label>
+                      </div>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>R$ 300 - R$ 450</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="filterSection">
+                  <h4>Desconto: </h4>
+                  <div class="filterSearch">
+                    <input type="text" value="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <ul class="filterUl" style="list-style: none;">
+                    <li>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>5% - 17%</label>
+                      </div>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>18% - 30%</label>
+                      </div>
+                      <div class="containerFlex">
+                        <input type="checkbox">
+                        <label>31% - 43%</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary">Buscar</button>
             </div>
           </div>
         </div>
@@ -166,9 +256,15 @@
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                 </div>
-                <p class="fakePrice">R$ 176.00</p>
-                <p style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ 150.00</p>
-                <p class="secondPrice">ou 5x de R$ 30.00</p>
+                <div style="display: flex; flex-direction: column;">
+                  <span class="fakePrice">R$ 176.00</span>
+                  <span style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ 150.00</span>
+                  <span class="secondPrice">ou 5x de R$ 30.00</span>
+                  <span class="category">
+                    NFT
+                  </span>
+                </div>
+                
               </div>
             </div>
           </a>
@@ -184,9 +280,14 @@
                   <i class="fa-solid fa-star starChecked"></i>
                   <i class="fa-solid fa-star"></i>
                 </div>
-                <p class="fakePrice">R$ 176.00</p>
-                <p style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ 150.00</p>
-                <p class="secondPrice">ou 5x de R$ 30.00</p>
+                <div style="display: flex; flex-direction: column;">
+                  <span class="fakePrice">R$ 176.00</span>
+                  <span style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ 150.00</span>
+                  <span class="secondPrice">ou 5x de R$ 30.00</span>
+                  <span style="background-color: #0f606b;" class="category">
+                    Pintura
+                  </span>
+                </div>
               </div>
             </div>
           </a>
@@ -202,10 +303,16 @@
                   <i class="fa-solid fa-star starChecked"></i>
                   <i class="fa-solid fa-star"></i>
                 </div>
-                <p class="fakePrice">R$ 176.00</p>
-                <p style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ 150.00</p>
-                <p class="secondPrice">ou 5x de R$ 30.00</p>
+                <div style="display: flex; flex-direction: column;">
+                  <span class="fakePrice">R$ 176.00</span>
+                  <span style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ 150.00</span>
+                  <span class="secondPrice">ou 5x de R$ 30.00</span>
+                  <span style="background-color: #B08EA2;" class="category">
+                    Quadro
+                  </span>
+                </div>
               </div>
+              
             </div>
           </a>
           <a class="col-md-4 align-items-center justify-content-center" style="text-decoration: none; color: black" href="products/1">
@@ -220,9 +327,14 @@
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                 </div>
-                <p class="fakePrice">R$ 176.00</p>
-                <p style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ 150.00</p>
-                <p class="secondPrice">ou 5x de R$ 30.00</p>
+                <div style="display: flex; flex-direction: column;">
+                  <span class="fakePrice">R$ 176.00</span>
+                  <span style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ 150.00</span>
+                  <span class="secondPrice">ou 5x de R$ 30.00</span>
+                  <span class="category">
+                    NFT
+                  </span>
+                </div>
               </div>
             </div>
           </a>

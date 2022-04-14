@@ -147,10 +147,24 @@ select {
   border-radius: 4px;
   width: 90%;
   margin-top: 10px;
+  justify-content: space-between;
 }
 
 .responsiveFilters h5 {
   margin-right: 6px;
+}
+
+.category {
+  background-color: #8150af;
+  color: white;
+  padding: 6px;
+  font-size: 14px;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: 4px;
 }
 
 @media only screen and (max-width: 720px) {
