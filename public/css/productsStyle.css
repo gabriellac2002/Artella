@@ -116,7 +116,7 @@ select {
   color: orange;
 }
 
-.fakePrice {
+.oldPrice {
   text-decoration: line-through;
   color: #777;
   font-size: 14px;
