@@ -138,14 +138,14 @@ select {
   justify-content: center;
 }
 
-.responsiveFilters {
+.refine {
   display: none;
   flex-direction: row;
   align-items: center;
   padding: 10px;
   border: 1px solid #999;
   border-radius: 4px;
-  width: 90%;
+  width: 93%;
   margin-top: 10px;
   justify-content: space-between;
 }
@@ -183,7 +183,7 @@ select {
   }
 
   .productsList > .ordenated {
-    align-items: left;
+    align-items: start;
     flex-direction: column;
   }
 
@@ -195,9 +195,16 @@ select {
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 5%;
   }
 
-  .responsiveFilters {
+  .productsList .rowMain {
+    width: 68%;
+    align-items: start;
+  }
+
+  .refine {
     display: flex;
+    margin-left: 3.5%;
   }
 }
