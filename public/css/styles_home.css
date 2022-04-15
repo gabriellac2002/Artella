@@ -6,11 +6,11 @@ body{
 }
 .container{
     width: 100rem;
-    height: 50rem;
+    height: 80rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    row-gap: 2rem;
+    row-gap: 2rems;
     align-content: center;
     justify-content: center;
 }
@@ -22,67 +22,82 @@ body{
     margin-top: 20px;
 }
 .slide img{
-    height: 20rem;
-    
+    height: 20rem;    
 }
 .two{
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 5;
+    height: 15rem;
+    margin-top: 20px;
 }
 .lancamentos{
     display: flex ;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    height: 10rem;
+    background-color: black;    
 }
 .lancamento_1{
     order: 0;
     flex-basis: auto;
     flex-grow: 1;
+    background-color: #051D40;
+    height: 50px;
+    width: 50px;
 }
 .lancamento_2{
     order: 1;
     flex-basis: auto;
     flex-grow: 1;
+    background-color: #051D40;
 }
 .lancamento_3{
     order: 2;
     flex-basis: auto;
     flex-grow: 1;
+    background-color: #051D40;
 }
 .lancamento_4{
     order: 3;
     flex-basis: auto;
     flex-grow: 1;
+    background-color: #051D40;
 }
 .lancamento_5{
     order: 4;
     flex-basis: auto;
     flex-grow: 1;
+    background-color: #051D40;
 }
 .ver_mais_produtos{
     order: 5;
     flex-basis: auto;
     flex-grow: 1;
+    background-color: #051D40;
 }
 .three{
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
+    background-color: aqua;
+    height: 20rem;
+    margin-right: 28px;
 }
 .four{
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 3;
     grid-column-end: 5;
+    background-color: purple;
+    margin-left: 28px;
 }
 .five{
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 5;
-    margin-bottom: 20pxs;
 }
