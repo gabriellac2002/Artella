@@ -9,7 +9,7 @@ main {
 }
 
 main h3 {
-  font-family: Poppins;
+  font-family: 'Poppins';
 }
 
 .filters {
@@ -32,9 +32,17 @@ main h3 {
   padding: 8px 8px 8px 8px;
 }
 
+.filterSection > h4 {
+  font-size: 18px;
+}
+
 .filterUl {
   display: flex;
   flex-direction: column;
+}
+
+.filterUl label {
+  font-size: 15px;
 }
 
 .filterUl > li {
@@ -98,6 +106,7 @@ main h3 {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  font-size: 18px;
 }
 
 select {
@@ -185,6 +194,7 @@ select {
   .productsList > .ordenated {
     align-items: start;
     flex-direction: column;
+    font-size: 15px;
   }
 
   .productsList > .ordenated > span {
@@ -199,7 +209,7 @@ select {
   }
 
   .productsList .rowMain {
-    width: 68%;
+    width: 70%;
     align-items: start;
   }
 
