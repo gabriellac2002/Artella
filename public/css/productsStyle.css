@@ -75,6 +75,10 @@ main h3 {
   width: 90%;
 }
 
+.container-xl a {
+  margin-top: 10px;
+}
+
 .productsList {
   margin-left: 3%;
   margin-top: 10px;
@@ -94,7 +98,6 @@ main h3 {
 }
 
 .productsList > .ordenated > span {
-  margin-right: 10%;
   display: flex;
   white-space: nowrap;
   align-items: center;
@@ -111,6 +114,7 @@ main h3 {
 
 select {
   padding: 10px;
+  margin-right: 0px;
   border: 1px solid #aaa;
   border-radius: 4px;
   background-color: transparent;
@@ -142,21 +146,37 @@ select {
 .rowMain {
   display: flex;
   flex-direction: row;
-  width: 10%;
   align-items: center;
   justify-content: center;
 }
 
+.rowMain label {
+  margin-right: 10px;
+}
+
 .refine {
-  display: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
   border: 1px solid #999;
+  margin-left: 0px;
   border-radius: 4px;
-  width: 93%;
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   justify-content: space-between;
+}
+
+.refine input {
+  width: 95%;
+  height: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border: 0px solid black;
+}
+
+.refine i {
+  margin-left: 10px;
 }
 
 .responsiveFilters h5 {
@@ -167,13 +187,60 @@ select {
   background-color: #8150af;
   color: white;
   padding: 6px;
-  font-size: 14px;
-  width: 20%;
+  font-size: 18px;
   display: flex;
+  width: 4.5rem;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   margin-top: 4px;
+}
+
+@media only screen and (max-width: 960px) {
+
+  .container {
+    margin-left: 0;
+  }
+
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .ordenated {
+    align-items: start;
+    flex-direction: column;
+    font-size: 15px;
+  }
+
+  .ordenated span {
+    font-size: 20px;
+    align-items: left;
+  }
+
+  .productsList > .ordenated > span {
+    margin-right: 0;
+    margin-top: 0px;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    justify-content: start;
+  }
+
+  .productsList .rowMain {
+    align-items: left;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .refine {
+    display: flex;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -197,24 +264,17 @@ select {
     font-size: 15px;
   }
 
+  
+
   .productsList > .ordenated > span {
     margin-right: 0;
     margin-top: 0px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 10px;
+    width: 100%;
+    font-size: 1rem;
     margin-bottom: 10px;
-    margin-left: 5%;
+    justify-content: space-between;
   }
 
-  .productsList .rowMain {
-    width: 70%;
-    align-items: start;
-  }
-
-  .refine {
-    display: flex;
-    margin-left: 3.5%;
-  }
 }
