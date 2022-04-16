@@ -1,99 +1,79 @@
-* {
-
-  margin: 0;
-  padding: 0;
-
-}
-
 body {
-
-  background-color: #dfdfdf;
-
+  background-color: #d9d9d9;
 }
 
 .nav-voucher {
-
   background-color: #000;
 }
 
 .text-voucher {
-
   margin: 0;
   padding: 0;
-
 }
 
 .text-voucher {
-
-  font: 12px 'Poppins', sans-serif;
-  color: #d9d9d9;
+  font: 12px "Poppins", sans-serif;
+  color: #8150af;
   text-transform: uppercase;
   text-align: center;
   margin: 5px;
   padding: 5px;
   animation: cupom-animate 3s linear infinite;
-
 }
 
 .text-voucher:hover {
-
-  color: #d9d9d9;
+  color: #8150af;
   animation: none;
-
 }
 
 nav {
-
   border-bottom: 1px solid rgba(5, 29, 64, 0.5);
   font-weight: 600;
   text-transform: uppercase;
-
 }
 
 .logo {
-
   width: 120px;
-
 }
 
 .nav-menu-itens {
-
   height: 50px;
+}
 
+.bg-nav {
+  background-color: #051d40 !important;
+}
+.text-nav {
+  color: #d9d9d9 !important;
 }
 
 .icon-person {
-
-  color: #051D40;
+  color: #d9d9d9;
   font-size: 35px;
-
 }
 
-.icons-profile {
-
-  color: #051D40;
+.itens-profile {
+  color: #8150af;
   font-size: 20px;
-
 }
 
 .nav-menu-itens:hover {
+  border-top: 1px inset #051d40;
+  border-bottom: 1px inset #051d40;
 
-  border-top: 1px inset #051D40;
-  border-bottom: 1px inset #051D40;
+  border-top: 1px inset #b1d4e0;
+  border-bottom: 1px inset #b1d4e0;
+
   transform: translateY(-3px);
-
 }
 
 .after-none::after {
-
   content: none;
-
 }
 
 @keyframes cupom-animate {
-
   0% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
   50% {
@@ -101,6 +81,6 @@ nav {
   }
 
   100% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
 }
