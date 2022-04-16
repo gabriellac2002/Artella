@@ -12,17 +12,21 @@ footer {
   font-weight: 500;
 }
 
-.footer-social-area {
+.footer-align-area {
   padding: 10px;
   text-align: justify;
   border-bottom: 1px solid #e0e0e0;
+  
 }
 .title-footer {
   text-transform: uppercase;
+  font-weight: bold;
 }
 .text-footer {
   font-size: 16px;
   font-weight: 400;
+  margin-left: 1em;
+  margin-top: 0;
 }
 .copyright-area {
   text-align: center;
@@ -31,7 +35,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .footer-social-area {
+  .footer-align-area {
     text-align: center;
   }
 
@@ -42,5 +46,11 @@ footer {
   .footer-text-area {
     display: inline-block;
     text-align: center;
+  }
+  
+  .text-footer {
+    margin-left: 0;
+    
+    font-size: 15px;
   }
 }
