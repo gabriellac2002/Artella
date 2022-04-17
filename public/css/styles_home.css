@@ -5,43 +5,58 @@ body{
     color: #051D40 !important;
 }
 .container{
-    width: 100rem;
-    height: 80rem;
+    width: 1600px;
+    height: 2500px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    row-gap: 2rems;
+    row-gap: 20px;
     align-content: center;
     justify-content: center;
+    background-color: #b1d4e0;
 }
 .one{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 5;
-    margin-top: 20px;
+    margin-top: 15px;
+}
+.slide{
+    width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
 }
 .slide img{
-    height: 20rem;    
+    height: 320px;
+    border-radius: 15px;        
 }
 .two{
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 5;
-    height: 15rem;
-    margin-top: 20px;
+    height: 360px;
+    margin-bottom: 20px;
 }
 .lancamentos{
     display: flex ;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    height: 12rem;    
+    height: 220px;  
+    background-color: #051D40;
+    border-radius: 15px; 
+}
+.lancamentos p{
+    color: #d9d9d9;
+    margin-left: 10px;
 }
 .lancamentos img{
     height: 160px;
     width: 100px;
+    margin-left: 40px;
 }
 .lancamento_1{
     order: 0;
@@ -84,21 +99,46 @@ body{
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
-    background-color: aqua;
     height: 20rem;
     margin-right: 28px;
+    border-radius: 15px;
+}
+.three img{
+    width: 620px;
+    height: 320px;
 }
 .four{
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 3;
     grid-column-end: 5;
-    background-color: purple;
+    height: 20rem;
     margin-left: 28px;
+    border-radius: 15px;
+}
+.four img{
+    width: 620px;
+    height: 320px;
 }
 .five{
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 5;
+}
+.Obras{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.NFTs{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Artistas{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.Exposicoes{
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
