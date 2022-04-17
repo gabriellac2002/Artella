@@ -1,19 +1,21 @@
 body{
-    background-color: #d9d9d9;
+    background-color: #4C4C4C;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: #051D40 !important;
 }
 .container{
     width: 1600px;
-    height: 2500px;
+    height: 2400px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     row-gap: 20px;
     align-content: center;
     justify-content: center;
-    background-color: #b1d4e0;
+    background-color: #d9d9d9;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .one{
     grid-row-start: 1;
@@ -52,6 +54,7 @@ body{
 .lancamentos p{
     color: #d9d9d9;
     margin-left: 10px;
+    text-align: center;
 }
 .lancamentos img{
     height: 160px;
