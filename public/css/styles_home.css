@@ -39,7 +39,7 @@ body{
     height: 320px;
     border-radius: 15px;  
     max-width: 960px;
-    max-height: 320px;      
+    max-height: 320px;     
 }
 .two{
     grid-row-start: 2;
@@ -126,6 +126,7 @@ body{
     width: 90%;
     max-width: 620px;
     height: 320px;
+    margin-top: 30px;
 }
 .four{
     grid-row-start: 3;
@@ -139,7 +140,7 @@ body{
 .four img{
     width: 90%;
     max-width: 620px;
-    height: auto;
+    margin-top: 30px;
 }
 .five{
     grid-row-start: 4;
@@ -162,4 +163,57 @@ body{
 .Exposicoes{
     margin-top: 20px;
     margin-bottom: 50px;
+}
+@media ( max-width: 1200px){
+    .slide{
+        width: 100%;
+        max-width: 700px;
+    }
+}
+@media ( max-width: 900px){
+    .slide{
+        width: 100%;
+        max-width: 500px;
+        max-height: 222px;
+        height: 100%; 
+    }
+    .slide img{
+        max-height: 222px;
+        height: 100%; 
+    }
+    .container{
+        height: 2100px;
+        max-height: 100%;
+    }
+    .four img{
+        margin-top: 80px;
+    }
+}
+@media ( max-width: 700px){
+    .slide{
+        width: 100%;
+        max-width: 400px;
+        max-height: 177px;
+        height: 100%; 
+    }
+    .slide img{
+        max-height: 177px;
+        height: 100%; 
+    }
+    .container{
+        height: 2000px;
+        max-height: 100%;
+    }
+}
+@media ( max-width: 550px){
+    .slide{
+        width: 100%;
+        max-width: 300px;
+        max-height: 133px;
+        height: 100%;
+    }
+    .slide img{
+        max-height: 133px;
+        height: 100%; 
+    }
 }
