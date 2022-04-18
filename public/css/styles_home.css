@@ -10,29 +10,36 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    row-gap: 20px;
     align-content: center;
     justify-content: center;
     background-color: #d9d9d9;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 1320px;
+    max-height: 2400px;
 }
 .one{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 5;
-    margin-top: 15px;
+    height: 320px;
+    text-align: center;
 }
 .slide{
     width: 60rem;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
+    max-width: 960px;
+    max-height: 320px;
+    margin-top: 30px;
 }
 .slide img{
     height: 320px;
-    border-radius: 15px;        
+    border-radius: 15px;  
+    max-width: 960px;
+    max-height: 320px;      
 }
 .two{
     grid-row-start: 2;
