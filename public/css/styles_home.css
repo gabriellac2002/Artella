@@ -53,49 +53,59 @@ body{
 }
 .lancamentos p{
     color: #d9d9d9;
-    margin-left: 10px;
     text-align: center;
 }
 .lancamentos img{
     height: 160px;
     width: 100px;
-    margin-left: 40px;
 }
 .lancamento_1{
     order: 0;
     flex-basis: auto;
     flex-grow: 1;
     height: 160px;
+    text-align: center;
+    max-width: 216px;
 }
 .lancamento_2{
     order: 1;
     flex-basis: auto;
     flex-grow: 1;
     height: 160px;
+    text-align: center;
+    max-width: 216px;
 }
 .lancamento_3{
     order: 2;
     flex-basis: auto;
     flex-grow: 1;
     height: 160px;
+    text-align: center;
+    max-width: 216px;
 }
 .lancamento_4{
     order: 3;
     flex-basis: auto;
     flex-grow: 1;
     height: 160px;
+    text-align: center;
+    max-width: 216px;
 }
 .lancamento_5{
     order: 4;
     flex-basis: auto;
     flex-grow: 1;
     height: 160px;
+    text-align: center;
+    max-width: 216px;
 }
 .ver_mais_produtos{
     order: 5;
     flex-basis: auto;
     flex-grow: 1;
     height: 160px;
+    text-align: center;
+    max-width: 216px;
 }
 .three{
     grid-row-start: 3;
