@@ -10,7 +10,6 @@ body
     padding: 50px 400px 50px 400px;
     text-align: justify;
     color: #051d40;
-
 }
 
 .main-text h1
@@ -20,6 +19,14 @@ body
     text-transform: uppercase;
     font-weight: bolder;
     color: #051d40;
+    animation-name: esqdir;
+    animation-duration: 2s;
+}
+
+.main-text p
+{
+    -webkit-animation: blur 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: blur 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .main-text img
@@ -30,6 +37,8 @@ body
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+    animation-name: esqdir;
+    animation-duration: 2s;
 }
 
 .icon-text
@@ -55,7 +64,37 @@ body
     padding-bottom: 20px;
     font-size: 20px;
     text-align: justify;
+    color: #0f606b;
     font-weight: 800;
+    -webkit-animation: blur 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: blur 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes blur
+{
+    0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+      }
+    
+    50% {
+        -webkit-filter: blur(6px);
+                filter: blur(6px);
+        opacity: 0.5;
+        }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+      }
+}
+
+
+@keyframes esqdir
+{
+    0% {opacity: 0; transform: translate(-100px, 0px);}
+    100% {opacity: 1; transform: translate(0px, 0px);}
 }
 
 
