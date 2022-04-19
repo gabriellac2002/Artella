@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+main h3 {
+  font-family: 'Poppins';
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  background-color: #c3c3c3;
+  min-height: 600px;
+  padding: 10px;
+  width: 12%;
+  min-width: 300px;
+  border-radius: 5px;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+.filterSection {
+  background-color: white;
+  margin-top: 12px;
+  border-radius: 5px;
+  padding: 8px 8px 8px 8px;
+}
+
+.filterSection > h4 {
+  font-size: 2em;
+}
+
+.filterUl {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterUl label {
+  font-size: 1em;
+}
+
+.filterUl > li {
+  margin-top: 10px;
+}
+
+.containerFlex {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.containerFlex > input {
+  margin-right: 5px;
+}
+
+.filterSearch {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+  margin-top: 6px;
+  border-radius: 4px;
+}
+
+.filterSearch > input {
+  background-color: transparent;
+  border: 0px;
+  width: 90%;
+}
+
+.container-xl a {
+  margin-top: 10px;
+}
+
+.productsList {
+  margin-left: 3%;
+  margin-top: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+.productsList > h1 {
+  font-weight: bold;
+}
+
+.productsList > p {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.productsList > .ordenated > span {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.ordenated {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1em;
+}
+
+select {
+  padding: 10px;
+  margin-right: 0px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.secondPrice {
+  color: #777;
+  font-size: 0.8em;
+}
+
+.starChecked {
+  color: orange;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 0.8em;
+}
+
+.container a  {
+  margin-top: 10px;
+}
+
+.container-md a {
+  margin-top: 14px;
+}
+
+.rowMain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowMain label {
+  margin-right: 10px;
+}
+
+.refine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #999;
+  margin-left: 0px;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.refine input {
+  width: 95%;
+  height: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border: 0px solid black;
+}
+
+.refine i {
+  margin-left: 10px;
+}
+
+.responsiveFilters h5 {
+  margin-right: 6px;
+}
+
+.category {
+  background-color: #8150af;
+  color: white;
+  padding: 6px;
+  font-size: 1em;
+  display: flex;
+  width: 4.5rem;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+@media only screen and (max-width: 960px) {
+
+  .container {
+    margin-left: 0;
+  }
+
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .ordenated {
+    align-items: start;
+    flex-direction: column;
+    font-size: 1em;
+  }
+
+  .ordenated span {
+    font-size: 1em;
+    align-items: left;
+  }
+
+  .productsList > .ordenated > span {
+    margin-right: 0;
+    margin-top: 0px;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    justify-content: start;
+  }
+
+  .productsList .rowMain {
+    align-items: left;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .refine {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  .container {
+    margin-left: 0;
+  }
+
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .productsList > .ordenated {
+    align-items: start;
+    flex-direction: column;
+    font-size: 0.8em;
+  }
+
+  
+
+  .productsList > .ordenated > span {
+    margin-right: 0;
+    margin-top: 0px;
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+
+}
