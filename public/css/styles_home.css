@@ -182,7 +182,6 @@ body{
         height: 100%; 
     }
     .container{
-        display: inline-grid;
         height: 5000px;
         max-height: 100%;
         margin-left: 40px;
@@ -231,8 +230,27 @@ body{
         height: 100%; 
     }
     .container{
-        height: 2000px;
+        height: 5000px;
         max-height: 100%;
+        margin-left: 40px;
+    }
+    .lancamento_1{
+        margin-left: 35px;
+    }
+    .lancamento_2{
+        margin-left: 35px;
+    }
+    .lancamento_3{
+        margin-left: 35px;
+    }
+    .lancamento_4{
+        margin-left: 35px;
+    }
+    .lancamento_5{
+        margin-left: 35px;
+    }
+    .ver_mais_produtos{
+        margin-left: 35px;
     }
 }
 @media ( max-width: 550px){
