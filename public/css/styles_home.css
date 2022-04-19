@@ -200,6 +200,24 @@ body{
     body{
         background-color: #d9d9d9;
     }
+    .lancamento_1{
+        margin-left: 55px;
+    }
+    .lancamento_2{
+        margin-left: 55px;
+    }
+    .lancamento_3{
+        margin-left: 55px;
+    }
+    .lancamento_4{
+        margin-left: 55px;
+    }
+    .lancamento_5{
+        margin-left: 55px;
+    }
+    .ver_mais_produtos{
+        margin-left: 55px;
+    }
 }
 @media ( max-width: 700px){
     .slide{
@@ -227,6 +245,24 @@ body{
     .slide img{
         max-height: 133px;
         height: 100%; 
+    }
+    .lancamento_1{
+        margin-left: 0px;
+    }
+    .lancamento_2{
+        margin-left: 0px;
+    }
+    .lancamento_3{
+        margin-left: 0px;
+    }
+    .lancamento_4{
+        margin-left: 0px;
+    }
+    .lancamento_5{
+        margin-left: 0px;
+    }
+    .ver_mais_produtos{
+        margin-left: 0px;
     }
     body{
         background-color: #d9d9d9;
