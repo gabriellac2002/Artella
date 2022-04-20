@@ -1,15 +1,18 @@
 body
 {
     font-family: 'Poppins', sans-serif;
+    background-image: url("../assets/bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #cae1e8;
 }
 
 
 .main-text
 {
-    font-size: 20px;
-    padding: 50px 400px 50px 400px;
-    text-align: justify;
-    color: #051d40;
+    margin: 50px 100px 50px 100px;
 }
 
 .main-text h1
@@ -17,34 +20,43 @@ body
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: 700;
     color: #051d40;
     animation-name: esqdir;
     animation-duration: 2s;
+}
+
+.content
+{
+    margin-top: 80px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 30px;
 }
 
 .main-text p
 {
     -webkit-animation: blur 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: blur 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    color: #051d40;
+    font-weight: 400;
+
 }
 
 .main-text img
 {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 100%;
+    float: right;
     height: auto;
-    margin-bottom: 10px;
     animation-name: esqdir;
     animation-duration: 2s;
+    margin-left: 20px;
 }
 
 .icon-text
 {
-    padding-top: 50px;
-    padding-left: 200px;
+    margin-top: 100px;
+    padding-left: 400px;
+    width: 800px;
     padding-right: 200px;
 }
 
@@ -52,7 +64,6 @@ body
 {
     float: left;
     height: 50px;
-    width: auto;
     margin-right: 30px;
     padding-top: 10px;
 }
@@ -62,9 +73,9 @@ body
     padding-top: 12px;
     text-transform: uppercase;
     padding-bottom: 20px;
-    font-size: 20px;
+    font-size: 22px;
     text-align: justify;
-    color: #0f606b;
+    color: #8150AF;
     font-weight: 800;
     -webkit-animation: blur 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     animation: blur 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -100,15 +111,53 @@ body
 
 @media (max-width:1000px)
 {
+
     .main-text
     {
-        padding: 10px 5% 40px 5%;
+        margin: 20px 50px 20px 50px;
     }
+
+    .main-text h1
+    {
+        font-size: 24px;
+    }
+
+    .main-text img
+    {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        float: none;
+    }
+    
+    .content
+    {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 16px;
+    }
+
 
     .icon-text
     {
-        padding-left: 50px;
-        padding-right:50px;
-        padding-top:20px;
+        margin-top: 50px;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: fit-content;
     }
-}
+    
+    .icon-text img
+    {
+        max-width: 15%;
+        max-height: 15%;
+        margin-bottom: 10px;
+        float:left;
+        margin-right: 15px;
+    }
+
+    .icon-text h2
+    {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700;
+    }
