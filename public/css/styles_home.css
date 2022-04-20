@@ -1,5 +1,5 @@
 body{
-    background-color: #4C4C4C;
+    background-color: #d9d9d9;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: #051D40 !important;
@@ -53,11 +53,11 @@ body{
     justify-content: center;
     align-items: center;
     height: 220px;  
-    background-color: #0f606b;
-    border-radius: 15px; 
+    background-color: #d9d9d9;
+
 }
 .lancamentos p{
-    color: #d9d9d9;
+    color: #051D40;
     text-align: center;
 }
 .lancamentos img{
@@ -65,53 +65,17 @@ body{
     max-width: 150px;
     width: 90%;
 }
-.lancamento_1{
+.lancamento_card{
     order: 0;
     flex-basis: auto;
     flex-grow: 1;
     height: 160px;
     text-align: center;
-    max-width: 216px;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
-.lancamento_2{
-    order: 1;
-    flex-basis: auto;
-    flex-grow: 1;
-    height: 160px;
+.lancamento_card_img{
     text-align: center;
-    max-width: 216px;
-}
-.lancamento_3{
-    order: 2;
-    flex-basis: auto;
-    flex-grow: 1;
-    height: 160px;
-    text-align: center;
-    max-width: 216px;
-}
-.lancamento_4{
-    order: 3;
-    flex-basis: auto;
-    flex-grow: 1;
-    height: 160px;
-    text-align: center;
-    max-width: 216px;
-}
-.lancamento_5{
-    order: 4;
-    flex-basis: auto;
-    flex-grow: 1;
-    height: 160px;
-    text-align: center;
-    max-width: 216px;
-}
-.ver_mais_produtos{
-    order: 5;
-    flex-basis: auto;
-    flex-grow: 1;
-    height: 160px;
-    text-align: center;
-    max-width: 216px;
 }
 .three{
     grid-row-start: 3;
