@@ -56,6 +56,19 @@ body {
   padding-bottom: 60px;
 }
 
+.next {
+  display: none;
+}
+.next i {
+  text-transform: none;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cards:hover .next {
+  display: inline;
+}
+
 @media (max-width: 768px) {
   .cards-area {
     width: 100%;
