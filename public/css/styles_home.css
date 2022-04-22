@@ -63,9 +63,16 @@ body{
     border-radius: 15px;
     margin-bottom: 20px;
 }
-.three img{ 
+.three img{
     height: 10rem;
-    width: 10rem;
+}
+.img1{
+    margin-top:30px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.img2{
     margin: 20px;
 }
 .four{
@@ -125,6 +132,9 @@ body{
     .two{
         height: 55rem;
     }
+    .three img{
+        height: 7rem;
+    }
 }
 @media ( max-width: 550px){
     .slide{
@@ -143,6 +153,9 @@ body{
     .container{
         margin-left: 20px;
     }  
+    .three img{
+        height: 5rem;
+    }
 }
 @media ( max-width: 470px){
     .two{
@@ -151,5 +164,9 @@ body{
     .three{
         display: block;
         text-align: center;
+    }
+    .three img{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
