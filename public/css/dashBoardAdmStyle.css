@@ -73,29 +73,26 @@ body {
 
 @media (max-width: 768px) {
   .cards-area {
-
     width: 100%;
-    height: 40vw;
+    height: auto;
     display: grid;
   }
   .cards {
-
     min-width: 200px;
     min-height: 300px;
     margin-right: 10px;
-
   }
   .cards:hover .next {
     display: none;
   }
 
-  .topBar a i{
+  .topBar a i {
     font-size: 27px;
   }
-  .cards h4{
-    font-size:15px;
+  .cards h4 {
+    font-size: 15px;
   }
-  .cards i{
+  .cards i {
     font-size: 60px;
     padding-top: 25px;
     padding-bottom: 50px;
@@ -103,14 +100,13 @@ body {
 }
 
 @media (max-width: 300px) {
-
   .cards {
     min-width: 0;
     min-height: 0;
     width: 160px;
     height: 240px;
   }
-  .cards:hover{
+  .cards:hover {
     transform: scale(1.1);
   }
 
@@ -118,13 +114,13 @@ body {
     display: none;
   }
 
-  .topBar a i{
+  .topBar a i {
     font-size: 20px;
   }
-  .cards h4{
-    font-size:10px;
+  .cards h4 {
+    font-size: 10px;
   }
-  .cards i{
+  .cards i {
     font-size: 40px;
     padding-top: 20px;
     padding-bottom: 40px;
