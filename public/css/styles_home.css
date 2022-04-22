@@ -41,7 +41,10 @@ body{
 }
 .card{
     width: 13rem;
-    align-items: center;    
+    align-items: center;
+    background-color: #d9d9d9;
+    color: #051D40;
+    border: #d9d9d9;
 }
 .cards{
     width: 13rem;
