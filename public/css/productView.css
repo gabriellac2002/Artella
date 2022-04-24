@@ -15,7 +15,7 @@ body
 .main
 {
     max-width: 800px;
-    margin: 100px auto;
+    margin: 20px auto;
 }
 
 .main img
@@ -27,6 +27,7 @@ body
 .displayPic
 {
     overflow: hidden;
+    margin: 0 0.3rem 0 0.3rem;
 }
 
 .showPic
@@ -53,7 +54,7 @@ body
 
 .itemPic:nth-child(1), .itemPic:nth-child(2), .itemPic:nth-child(3)
 {
-    margin-right: 0;
+    margin-right: 0.1rem;
 }
 
 .itemPic:hover
