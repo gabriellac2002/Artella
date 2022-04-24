@@ -5,13 +5,18 @@ if(memory <= 2) {
   document.querySelector('.animationComponent').paused = true;
 }
 
-const password = document.querySelector('#password');
-const message = document.querySelector('.message');
+const faEye = document.querySelector('.fa-eye')
 
-password.addEventListener('keyup', function (e) {
-  if (e.getModifierState('CapsLock')) {
-      message.textContent = 'Caps lock ativado';
-  } else {
-      message.textContent = '';
+let passwordVisible = false;
+
+faEye.addEventListener('click', () => {
+  if(passwordVisible) {
+    faEye.style.color = 'grey';
+    document.getElementById('password').type = "password";
   }
-});
+  else {
+    faEye.style.color = 'black';
+    document.getElementById('password').type = "text";
+  }
+  passwordVisible = !passwordVisible
+})
