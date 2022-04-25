@@ -22,14 +22,6 @@ body{
     width: 25rem;
 
 }
-.quadro_contato{
-    height: auto;         
-    width: 41.25rem;
-    text-align: center;
-}
-.quadro_contato h1{
-    font-size: 7rem;
-}
 .map-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -42,4 +34,30 @@ body{
     height:100%;
     width:100%;
     position:absolute;
+}
+.quadro_contato{
+    height: auto;         
+    width: 41.25rem;
+    text-align: center;
+}
+.quadro_contato h1{
+    text-align: start;
+    font-size: 7rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.butao{
+    margin-top: 2rem;
+    height: 3rem;
+}
+.redes_sociais{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.redes_sociais img{
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
