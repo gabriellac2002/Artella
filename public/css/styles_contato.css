@@ -1,0 +1,45 @@
+body{
+    background-color: #d9d9d9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #051D40 !important;
+}
+.container{
+    display: flex;
+    height: auto;
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: 3.75rem;
+    padding: 0px;
+}
+.quadro_imagem{
+    height: auto;
+    width: 41.25rem;
+    text-align: center;
+}
+.quadro_imagem img{
+    height: 25rem;
+    width: 25rem;
+
+}
+.quadro_contato{
+    height: auto;         
+    width: 41.25rem;
+    text-align: center;
+}
+.quadro_contato h1{
+    font-size: 7rem;
+}
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
