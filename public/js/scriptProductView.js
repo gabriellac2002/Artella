@@ -5,7 +5,7 @@ let picId = 1;
 picsButton.forEach((itemPic) => {
     itemPic.addEventListener('click', (event) => {
     event.preventDefault();
-    picId = picItem.dataset.id;
+    picId = itemPic.dataset.id;
     slideImage();
     });
 });
