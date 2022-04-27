@@ -4,22 +4,43 @@ body{
     font-size: 20px;
     color: #051D40 !important;
 }
-.container{
-    display: flex;
-    height: auto;
-    width: 88.125rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0px;
-}
-.quadro_imagem{
-    height: auto;
-    width: 27.5rem;
-    text-align: center;
-}
-.quadro_imagem img{
-    height: 25rem;
+.logo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 25rem;
+    height: 25rem;
+}
+h1{
+    text-align: center;
+    font-size: 5rem;
+}
+h2{
+    text-align: center;
+    font-size: 3rem;
+}
+.formulario{
+    width: 70rem;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mapa_responsivo{
+    height: 18.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+.butao{
+    margin-top: 0rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4rem;
+    margin-bottom: 3rem;
 }
 .map-responsive{
     overflow:hidden;
@@ -34,53 +55,10 @@ body{
     width:100%;
     position:absolute;
 }
-.quadro_contato{
-    height: auto;         
-    width: 52rem;
-    margin: 0 auto;
-    margin-left: 3rem;
-   
-}
-.quadro_contato h1{
-    text-align: start;
-    font-size: 5rem;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-}
-.formulario{
-    text-align: center;
-}
-.butao{
-    margin-top: 2rem;
-    height: 3rem;
-}
-.redes_sociais{
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-}
-.redes_sociais img{
-    height: 3rem;
-    width: 3rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
+
 @media ( max-width: 1000px){
-    .container{
-        display: block;
-        margin: 0px;
-        margin-bottom: 1rem;
-    }
-    .quadro_imagem{
-        display: flex;
-    }
-    .mapa_responsivo{
-        margin-top: 3.125rem;
-        margin-bottom: 3.125rem;
-        margin-left: 3rem;
-    }
-    .quadro_contato h1{
-        margin-top: 0rem;
+    .formulario{
+        width: auto;
     }
 }
 @media ( max-width:900px){
