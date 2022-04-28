@@ -20,7 +20,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  background-color: #0f606b;
+  background-color: #1D3353;
 }
 
 .form h2 {
@@ -46,12 +46,12 @@ small {
 
 .form > form div {
   margin-top: 10px;
+  
 }
 
 button {
   margin-top: 22px;
   color: white;
-  background-color: #02C39A !important;
   font-weight: bold;
   padding: 10px !important;
   border: 0px solid black !important;
