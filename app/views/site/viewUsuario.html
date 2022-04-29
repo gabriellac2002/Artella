@@ -50,6 +50,8 @@
     <div class="container">
       <div class="spaceTable">
         <table class="table ">
+
+          <!-- CABEÇALHO -->
           <thead>
             <tr>
               <th>ID</th>
@@ -58,6 +60,9 @@
               <th>AÇÃO</th>
             </tr>
           </thead>
+
+          <!-- CONTEÚDO -->
+          <!-- ! AINDA SEM O PHP -->
           <tbody>
             <tr>
               <td>1</td>
@@ -67,13 +72,26 @@
                 <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
                   <i class="fa-solid fa-ellipsis-vertical"></i></button>
 
-                <div class="modal fade" id="userAction" tabindex="-1" aria-labelledby="userAction" aria-hidden="true">
+                <div class="modal fade" id="userAction" tabindex="-1" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       
+                      <!-- cabeçalho do modal -->
                       <div class="modal-header">
                         <h2 class="modal-title">Modal title</h5>
+                        <!-- Botão fechar -->
                         <button data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
+                      </div>
+                      
+                      <!-- conteúdo do modal -->
+                      <div class="modal-body">
+
+                        <button class="btn" data-bs-target="#viewAction"><i class="fa-solid fa-eye"></i></button>
+
+                        <button class="btn" data-bs-target="#editAction"><i class="fa fa-pencil"></i></button>
+
+                        <button class="btn" data-bs-target="#deleteAction"><i class="fa-solid fa-trash"></i></button>
+
                       </div>
 
                     </div>
