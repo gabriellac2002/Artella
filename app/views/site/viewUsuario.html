@@ -63,9 +63,26 @@
               <td>1</td>
               <td>Eu</td>
               <td>eu@gmail.com Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, in?</td>
-              <td><button class="button-action"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+              <td>
+                <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
+                  <i class="fa-solid fa-ellipsis-vertical"></i></button>
+
+                <div class="modal fade" id="userAction" tabindex="-1" aria-labelledby="userAction" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      
+                      <div class="modal-header">
+                        <h2 class="modal-title">Modal title</h5>
+                        <button data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
               </td>
             </tr>
+            
+
           </tbody>
         </table>
       </div>
