@@ -12,16 +12,24 @@ body {
   width: 100%;
   height: 100%;
 }
+
 table thead {
   background: #0f606b;
 }
+
 .spaceTable table {
   border: solid 1px #000;
   text-align: center;
 }
+
 .button-action {
   border: none;
   background: none;
+  display: none;
+}
+
+.btn-row{
+  min-width: 200px;
 }
 
 .btnClose:hover {
@@ -33,32 +41,43 @@ table thead {
 .btnDelete {
   font: 14px "Poppins", sans-serif;
 }
-.btnView{
-    color:#66b266;
-}
-.btnView:hover{
-    color:#518e51;
-}
 
-.btnEdit{
-    color:#5a5aff;
+.btnView i p,
+.btnEdit i p,
+.btnDelete i p {
+  display:none;
 }
-.btnEdit:hover{
-    color:#3232ff ;
-}
-
-.btnDelete{
-    color:#ff5858;
-}
-
-.btnDelete:hover{
-    color:#ff1919 ;
-}
-
-
 
 .btnView:hover,
 .btnEdit:hover,
 .btnDelete:hover {
   transform: scale(1.2);
+}
+
+@media (max-width:540px){
+
+  .button-action{
+    display: block;
+  }
+
+  .btns-desktop{
+    display: none;
+  }
+
+  .btnView i p,
+  .btnEdit i p,
+  .btnDelete i p {
+    display:block;
+  }
+
+  .btn-row{
+    min-width: 0;
+    max-width: 30px;
+  }
+  .headTable{
+    font: 12px "Poppins", sans-serif;
+  }
+  .bodyTable{
+    font: 12px "Poppins", sans-serif;
+  }
 }
