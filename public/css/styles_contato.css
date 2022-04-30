@@ -33,25 +33,25 @@ h2{
     margin-right: auto;
     height: 4rem;
     margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 .mapa_responsivo{
-    height: 18.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 1rem;
-    margin-bottom: 5rem;
-}
-.map-responsive{
+    height: 300px;
+ }
+.mapa_responsivo{
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
     height:0;
 }
-.map-responsive iframe{
+.mapa_responsivo iframe{
     left:0;
     top:0;
-    height:100%;
+    height:70%;
     width:100%;
     position:absolute;
 }
@@ -59,11 +59,6 @@ h2{
     h1{
         font-size: 4rem;
     }
-    .mapa_responsivo{
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-     }
 }
 @media (max-width:550px){
     h1{
@@ -82,12 +77,6 @@ h2{
         width: 300px;
         height: 300px;
     }
-    .mapa_responsivo{
-        height: 300px;
-    }
-}
-@media (max-width:350px){
- 
 }
 @media (max-width:320px){
     .logo_contato img{
@@ -98,5 +87,11 @@ h2{
 @media (max-width:300px){
     .formulario{
         font-size: 16px;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 1.8rem;
     }
 }
