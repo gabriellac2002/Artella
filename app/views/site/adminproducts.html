@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área administrativa produtos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../public/css/styles.css">
+  <link rel="stylesheet" href="../../../public/css/adminproducts.css">
+</head>
+<body>
+  <main>
+    <div class="container-xl">
+      <h2>Produtos</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Preço</th>
+            <th scope="col">
+              <i style="color: #051d40;" class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-plus fa-plus-visible"></i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="editingModal" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Editar: </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="editingForm">
+                
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <button id="EditingButton" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editingModal">
+      Launch demo modal
+    </button>
+
+    <div id="addModal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Novo Produto: </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="editingForm">
+              <label>Nome</label>
+              <input placeholder="Nome">
+              <label>Preço</label>
+              <input placeholder="Preço">
+              <label>Descrição</label>
+              <textarea>
+                
+              </textarea>
+              <div class="row">
+                <label>Categoria </label>
+                <select>
+                  <option name="">NFT</option>
+                  <option name="">Quadro</option>
+                  <option name="">Aquarela</option>
+                </select>
+              </div>
+              <h4 style="margin-top: 10px;">Imagens</h4>
+              <div id="dropzone" class="fileInput">
+                <input type="file" multiple hidden>
+                <i class="fa-solid fa-file"></i>
+                <h5>Arraste seus arquivos aqui</h5>
+              </div>
+              <div id="imagesPreview">
+                
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <button id="NewProductButton" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+    Launch demo modal
+  </button>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/91248aca6a.js" crossorigin="anonymous"></script>
+  <script src="../../../public/js/adminProduct.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+body {
+  background-color: #d9d9d9;
+}
+
+
+tr:nth-child(even) {
+  background-color: #0f606b !important;
+  color: white !important;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+thead tr {
+  background-color: #051d40 !important;
+  color: white !important;
+  border-bottom: 0px solid black !important;
+}
+
+i {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+table {
+  margin-top: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.editingForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editingForm label {
+  margin-top: 10px;
+}
+
+.editingForm input {
+  width: 80%;
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+}
+
+.editingForm .row select {
+  width: 168px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.fileInput {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 280px;
+  max-width: 280px;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#imagesPreview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#imagesPreview > img {
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.imagePreviewed {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: end;
+  margin-top: 16px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.imagePreviewed i {
+  color: #0f606b;
+}
+
+.divMouseOver {
+  color: #000;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divMouseOver:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  #addModal > .modal-dialog {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
