@@ -12,16 +12,15 @@ body {
   height: 100%;
 }
 
-.tableBar{
+.tableBar {
   margin-top: 20vh;
   display: grid;
   grid-template-columns: 20% 80%;
   background: #0f606b;
 }
 
-.tableBar-form{
+.tableBar-form {
   text-align: right;
-
 }
 table thead {
   background: #0f606b;
@@ -38,12 +37,8 @@ table thead {
   display: none;
 }
 
-.btn-row{
+.btn-row {
   min-width: 200px;
-}
-
-.btnClose:hover {
-  transform: scale(1.2);
 }
 
 .btnView,
@@ -55,39 +50,42 @@ table thead {
 .btnView i p,
 .btnEdit i p,
 .btnDelete i p {
-  display:none;
+  display: none;
+  font: 12px "Poppins", sans-serif;
 }
 
 .btnView:hover,
 .btnEdit:hover,
-.btnDelete:hover {
+.btnDelete:hover,
+.btnClose:hover {
   transform: scale(1.2);
 }
-
-@media (max-width:540px){
-
-  .button-action{
+.modal-body {
+  text-align: center;
+}
+@media (max-width: 540px) {
+  .button-action {
     display: block;
   }
 
-  .btns-desktop{
+  .btns-desktop {
     display: none;
   }
 
   .btnView i p,
   .btnEdit i p,
   .btnDelete i p {
-    display:block;
+    display: block;
   }
 
-  .btn-row{
+  .btn-row {
     min-width: 0;
     max-width: 30px;
   }
-  .headTable{
+  .headTable {
     font: 12px "Poppins", sans-serif;
   }
-  .bodyTable{
+  .bodyTable {
     font: 12px "Poppins", sans-serif;
   }
 }
