@@ -13,16 +13,45 @@ body {
 }
 
 .tableBar {
-  margin-top: 20vh;
+  background: #0f606b;
   display: grid;
   grid-template-columns: 20% 80%;
-  background: #0f606b;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 20vh;
+  height: 50px;
 }
 
-.tableBar-form {
-  text-align: right;
+.tableBarForm {
+  width: 100%;
+  justify-content: flex-end;
 }
-table thead {
+
+.formSeach {
+  justify-content: flex-end;
+  background-color: white;
+  width: 400px;
+  height: 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.seachBar {
+  border: none;
+  width: 100%;
+  outline: none;
+  height: 20px;
+}
+
+.tableUsers {
+  border-collapse: collapse;
+  border-radius: 1.2em;
+  overflow: hidden;
+}
+
+.tableUsers thead {
   background: #0f606b;
 }
 
@@ -87,5 +116,8 @@ table thead {
   }
   .bodyTable {
     font: 12px "Poppins", sans-serif;
+  }
+  .formSeach {
+    width: 200px;
   }
 }
