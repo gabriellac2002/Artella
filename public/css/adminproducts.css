@@ -116,6 +116,16 @@ h2 {
   opacity: 1;
 }
 
+.modal-header {
+  background-color: #051d40 !important;
+  color: white !important;
+}
+
+.btn-close {
+  color: #fff !important; 
+  opacity: 1;
+}
+
 @media only screen and (max-width: 600px) {
   #addModal > .modal-dialog {
     display: flex !important;

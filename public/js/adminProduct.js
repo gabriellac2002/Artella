@@ -3,6 +3,22 @@ const imagesPreview = document.getElementById('imagesPreview')
 const dropzoneInput = dropzone.querySelector('input')
 let fileObject = {};
 
+const fa_trash = document.querySelectorAll('.fa-trash')
+
+fa_trash.forEach(trash => {
+  trash.addEventListener('click', deleteRow)
+})
+
+const fa_eye = document.querySelectorAll('.fa-eye')
+
+function openViewModal(e) {
+  document.getElementById('ViewProductModal').click()
+}
+
+fa_eye.forEach(fa => {
+  fa.addEventListener('click', openViewModal)
+})
+
 window.addEventListener("dragover",function(e){
   e = e || event;
   e.preventDefault();
@@ -14,6 +30,10 @@ window.addEventListener("drop",function(e){
 
 document.querySelectorAll('.fa-pen').forEach(element => {
   element.addEventListener('click', () => {
+    const data = element.parentElement.parentElement.querySelectorAll('td');
+    document.querySelector('#editingNameInput').value = data[0].textContent;
+    document.querySelector('#editingPriceInput').value = data[1].textContent;
+    document.querySelector('#editingDescriptionTextArea').value = data[2].innerText;
     document.getElementById('EditingButton').click();
   })
 })
@@ -137,10 +157,40 @@ function deleteImage(e) {
   parent.remove();
   delete fileObject[e.target.target]
   const keys = Object.keys(fileObject);
-  let data = [];
   const dataTransfer = new DataTransfer();
   keys.forEach(key => {
     dataTransfer.items.add(fileObject[key])
   })
   dropzoneInput.files = dataTransfer.files;
 }
+
+function deleteRow(e) {
+  //Fetch api action
+  //if(!error)
+  e.target.parentElement.parentElement.remove();
+}
+
+function clearPreviewedImages() {
+  document.querySelectorAll('.imagePreviewed').forEach(image => {
+    image.remove();
+  })
+  const keys = Object.keys(fileObject);
+  dropzoneInput.files = new DataTransfer().files;
+  keys.forEach(key => {
+    delete fileObject[key];
+  })
+  console.log(dropzoneInput)
+  console.log(fileObject)
+}
+
+document.querySelector('#addModalClose1Button').addEventListener('click', () => {
+  clearPreviewedImages();
+})
+
+document.querySelector('#addModalClose2Button').addEventListener('click', () => {
+  clearPreviewedImages();
+})
+
+document.querySelectorAll('.btn-close').forEach(element => {
+  element.classList.add('btn-close-white')
+})
