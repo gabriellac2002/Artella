@@ -11,12 +11,20 @@ body {
   width: 100%;
   height: 100%;
 }
-
+.title {
+  margin-top: 5vh;
+  text-align: center;
+  font: 34px "Poppins", sans-serif;
+  font-weight: 100;
+  letter-spacing: 4px;
+  color: #0f606b;
+  text-shadow: #402857 0.05em 0.1em 0.1em;
+}
 .tableBar {
   display: grid;
   grid-template-columns: 20% 80%;
   align-items: center;
-  margin-top: 20vh;
+  margin-top: 8vh;
   height: 50px;
   border-radius: 0.8em;
   background: #0f606b;
@@ -56,6 +64,7 @@ body {
 
 .tableUsers thead {
   background: #0f606b;
+  color: #d9d9d9;
 }
 
 .spaceTable table tr {
@@ -135,6 +144,9 @@ body {
 }
 
 @media (max-width: 540px) {
+  .title {
+    font-size: 20px;
+  }
   .button-action {
     display: block;
   }
