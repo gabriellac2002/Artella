@@ -79,7 +79,7 @@
 
         <tbody class="bodyTable">
           <!-- 1ª -->
-          <tr class="bg-light">
+          <tr class="rowTable1">
             <td>1</td>
             <td>Eu</td>
             <td>eu@gmail.com Lorem ipsum dolor sit amet, co?</td>
@@ -115,7 +115,7 @@
           </tr>
 
           <!-- 2ª -->
-          <tr class="bg-light">
+          <tr class="rowTable2">
             <td>2</td>
             <td>Ok</td>
             <td>eu@gmail.com Lorem ipsum dolor sit amet, co?</td>
@@ -161,7 +161,41 @@
   <div class="modal fade mt-5" id="addAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        add
+
+        <!-- cabeçalho do modal -->
+        <div class="modal-header">
+          <h5 class="modal-title" style="text-transform: uppercase;">Cadastrar Usuário</h5>
+          <!-- Botão fechar -->
+          <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
+        </div>
+
+        <!-- conteúdo do modal -->
+        
+          <div class="form-group my-3 mx-3">
+            <label>Nome</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group my-3 mx-3">
+            <label>
+              EMAIL
+            </label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group my-3 mx-3">
+            <label>Senha</label>
+            <input type="password" class="form-control">
+          </div>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <button class="btn btn-primary btn-block">
+          <i class="fa-solid fa-floppy-disk"> </i> Salvar
+        </button>
+        
       </div>
     </div>
   </div>
@@ -205,7 +239,27 @@
   <div class="modal fade mt-5" id="viewAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        view
+        
+        <!-- cabeçalho do modal -->
+        <div class="modal-header">
+          <h5 class="modal-title" style="text-transform: uppercase;">Usuário</h5>
+          <!-- Botão fechar -->
+          <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
+        </div>
+
+        <!-- conteúdo do modal -->
+        
+          <div class="form-group my-3 mx-3">
+            <p>Nome do usuário</p>
+            
+          </div>
+
+          <div class="form-group my-3 mx-3">
+            <p>email do usuário</p>
+          </div>
+
+      </div>
+
       </div>
     </div>
   </div>
@@ -214,7 +268,34 @@
   <div class="modal fade mt-5" id="deleteAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        delete
+       
+        <div class="modal-header">
+          <h5 class="modal-title" style="text-transform: uppercase;">Deletar Usuário</h5>
+          <!-- Botão fechar -->
+          <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
+        </div>
+
+        <!-- conteúdo do modal -->
+        
+          <div class="modal-body">
+            <p>Você deletará esse usuário para sempre, deseja continuar?</p>
+          </div>
+
+      </div>
+
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-check"> </i> CONFIRMAR
+
+        </button>
+        <button type="button" class="btn btn-danger btn-block">
+          <i class="fa-solid fa-close"> </i> CANCELAR
+
+        </button>
+        
+      </div>
+
       </div>
     </div>
   </div>
@@ -223,8 +304,43 @@
   <div class="modal fade mt-5" id="editAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        edit
+
+        <!-- cabeçalho do modal -->
+        <div class="modal-header">
+          <h5 class="modal-title" style="text-transform: uppercase;">Editar</h5>
+          <!-- Botão fechar -->
+          <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
+        </div>
+
+        <!-- conteúdo do modal -->
+        
+          <div class="form-group my-3 mx-3">
+            <label>Nome</label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group my-3 mx-3">
+            <label>
+              EMAIL
+            </label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group my-3 mx-3">
+            <label>Senha</label>
+            <input type="password" class="form-control">
+          </div>
+
       </div>
+
+      <div class="modal-footer">
+
+        <button class="btn btn-primary btn-block">
+          <i class="fa-solid fa-floppy-disk"> </i> Salvar
+        </button>
+        
+      </div>
+    </div>
     </div>
   </div>
   </tr>

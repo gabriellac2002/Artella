@@ -60,6 +60,13 @@ body {
   text-align: center;
 }
 
+.rowTable1{
+  background: #fff;
+}
+.rowTable2{
+  background: #cccccc ;
+}
+
 .button-action {
   border: none;
   background: none;
@@ -89,9 +96,12 @@ body {
 .btnClose:hover {
   transform: scale(1.2);
 }
+
 .modal-body {
   text-align: center;
 }
+
+
 @media (max-width: 540px) {
   .button-action {
     display: block;
