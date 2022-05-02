@@ -13,13 +13,14 @@ body {
 }
 
 .tableBar {
-  background: #0f606b;
   display: grid;
   grid-template-columns: 20% 80%;
   align-items: center;
-  border-radius: 10px;
   margin-top: 20vh;
   height: 50px;
+  border-radius: 0.8em;
+  background: #0f606b;
+  border: 1px solid #073035;
 }
 
 .tableBarForm {
@@ -28,26 +29,28 @@ body {
 }
 
 .formSeach {
+  display: flex;
   justify-content: flex-end;
-  background-color: white;
+  align-items: center;
   width: 400px;
   height: 20px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
   padding: 20px;
+  border-radius: 1.2em;
+  background-color: #6f9fa6;
+  border: 1px solid #073035;
 }
 
 .seachBar {
-  border: none;
   width: 100%;
-  outline: none;
   height: 20px;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 .tableUsers {
   border-collapse: collapse;
-  border-radius: 1.2em;
+  border-radius: 0.8em;
   overflow: hidden;
 }
 
@@ -55,16 +58,16 @@ body {
   background: #0f606b;
 }
 
-.spaceTable table {
-  border: solid 1px #000;
+.spaceTable table tr {
+  border-style: normal;
   text-align: center;
 }
 
-.rowTable1{
+.rowTable1 {
   background: #fff;
 }
-.rowTable2{
-  background: #cccccc ;
+.rowTable2 {
+  background: #cccccc;
 }
 
 .button-action {
@@ -92,8 +95,7 @@ body {
 
 .btnView:hover,
 .btnEdit:hover,
-.btnDelete:hover,
-.btnClose:hover {
+.btnDelete:hover {
   transform: scale(1.2);
 }
 
@@ -101,6 +103,36 @@ body {
   text-align: center;
 }
 
+.modals .modal-dialog .modal-content,
+.modals .modal-dialog {
+  background-color: #266f79;
+  border-radius: 20px;
+  border: none;
+}
+.modals .modal-dialog {
+  border: 1px solid #0f606b;
+}
+
+.modals .modal-dialog .modal-content .modal-header h5 {
+  color: #d9d9d9;
+  font: 20px "Poppins", sans-serif;
+}
+.modals-input {
+  border-radius: 10px;
+}
+.modals-label {
+  color: #d9d9d9;
+  font: 14px "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+.modals-text {
+  color: #d9d9d9;
+  font: 12px "Poppins", sans-serif;
+}
+.modals-button {
+  border-radius: 10px;
+  text-transform: uppercase;
+}
 
 @media (max-width: 540px) {
   .button-action {
@@ -115,6 +147,11 @@ body {
   .btnEdit i p,
   .btnDelete i p {
     display: block;
+  }
+  .btnView i,
+  .btnEdit i,
+  .btnDelete i {
+    color: #d9d9d9;
   }
 
   .btn-row {

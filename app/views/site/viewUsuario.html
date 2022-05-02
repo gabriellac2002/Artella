@@ -39,11 +39,11 @@
   <!-- TABLE  -->
   <div class="container">
 
-    <div class="tableBar mb-3">
+    <div class="tableBar mb-3 mx-0">
 
       <div class="tableBar-add">
-        <button class="btn btnAddMore" data-bs-toggle="modal" data-bs-target="#addAction"><i class="fa-solid fa-plus"
-            style="color:#d9d9d9;"></i></button>
+        <button class="btn btnAddMore ms-1" data-bs-toggle="modal" data-bs-target="#addAction"><i
+            class="fa-solid fa-plus" style="color:#d9d9d9;"></i></button>
       </div>
 
       <div class="tableBarForm d-flex">
@@ -117,7 +117,7 @@
           <!-- 2ª -->
           <tr class="rowTable2">
             <td>2</td>
-            <td>Ok</td>
+            <td>Ok ffffffffffffff</td>
             <td>eu@gmail.com Lorem ipsum dolor sit amet, co?</td>
             <td class="btn-row">
 
@@ -158,50 +158,50 @@
   <!--! MODALS -->
 
   <!-- modal add more -->
-  <div class="modal fade mt-5" id="addAction" tabindex="-1" aria-hidden="true">
+  <div class="modal modals fade mt-5" id="addAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
 
         <!-- cabeçalho do modal -->
-        <div class="modal-header">
+        <div class="modal-header my-3">
           <h5 class="modal-title" style="text-transform: uppercase;">Cadastrar Usuário</h5>
           <!-- Botão fechar -->
           <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
         </div>
 
         <!-- conteúdo do modal -->
-        
-          <div class="form-group my-3 mx-3">
-            <label>Nome</label>
-            <input type="text" class="form-control">
-          </div>
 
-          <div class="form-group my-3 mx-3">
-            <label>
-              EMAIL
-            </label>
-            <input type="text" class="form-control">
-          </div>
+        <div class="form-group mt-5 mb-3 mx-3">
+          <label class="modals-label">Nome</label>
+          <input type="text" class="form-control modals-input">
+        </div>
 
-          <div class="form-group my-3 mx-3">
-            <label>Senha</label>
-            <input type="password" class="form-control">
-          </div>
+        <div class="form-group my-3 mx-3">
+          <label class="modals-label">
+            EMAIL
+          </label>
+          <input type="text" class="form-control modals-input">
+        </div>
+
+        <div class="form-group mt-3 mb-5 mx-3">
+          <label class="modals-label">Senha</label>
+          <input type="password" class="form-control modals-input">
+        </div>
 
       </div>
 
-      <div class="modal-footer">
+      <div class="modal-footer mt-3">
 
-        <button class="btn btn-primary btn-block">
+        <button class="btn btn-primary modals-button">
           <i class="fa-solid fa-floppy-disk"> </i> Salvar
         </button>
-        
+
       </div>
     </div>
   </div>
 
   <!-- modal ações mobile -->
-  <div class="modal fade mt-5" id="userAction" tabindex="-1" aria-hidden="true">
+  <div class="modal modals my-5" id="userAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
 
@@ -209,25 +209,25 @@
         <div class="modal-header">
           <h5 class="modal-title" style="text-transform: uppercase;">Ações</h5>
           <!-- Botão fechar -->
-          <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
+          <button data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
         </div>
 
         <!-- conteúdo do modal -->
-        <div class="modal-body">
+        <div class="modal-body my-5">
 
           <!-- Botões do modal -->
 
           <button class="btn btnView" data-bs-toggle="modal" data-bs-target="#viewAction"><i class="fa-solid fa-eye">
-              <p class="mt-3">Vizualizar</p>
+              <p class="mt-3 modals-text">Vizualizar</p>
             </i></button>
 
           <button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction"><i class="fa fa-pencil">
-              <p class="mt-3">Editar</p>
+              <p class="mt-3 modals-text">Editar</p>
             </i></button>
 
           <button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction"><i
               class="fa-solid fa-trash">
-              <p class="mt-3">Deletar</p>
+              <p class="mt-3 modals-text">Deletar</p>
             </i></button>
 
         </div>
@@ -236,112 +236,113 @@
   </div>
 
   <!--modal view -->
-  <div class="modal fade mt-5" id="viewAction" tabindex="-1" aria-hidden="true">
+  <div class="modal modals fade mt-5" id="viewAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        
+
         <!-- cabeçalho do modal -->
-        <div class="modal-header">
+        <div class="modal-header my-3">
           <h5 class="modal-title" style="text-transform: uppercase;">Usuário</h5>
           <!-- Botão fechar -->
           <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
         </div>
 
         <!-- conteúdo do modal -->
-        
-          <div class="form-group my-3 mx-3">
-            <p>Nome do usuário</p>
-            
+        <div class="modal-body my-5">
+          <div class="form-group mt-2 mb-2 mx-5">
+            <p class="modals-text">Nome do usuário</p>
+
           </div>
 
-          <div class="form-group my-3 mx-3">
-            <p>email do usuário</p>
+          <div class="form-group mt-2 mb-2 mx-5">
+            <p class="modals-text">email do usuário</p>
           </div>
-
+        </div>
       </div>
 
-      </div>
     </div>
+  </div>
   </div>
 
   <!-- delete -->
-  <div class="modal fade mt-5" id="deleteAction" tabindex="-1" aria-hidden="true">
+  <div class="modal modals fade mt-5" id="deleteAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-       
-        <div class="modal-header">
+
+        <div class="modal-header my-3">
           <h5 class="modal-title" style="text-transform: uppercase;">Deletar Usuário</h5>
           <!-- Botão fechar -->
-          <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
+          <button data-bs-dismiss="modal" class="btn-close" aria-label="Close"></button>
         </div>
 
         <!-- conteúdo do modal -->
-        
-          <div class="modal-body">
-            <p>Você deletará esse usuário para sempre, deseja continuar?</p>
-          </div>
+
+        <div class="modal-body">
+          <p class="modals-text my-5" style="font-size: 14px;">Você deletará esse usuário para sempre, deseja continuar?
+          </p>
+        </div>
 
       </div>
 
       <div class="modal-footer">
 
-        <button type="button" class="btn btn-primary btn-block">
+        <button type="button" class="btn btn-primary modals-button">
           <i class="fa-solid fa-check"> </i> CONFIRMAR
 
         </button>
-        <button type="button" class="btn btn-danger btn-block">
+        <button type="button" class="btn btn-danger  modals-button">
           <i class="fa-solid fa-close"> </i> CANCELAR
 
         </button>
-        
-      </div>
 
       </div>
+
     </div>
+  </div>
   </div>
 
   <!-- edit -->
-  <div class="modal fade mt-5" id="editAction" tabindex="-1" aria-hidden="true">
+  <div class="modal modals fade mt-5" id="editAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
 
         <!-- cabeçalho do modal -->
-        <div class="modal-header">
+        <div class="modal-header my-3">
           <h5 class="modal-title" style="text-transform: uppercase;">Editar</h5>
           <!-- Botão fechar -->
           <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
         </div>
 
         <!-- conteúdo do modal -->
-        
-          <div class="form-group my-3 mx-3">
-            <label>Nome</label>
-            <input type="text" class="form-control">
-          </div>
 
-          <div class="form-group my-3 mx-3">
-            <label>
-              EMAIL
-            </label>
-            <input type="text" class="form-control">
-          </div>
+        <div class="form-group mb-3 mt-5 mx-3">
+          <label class="modals-label">Novo Nome</label>
+          <input type="text" class="form-control modals-input">
+        </div>
 
-          <div class="form-group my-3 mx-3">
-            <label>Senha</label>
-            <input type="password" class="form-control">
-          </div>
+        <div class="form-group my-3 mx-3">
+          <label class="modals-label">
+            Novo EMAIL
+          </label>
+          <input type="text" class="form-control modals-input">
+        </div>
+
+        <div class="form-group mt-3 mb-5 mx-3">
+          <label class="modals-label">Nova Senha</label>
+          <input type="password" class="form-control modals-input">
+        </div>
 
       </div>
 
       <div class="modal-footer">
 
-        <button class="btn btn-primary btn-block">
+        <button class="btn btn-primary modals-button">
           <i class="fa-solid fa-floppy-disk"> </i> Salvar
         </button>
-        
+
       </div>
     </div>
-    </div>
+  </div>
   </div>
   </tr>
 
