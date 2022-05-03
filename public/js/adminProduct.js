@@ -12,6 +12,11 @@ fa_trash.forEach(trash => {
 const fa_eye = document.querySelectorAll('.fa-eye')
 
 function openViewModal(e) {
+  const parent = e.target.parentElement.parentElement;
+  const viewName = document.getElementById('viewName');
+  viewName.value = parent.querySelectorAll('td')[0].textContent
+  const viewPrice = document.getElementById('viewPrice');
+  viewPrice.value = parent.querySelectorAll('td')[1].textContent
   document.getElementById('ViewProductModal').click()
 }
 
