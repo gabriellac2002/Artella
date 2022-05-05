@@ -10,7 +10,7 @@ body{
     justify-content: center;
     background-color: #d9d9d9;
     max-width: 1320px;
-    max-height: 2400px;
+    max-height: auto;
 }
 .one{
     display: flex;
@@ -85,8 +85,11 @@ body{
     max-width: 620px;
     margin-top: 30px;
 }
-@media( max-width: 1390px) {
+@media( max-width: 1387px) {
     .two{
+        height: 35rem;
+    }
+    .cards_todos{
         height: 35rem;
     }
 }
@@ -115,7 +118,7 @@ body{
         margin-top: 80px;
     }
 }
-@media ( max-width: 700px){
+@media ( max-width: 693px){
     .slide{
         width: 100%;
         max-width: 400px;
@@ -135,6 +138,9 @@ body{
     .three img{
         height: 7rem;
     }
+    .cards_todos{
+        height: 55rem;
+    }
 }
 @media ( max-width: 550px){
     .slide{
@@ -147,9 +153,6 @@ body{
         max-height: 133px;
         height: 100%; 
     }
-    body{
-        background-color: #d9d9d9;
-    }
     .container{
         margin-left: 20px;
     }  
@@ -157,10 +160,16 @@ body{
         height: 5rem;
     }
 }
-@media ( max-width: 470px){
+@media ( max-width: 479px){
+    .cards_todos{
+        height: 105rem;
+    }
     .two{
         height: 105rem;
     }
+}
+@media ( max-width: 462px){
+    
     .three{
         display: block;
         text-align: center;
@@ -168,5 +177,14 @@ body{
     .three img{
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    
+}
+@media (max-width: 360px){
+    .slide{
+        height: 133px;
+    }
+    .slide img{
+        height: 133px;
     }
 }
