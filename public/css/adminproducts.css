@@ -4,8 +4,7 @@ body {
 
 
 tr:nth-child(even) {
-  background-color: #0f606b !important;
-  color: white !important;
+  background-color: #A4C2C6 !important;
 }
 
 tr:nth-child(odd) {
@@ -13,14 +12,14 @@ tr:nth-child(odd) {
 }
 
 thead tr {
-  background-color: #051d40 !important;
+  background-color: #0f606b !important;
   color: white !important;
   border-bottom: 0px solid black !important;
 }
 
 i {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 table {
@@ -126,6 +125,26 @@ h2 {
   opacity: 1;
 }
 
+.actionsResponsive {
+  display: none;
+}
+
+#modalActions {
+  position: absolute;
+  z-index: 100;
+}
+
+.modalActionsContainer {
+  width: 44px;
+  height: 68px;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
 @media only screen and (max-width: 600px) {
   #addModal > .modal-dialog {
     display: flex !important;
@@ -136,4 +155,13 @@ h2 {
   th {
     display: hidden !important;
   }
+
+  .actions {
+    display: none !important;
+  }
+
+  .actionsResponsive {
+    display: table-cell;
+  }
+
 }

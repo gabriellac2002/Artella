@@ -11,6 +11,13 @@ fa_trash.forEach(trash => {
 
 const fa_eye = document.querySelectorAll('.fa-eye')
 
+const admin_responsive = document.querySelectorAll('.adminResponsive');
+admin_responsive.forEach(element => {
+  element.addEventListener('click', () => {
+    console.log(document.querySelector('#modalActions'))
+  })
+})
+
 function openViewModal(e) {
   const parent = e.target.parentElement.parentElement;
   const viewName = document.getElementById('viewName');
@@ -43,7 +50,7 @@ document.querySelectorAll('.fa-pen').forEach(element => {
   })
 })
 
-document.querySelector('.fa-plus-visible').addEventListener('click', () => {
+document.querySelector('.fa-plus').addEventListener('click', () => {
   document.getElementById('NewProductButton').click();
 })
 

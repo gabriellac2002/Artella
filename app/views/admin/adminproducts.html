@@ -20,6 +20,9 @@
   <main>
     <div class="container-xl">
       <h2>Produtos</h2>
+      <div>
+        
+      </div>
       <table class="table">
         <thead>
           <tr>
@@ -27,8 +30,9 @@
             <th scope="col">Nome</th>
             <th scope="col">Preço</th>
             <th scope="col">
-              <i style="color: #051d40;" class="fa-solid fa-plus"></i>
-              <i class="fa-solid fa-plus fa-plus-visible"></i>
+              <span style="margin-left: 50px;">
+                Ações
+              </span>
             </th>
           </tr>
         </thead>
@@ -40,10 +44,13 @@
             <td hidden>
               Guernica is a large 1937 oil painting on canvas by Spanish artist Pablo Picasso. It is one of his best-known works, regarded by many art critics as the most moving and powerful anti-war painting in history. It is exhibited in the Museo Reina Sofía in Madrid
             </td>
-            <td>
+            <td class="actions">
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-pen"></i>
               <i class="fa-solid fa-trash"></i>
+            </td>
+            <td class="actionsResponsive">
+              <i style="margin-left: 60px;" class="fa-solid fa-ellipsis fa-xl"></i>
             </td>
           </tr>
           <tr id="row2">
@@ -55,10 +62,13 @@
               Considered an archetypal masterpiece of the Italian Renaissance, it has been described as "the best known, the most visited, 
               the most written about, the most sung about, the most parodied work of art in the world".
             </td>
-            <td>
+            <td class="actions">
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-pen"></i>
               <i class="fa-solid fa-trash"></i>
+            </td>
+            <td class="actionsResponsive">
+              <i style="margin-left: 60px;" class="fa-solid fa-ellipsis fa-xl"></i>
             </td>
           </tr>
           <tr id="row3">
@@ -70,10 +80,13 @@
               The agonized face in the painting has become 
               one of the most iconic images of art, seen as symbolizing the anxiety of the human condition.
             </td>
-            <td>
+            <td class="actions">
               <i class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-pen"></i>
               <i class="fa-solid fa-trash"></i>
+            </td>
+            <td class="actionsResponsive">
+              <i style="margin-left: 60px;" class="fa-solid fa-ellipsis fa-xl"></i>
             </td>
           </tr>
         </tbody>
@@ -217,6 +230,24 @@
   
   </div>
   <button id="NewProductButton" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+    Launch demo modal
+  </button>
+
+  <div id="actionsModal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  <button id="NewProductButton" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#actionsModal">
     Launch demo modal
   </button>
   </main>
