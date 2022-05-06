@@ -20,8 +20,12 @@
   <main>
     <div class="container-xl">
       <h2>Produtos</h2>
-      <div>
-        
+      <div class="search">
+        <i class="fa-solid fa-plus"></i>
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input >
+        </div>
       </div>
       <table class="table">
         <thead>
@@ -30,7 +34,7 @@
             <th scope="col">Nome</th>
             <th scope="col">Preço</th>
             <th scope="col">
-              <span style="margin-left: 50px;">
+              <span>
                 Ações
               </span>
             </th>
@@ -50,7 +54,7 @@
               <i class="fa-solid fa-trash"></i>
             </td>
             <td class="actionsResponsive">
-              <i style="margin-left: 60px;" class="fa-solid fa-ellipsis fa-xl"></i>
+              <i class="fa-solid fa-ellipsis fa-xl"></i>
             </td>
           </tr>
           <tr id="row2">
@@ -68,7 +72,7 @@
               <i class="fa-solid fa-trash"></i>
             </td>
             <td class="actionsResponsive">
-              <i style="margin-left: 60px;" class="fa-solid fa-ellipsis fa-xl"></i>
+              <i  class="fa-solid fa-ellipsis fa-xl"></i>
             </td>
           </tr>
           <tr id="row3">
@@ -86,7 +90,7 @@
               <i class="fa-solid fa-trash"></i>
             </td>
             <td class="actionsResponsive">
-              <i style="margin-left: 60px;" class="fa-solid fa-ellipsis fa-xl"></i>
+              <i  class="fa-solid fa-ellipsis fa-xl"></i>
             </td>
           </tr>
         </tbody>
@@ -237,7 +241,11 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-body">
-          
+          <div>
+            <i class="fa-solid fa-eye"></i>
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -247,7 +255,7 @@
   </div>
   
   </div>
-  <button id="NewProductButton" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#actionsModal">
+  <button id="ActionsModal" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#actionsModal">
     Launch demo modal
   </button>
   </main>

@@ -129,6 +129,10 @@ h2 {
   display: none;
 }
 
+.actionsResponsive i {
+  margin-left: 60px;
+}
+
 #modalActions {
   position: absolute;
   z-index: 100;
@@ -145,6 +149,46 @@ h2 {
   padding: 5px;
 }
 
+.search {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #051d40;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.search > i {
+  margin-left: 2.4em;
+}
+
+.search div {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1D3353;
+  padding: 5px;
+  margin-right: 2.4em;
+}
+
+.search i {
+  color: white;
+}
+
+.search input {
+  background-color: transparent;
+  width: 100%;
+  border: 0px solid;
+}
+
+th span {
+  margin-left: 50px;
+}
+
 @media only screen and (max-width: 600px) {
   #addModal > .modal-dialog {
     display: flex !important;
@@ -152,8 +196,23 @@ h2 {
     align-items: center !important;
   }
 
+  .modal-body > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   th {
     display: hidden !important;
+  }
+
+  td {
+    font-size: 12px;
+  }
+
+  td:nth-child(1) {
+    display: none;
   }
 
   .actions {
@@ -164,4 +223,20 @@ h2 {
     display: table-cell;
   }
 
+  .actionsResponsive i {
+    margin-left: 24px;
+  }
+
+  th span {
+    margin-left: 10px;
+  }
+
+  .search div {
+    width: 90%;
+    margin-right: 2px;
+  }
+  
+  .search > i {
+    margin-left: 2px;
+  }
 }

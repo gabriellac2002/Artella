@@ -19,12 +19,17 @@ admin_responsive.forEach(element => {
 })
 
 function openViewModal(e) {
-  const parent = e.target.parentElement.parentElement;
-  const viewName = document.getElementById('viewName');
-  viewName.value = parent.querySelectorAll('td')[0].textContent
-  const viewPrice = document.getElementById('viewPrice');
-  viewPrice.value = parent.querySelectorAll('td')[1].textContent
-  document.getElementById('ViewProductModal').click()
+  if(e.target.parentElement.tagName != "DIV") {
+    const parent = e.target.parentElement.parentElement;
+    const viewName = document.getElementById('viewName');
+    viewName.value = parent.querySelectorAll('td')[0].textContent
+    const viewPrice = document.getElementById('viewPrice');
+    viewPrice.value = parent.querySelectorAll('td')[1].textContent
+    document.getElementById('ViewProductModal').click()
+  }
+  else {
+    document.getElementById('ViewProductModal').click()
+  }
 }
 
 fa_eye.forEach(fa => {
@@ -42,11 +47,16 @@ window.addEventListener("drop",function(e){
 
 document.querySelectorAll('.fa-pen').forEach(element => {
   element.addEventListener('click', () => {
-    const data = element.parentElement.parentElement.querySelectorAll('td');
-    document.querySelector('#editingNameInput').value = data[0].textContent;
-    document.querySelector('#editingPriceInput').value = data[1].textContent;
-    document.querySelector('#editingDescriptionTextArea').value = data[2].innerText;
-    document.getElementById('EditingButton').click();
+    if(element.parentElement.tagName != "DIV") {
+      const data = element.parentElement.parentElement.querySelectorAll('td');
+      document.querySelector('#editingNameInput').value = data[0].textContent;
+      document.querySelector('#editingPriceInput').value = data[1].textContent;
+      document.querySelector('#editingDescriptionTextArea').value = data[2].innerText;
+      document.getElementById('EditingButton').click();
+    }
+    else {
+      document.getElementById('EditingButton').click();
+    }
   })
 })
 
@@ -179,7 +189,9 @@ function deleteImage(e) {
 function deleteRow(e) {
   //Fetch api action
   //if(!error)
-  e.target.parentElement.parentElement.remove();
+  if(e.target.parentElement.tagName != 'DIV') {
+    e.target.parentElement.parentElement.remove();
+  }
 }
 
 function clearPreviewedImages() {
@@ -205,4 +217,11 @@ document.querySelector('#addModalClose2Button').addEventListener('click', () => 
 
 document.querySelectorAll('.btn-close').forEach(element => {
   element.classList.add('btn-close-white')
+})
+
+document.querySelectorAll('.fa-ellipsis').forEach(element => {
+  console.log("FAAA")
+  element.addEventListener('click', () => {
+    document.getElementById('ActionsModal').click();
+  })
 })
