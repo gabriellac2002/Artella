@@ -75,13 +75,14 @@
   line-height: 60px;
 }
 
-.sidebar img
+
+.sidebar .logo-details img
 {
+  display: none;
   height: 60px;
   min-width: 50px;
   text-align: center;
   margin-right: 20px;
-  overflow: hidden;
 }
 
 .sidebar .nav-list
