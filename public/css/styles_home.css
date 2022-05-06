@@ -4,8 +4,17 @@ body{
     font-size: 20px;
     color: #051D40 !important;
 }
-.container{
-    width: 90%;
+h1{
+    margin-left: 3.125rem;
+}
+h2{
+    margin-left: 5rem;
+}
+.container_home{
+    display: inline;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
     align-content: center;
     justify-content: center;
     background-color: #d9d9d9;
@@ -85,12 +94,22 @@ body{
     max-width: 620px;
     margin-top: 30px;
 }
-@media( max-width: 1387px) {
+@media( max-width: 1247.5px){
+    .two{
+        height: 35rem;
+    }  
+}
+@media( max-width: 1224px) {
     .two{
         height: 35rem;
     }
     .cards_todos{
         height: 35rem;
+    }
+}
+@media ( max-width: 1260px){
+    .cards_todos{
+        width: 100%;
     }
 }
 @media ( max-width: 1200px){
@@ -110,7 +129,7 @@ body{
         max-height: 222px;
         height: 100%; 
     }
-    .container{
+    .container_home{
         max-height: 100%;
         margin-left: 40px;
     }
@@ -129,7 +148,7 @@ body{
         max-height: 177px;
         height: 100%; 
     }
-    .container{
+    .container_home{
         margin-left: 40px;
     }
     .two{
@@ -153,14 +172,14 @@ body{
         max-height: 133px;
         height: 100%; 
     }
-    .container{
+    .container_home{
         margin-left: 20px;
     }  
     .three img{
         height: 5rem;
     }
 }
-@media ( max-width: 479px){
+@media ( max-width: 415px){
     .cards_todos{
         height: 105rem;
     }
