@@ -156,7 +156,8 @@
       font-size: 20px;
     }
     .button-action {
-      display: block;
+      display: inline;
+      margin-right: 0px;
     }
   
     .btns-desktop {
@@ -177,6 +178,7 @@
     .btn-row {
       min-width: 0;
       max-width: 30px;
+
     }
     .headTable {
       font: 12px "Poppins", sans-serif;
