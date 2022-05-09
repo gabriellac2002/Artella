@@ -47,7 +47,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width:250px;
+    width: 370px;
     height: 20px;
     padding: 20px;
     border-radius: 1.2em;
@@ -61,6 +61,7 @@
     border: none;
     background: none;
     outline: none;
+    color: #d9d9d9;
   }
   
   .tableUsers {
@@ -174,7 +175,6 @@
     .btnDelete i {
       color: #d9d9d9;
     }
-  
     .btn-row {
       min-width: 0;
       max-width: 30px;
@@ -187,6 +187,6 @@
       font: 12px "Poppins", sans-serif;
     }
     .formSeach {
-      width: 200px;
+      width: 300px;
     }
   }
