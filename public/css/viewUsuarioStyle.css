@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #d9d9d9;
+}
+
+.spaceTable {
+  width: 100%;
+  height: 100%;
+}
+.title {
+  margin-top: 5vh;
+  text-align: center;
+  font: 34px "Poppins", sans-serif;
+  font-weight: 100;
+  letter-spacing: 4px;
+  color: #0f606b;
+  text-shadow: #402857 0.05em 0.1em 0.1em;
+}
+.tableBar {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  margin-top: 8vh;
+  height: 50px;
+  border-radius: 0.8em;
+  background: #051d40;
+  border: 1px solid #073035;
+}
+
+.tableBarForm {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.formSeach {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 400px;
+  height: 20px;
+  padding: 20px;
+  border-radius: 1.2em;
+  background-color: #1d3353;
+  border: 1px solid #073035;
+}
+
+.seachBar {
+  width: 100%;
+  height: 20px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.tableUsers {
+  border-collapse: collapse;
+  border-radius: 0.8em;
+  overflow: hidden;
+}
+
+.tableUsers thead {
+  background: #0f606b;
+  color: #d9d9d9;
+}
+
+.spaceTable table tr {
+  border-style: normal;
+  text-align: center;
+}
+
+.rowTable1 {
+  background: #fff;
+}
+.rowTable2 {
+  background: #cccccc;
+}
+
+.button-action {
+  border: none;
+  background: none;
+  display: none;
+}
+
+.btn-row {
+  min-width: 200px;
+}
+
+.btnView,
+.btnEdit,
+.btnDelete {
+  font: 12px "Poppins", sans-serif;
+}
+
+.btnView i p,
+.btnEdit i p,
+.btnDelete i p {
+  display: none;
+  font: 12px "Poppins", sans-serif;
+}
+
+.btnView:hover,
+.btnEdit:hover,
+.btnDelete:hover {
+  transform: scale(1.2);
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modals .modal-dialog .modal-content,
+.modals .modal-dialog {
+  background-color: #266f79;
+  border-radius: 20px;
+  border: none;
+}
+.modals .modal-dialog {
+  border: 1px solid #0f606b;
+}
+
+.modals .modal-dialog .modal-content .modal-header h5 {
+  color: #d9d9d9;
+  font: 20px "Poppins", sans-serif;
+}
+.modals-input {
+  border-radius: 10px;
+}
+.modals-label {
+  color: #d9d9d9;
+  font: 14px "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+.modals-text {
+  color: #d9d9d9;
+  font: 12px "Poppins", sans-serif;
+}
+.modals-button {
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 540px) {
+  .title {
+    font-size: 20px;
+  }
+  .button-action {
+    display: block;
+  }
+
+  .btns-desktop {
+    display: none;
+  }
+
+  .btnView i p,
+  .btnEdit i p,
+  .btnDelete i p {
+    display: block;
+  }
+  .btnView i,
+  .btnEdit i,
+  .btnDelete i {
+    color: #d9d9d9;
+  }
+
+  .btn-row {
+    min-width: 0;
+    max-width: 30px;
+  }
+  .headTable {
+    font: 12px "Poppins", sans-serif;
+  }
+  .bodyTable {
+    font: 12px "Poppins", sans-serif;
+  }
+  .formSeach {
+    width: 200px;
+  }
+}

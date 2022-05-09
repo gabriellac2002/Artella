@@ -1,14 +1,14 @@
-.bg-universal{
-
-  background-color: #d9d9d9;
-
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.text-universal{
+.bg-universal {
+  background-color: #d9d9d9;
+}
 
-  font-family: 'Poppins', sans-serif;
+.text-universal {
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
-  color: #051D40 !important;
-
-
+  color: #051d40 !important;
 }

@@ -1,0 +1,97 @@
+body{
+    background-color: #d9d9d9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #051D40 !important;
+}
+.logo_contato img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem;
+    height: 25rem;
+}
+h1{
+    text-align: center;
+    font-size: 5rem;
+}
+h2{
+    text-align: center;
+    font-size: 3rem;
+}
+.formulario{
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.butao{
+    margin-top: 0rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4rem;
+    margin-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+.mapa_responsivo{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1rem;
+    height: 300px;
+ }
+.mapa_responsivo{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.mapa_responsivo iframe{
+    left:0;
+    top:0;
+    height:70%;
+    width:100%;
+    position:absolute;
+}
+@media ( max-width:750px){
+    h1{
+        font-size: 4rem;
+    }
+}
+@media (max-width:550px){
+    h1{
+        font-size: 3rem;
+    }
+    .formulario{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+}
+@media (max-width:400px){
+    .logo_contato img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width:320px){
+    .logo_contato img{
+        width: 250px;
+        height: 250px;
+    } 
+}
+@media (max-width:300px){
+    .formulario{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+}
