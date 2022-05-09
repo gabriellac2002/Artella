@@ -9,9 +9,9 @@ Projeto desenvolvido para o Trainee da [Code Jr](https://codejr.com.br/) que con
 
 Desenvolvedores:
 - shbdjsbd
+- Kleiton Ewerton de Oliveira
 - 
-- 
-- 
+- Pedro Grimaldi Hansel
 
 Scrum Master:
 
