@@ -39,14 +39,14 @@ h2{
     max-height: 320px;     
 }
 .two{
-    height: 20rem;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
 .cards_todos{
     display: flex;
     justify-content: center;
-    height: 20rem;
+    height: 100%;
 }
 .card{
     width: 13rem;
@@ -58,11 +58,15 @@ h2{
 .cards{
     width: 13rem;
     padding: 0px;
-    margin-bottom: 0px;
+    height: 100%;
+
 }
 .card img{
-    width: 9rem;
-    height: 10rem; 
+    height: 8.75rem;
+    width: 7.75rem;
+}    
+.card-body{
+        padding: 0.25rem;
 }
 .three{
     display: flex;
@@ -71,6 +75,8 @@ h2{
     background-color: #051D40;
     border-radius: 15px;
     margin-bottom: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 .three img{
     height: 10rem;
@@ -94,22 +100,19 @@ h2{
     max-width: 620px;
     margin-top: 30px;
 }
-@media( max-width: 1247.5px){
-    .two{
-        height: 35rem;
-    }  
-}
-@media( max-width: 1224px) {
-    .two{
-        height: 35rem;
-    }
-    .cards_todos{
-        height: 35rem;
-    }
-}
 @media ( max-width: 1260px){
     .cards_todos{
         width: 100%;
+    }
+}
+@media ( max-width: 1247px){
+    .cards img{
+        height: 8.75rem;
+        width: 7.75rem;
+    }
+
+    .card{
+        height: 13.75rem;
     }
 }
 @media ( max-width: 1200px){
@@ -140,7 +143,7 @@ h2{
 @media ( max-width: 693px){
     .slide{
         width: 100%;
-        max-width: 400px;
+        max-width: 500px;
         max-height: 177px;
         height: 100%; 
     }
@@ -151,20 +154,20 @@ h2{
     .container_home{
         margin-left: 40px;
     }
-    .two{
-        height: 55rem;
-    }
     .three img{
         height: 7rem;
     }
-    .cards_todos{
-        height: 55rem;
+    h1{
+        margin-left: 2rem;
+    }
+    h2{
+        margin-left: 3rem;
     }
 }
 @media ( max-width: 550px){
     .slide{
         width: 100%;
-        max-width: 300px;
+        max-width: 400px;
         max-height: 133px;
         height: 100%;
     }
@@ -179,14 +182,6 @@ h2{
         height: 5rem;
     }
 }
-@media ( max-width: 415px){
-    .cards_todos{
-        height: 105rem;
-    }
-    .two{
-        height: 105rem;
-    }
-}
 @media ( max-width: 462px){
     
     .three{
@@ -199,11 +194,43 @@ h2{
     }
     
 }
+@media ( max-width: 415px){
+    .slide{
+        width: 100%;
+        max-width: 300px;
+        max-height: 177px;
+        height: 100%; 
+    }
+    .slide img{
+        max-height: 133.33px;
+        height: 100%; 
+    }
+    h1{
+        text-align: center;
+        margin-left: 0px;
+    }
+    h2{
+        text-align: center;
+        margin-left: 0px;
+    }
+}
 @media (max-width: 360px){
     .slide{
         height: 133px;
     }
     .slide img{
         height: 133px;
+    }
+}
+@media ( max-width: 320px){
+    .slide{
+        width: 100%;
+        max-width: 250px;
+        max-height: 177px;
+        height: 100%; 
+    }
+    .slide img{
+        max-height: 111.11px;
+        height: 100%; 
     }
 }
