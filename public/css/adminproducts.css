@@ -1,0 +1,242 @@
+body {
+  background-color: #d9d9d9;
+}
+
+
+tr:nth-child(even) {
+  background-color: #A4C2C6 !important;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+thead tr {
+  background-color: #0f606b !important;
+  color: white !important;
+  border-bottom: 0px solid black !important;
+}
+
+i {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+table {
+  margin-top: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.editingForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editingForm label {
+  margin-top: 10px;
+}
+
+.editingForm input {
+  width: 80%;
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+}
+
+.editingForm .row select {
+  width: 168px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.fileInput {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 280px;
+  max-width: 280px;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#imagesPreview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#imagesPreview > img {
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.imagePreviewed {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: end;
+  margin-top: 16px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.imagePreviewed i {
+  color: #0f606b;
+}
+
+.divMouseOver {
+  color: #000;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divMouseOver:hover {
+  opacity: 1;
+}
+
+.modal-header {
+  background-color: #051d40 !important;
+  color: white !important;
+}
+
+.btn-close {
+  color: #fff !important; 
+  opacity: 1;
+}
+
+.actionsResponsive {
+  display: none;
+}
+
+.actionsResponsive i {
+  margin-left: 60px;
+}
+
+#modalActions {
+  position: absolute;
+  z-index: 100;
+}
+
+.modalActionsContainer {
+  width: 44px;
+  height: 68px;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.search {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #051d40;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.search > i {
+  margin-left: 2.4em;
+}
+
+.search div {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1D3353;
+  padding: 5px;
+  margin-right: 2.4em;
+}
+
+.search i {
+  color: white;
+}
+
+.search input {
+  background-color: transparent;
+  width: 100%;
+  border: 0px solid;
+}
+
+th span {
+  margin-left: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  #addModal > .modal-dialog {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .modal-body > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  th {
+    display: hidden !important;
+  }
+
+  td {
+    font-size: 12px;
+  }
+
+  td:nth-child(1) {
+    display: none;
+  }
+
+  .actions {
+    display: none !important;
+  }
+
+  .actionsResponsive {
+    display: table-cell;
+  }
+
+  .actionsResponsive i {
+    margin-left: 24px;
+  }
+
+  th span {
+    margin-left: 10px;
+  }
+
+  .search div {
+    width: 90%;
+    margin-right: 2px;
+  }
+  
+  .search > i {
+    margin-left: 2px;
+  }
+}
