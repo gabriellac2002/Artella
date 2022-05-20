@@ -2,5 +2,5 @@
   use App\Core\Router;
 
   $router = new Router();
-  $router->get("admin/test", "TestController@index");
+  $router->get("admin/test", "ExampleController@index");
 ?>

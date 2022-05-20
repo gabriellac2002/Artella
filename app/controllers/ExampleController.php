@@ -16,9 +16,9 @@ class ExampleController
 
     public function index()
     {
-        var_dump($this->queryBuilder->table("users")->select("*")->where("id", '=', 2)
-        ->where("name", '=', 'Gustavo')
-        ->commit());
+        $this->queryBuilder->table("users")->delete()
+        ->where("name", "=", "Gust")->orWhere("id", ">", 2)
+        ->commit();
     }
 
     public function show()

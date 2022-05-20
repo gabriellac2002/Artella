@@ -79,29 +79,63 @@ class QueryBuilder
     }
 
     public function insert($values) {
-        $query = "INSERT INTO ".$this->table." values(default,";
-        $params = "";
-        for($i = 0; $i < count($values); $i++) {
-            if($i == count($values) - 1) {
-                $params = $params."?";
+        $query = "INSERT INTO ".$this->table;
+        $uniqueArray = [];
+        $localIndex = 0;
+        if(gettype($values[0]) !== "array") {
+            $uniqueArray = $values;
+            $query = $query." values(default,";
+            $params = "";
+            for($i = 0; $i < count($values); $i++) {
+                if($i == count($values) - 1) {
+                    $params = $params."?";
+                }
+                else {
+                    $params = $params."?,";
+                }
             }
-            else {
-                $params = $params."?,";
+            $query = $query.$params.")";
+        }
+        else {
+            $query = $query." values";
+            for($i = 0; $i < count($values); $i++) {
+                $query = $query." (default,";
+                $params = "";
+                for($b = 0; $b < count($values[$i]); $b++) {
+                    if($b == count($values[$i]) - 1) {
+                        $params = $params."?";
+                    }
+                    else {
+                        $params = $params."?,";
+                    }
+                    $uniqueArray[$localIndex] = $values[$i][$b];
+                    $localIndex++;
+                }
+                if($i == count($values) - 1) {
+                    $query = $query.$params.")";
+                }
+                else {
+                    $query = $query.$params."),";
+                }
             }
         }
-        $query = $query.$params.")";
         $statement = $this->pdo->prepare($query);
-        $statement->execute($values);
-        
+        $statement->execute($uniqueArray);
+        $this->cleanup();
+        return $this;
+    }
+
+    public function cleanup() {
+        $this->table = "";
+        $this->storedValues = [];
+        $this->rootQuery = "";
+        $this->index = 0;
     }
 
     public function commit() {
         $statement = $this->pdo->prepare($this->rootQuery);
         $statement->execute($this->storedValues);
-        $this->table = "";
-        $this->storedValues = [];
-        $this->rootQuery = "";
-        $this->index = 0;
+        $this->cleanup();
         return $statement->fetch();
     }
 
@@ -114,14 +148,22 @@ class QueryBuilder
     {
         $this->rootQuery = "UPDATE ".$this->table." set ";
         for($i = 0; $i < count($names); $i++) {
-            
+            if($i == count($names) - 1) {
+                $this->rootQuery = $this->rootQuery.$names[$i]." = ?";
+            }
+            else {
+                $this->rootQuery = $this->rootQuery.$names[$i]." = ?, ";
+            }
+            $this->storedValues[$this->index] = $values[$i];
+            $this->index++;
         }
         return $this;
     }
 
     public function delete()
     {
-      
+      $this->rootQuery = "DELETE FROM ".$this->table;
+      return $this;
     }
 
     public function read()
