@@ -8,11 +8,15 @@ use App\Core\Database\QueryBuilder;
 
 class TestController
 {
-  
+    protected $queryBuilder;
+
+    public function __construct() {
+        $this->queryBuilder = new QueryBuilder();
+    }
 
     public function index()
     {
-       
+        
     }
 
     public function show()

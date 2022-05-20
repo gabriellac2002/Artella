@@ -1,6 +1,4 @@
 <?php
   use App\Core\Router;
-
-  $router = new Router();
-  $router->get("admin/test", "ExampleController@index");
+  $router->get("admin/test", "PostController@index");
 ?>
