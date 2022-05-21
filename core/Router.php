@@ -60,7 +60,6 @@ class Router
     public function direct($uri, $requestType)
     {
         if (array_key_exists($uri, $this->routes[$requestType])) {
-            var_dump(...explode('@', $this->routes[$requestType][$uri]));
             return $this->callAction(
                 ...explode('@', $this->routes[$requestType][$uri])
             );
@@ -79,8 +78,7 @@ class Router
     {
         $controller = "App\\Controllers\\{$controller}";
         $controller = new $controller;
-        $controller->index();
-        echo $controller;
+        
 
         if (! method_exists($controller, $action)) {
             throw new Exception(

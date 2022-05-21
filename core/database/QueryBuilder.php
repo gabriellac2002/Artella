@@ -136,7 +136,7 @@ class QueryBuilder
         $statement = $this->pdo->prepare($this->rootQuery);
         $statement->execute($this->storedValues);
         $this->cleanup();
-        return $statement->fetch();
+        return $statement->fetchAll();
     }
 
     public function selectAll()
@@ -162,8 +162,19 @@ class QueryBuilder
 
     public function delete()
     {
-      $this->rootQuery = "DELETE FROM ".$this->table;
-      return $this;
+        $this->rootQuery = "DELETE FROM ".$this->table;
+        return $this;
+    }
+
+    public function join($table, $rootColumn, $clause, $foreignColumn) {
+        $this->rootQuery = $this->rootQuery." inner join ".$table." on ".$table
+        .".".$foreignColumn." ".$clause." ".$this->table.".".$rootColumn;
+        return $this;
+    }
+
+    public function limit($rowCount, $offset) {
+        $this->rootQuery = $this->rootQuery." limit ".$rowCount.", ".$offset;
+        return $this;
     }
 
     public function read()
