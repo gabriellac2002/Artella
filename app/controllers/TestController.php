@@ -26,6 +26,7 @@ class TestController
         foreach($prepare->commit() as $value) {
             echo $value["name"];
         }
+        echo "ola";
     }
 
     public function show()
