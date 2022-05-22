@@ -11,10 +11,12 @@ fa_trash.forEach(trash => {
 
 const fa_eye = document.querySelectorAll('.fa-eye')
 
-const admin_responsive = document.querySelectorAll('.adminResponsive');
+const admin_responsive = document.querySelectorAll('.actionsResponsive');
 admin_responsive.forEach(element => {
   element.addEventListener('click', () => {
-    console.log(document.querySelector('#modalActions'))
+    
+
+
   })
 })
 
@@ -187,8 +189,7 @@ function deleteImage(e) {
 }
 
 function deleteRow(e) {
-  //Fetch api action
-  //if(!error)
+
   if(e.target.parentElement.tagName != 'DIV') {
     e.target.parentElement.parentElement.remove();
   }
@@ -220,8 +221,9 @@ document.querySelectorAll('.btn-close').forEach(element => {
 })
 
 document.querySelectorAll('.fa-ellipsis').forEach(element => {
-  console.log("FAAA")
+  
   element.addEventListener('click', () => {
     document.getElementById('ActionsModal').click();
+    
   })
 })

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../../../public/css/adminproducts.css">
 </head>
 <body>
+  <?php include 'sidebarAdmin.php'?>
   <main>
     <div class="container-xl">
       <h2>Produtos</h2>
@@ -41,10 +42,13 @@
           </tr>
         </thead>
         <tbody>
+
+        <?php foreach ($products as $value) { ?>
+
           <tr id="row1">
-            <th scope="row">1</th>
-            <td>Guernica</td>
-            <td>R$ 890.000.00</td>
+            <th scope="row"><?php echo $value["id"] ?></th>
+            <td><?php echo $value["name"] ?></td>
+            <td>R$ <?php echo $value["price"] ?></td>
             <td hidden>
               Guernica is a large 1937 oil painting on canvas by Spanish artist Pablo Picasso. It is one of his best-known works, regarded by many art critics as the most moving and powerful anti-war painting in history. It is exhibited in the Museo Reina Sofía in Madrid
             </td>
@@ -57,43 +61,11 @@
               <i class="fa-solid fa-ellipsis fa-xl"></i>
             </td>
           </tr>
-          <tr id="row2">
-            <th scope="row">2</th>
-            <td>Monalisa</td>
-            <td>R$ 1.250.000.00</td>
-            <td hidden>
-              The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci. 
-              Considered an archetypal masterpiece of the Italian Renaissance, it has been described as "the best known, the most visited, 
-              the most written about, the most sung about, the most parodied work of art in the world".
-            </td>
-            <td class="actions">
-              <i class="fa-solid fa-eye"></i>
-              <i class="fa-solid fa-pen"></i>
-              <i class="fa-solid fa-trash"></i>
-            </td>
-            <td class="actionsResponsive">
-              <i  class="fa-solid fa-ellipsis fa-xl"></i>
-            </td>
-          </tr>
-          <tr id="row3">
-            <th scope="row">3</th>
-            <td>O Grito</td>
-            <td>R$ 1.500.000.00</td>
-            <td hidden>
-              The Scream is the popular name given to a composition created by Norwegian artist Edvard Munch in 1893. 
-              The agonized face in the painting has become 
-              one of the most iconic images of art, seen as symbolizing the anxiety of the human condition.
-            </td>
-            <td class="actions">
-              <i class="fa-solid fa-eye"></i>
-              <i class="fa-solid fa-pen"></i>
-              <i class="fa-solid fa-trash"></i>
-            </td>
-            <td class="actionsResponsive">
-              <i  class="fa-solid fa-ellipsis fa-xl"></i>
-            </td>
-          </tr>
+
+          <?php } ?>
+
         </tbody>
+
       </table>
       <div id="addModal" class="modal" tabindex="-1">
         <div class="modal-dialog modal-lg">
@@ -256,7 +228,7 @@
   
   </div>
   <button id="ActionsModal" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#actionsModal">
-    Launch demo modal
+    
   </button>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -264,5 +236,7 @@
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/91248aca6a.js" crossorigin="anonymous"></script>
   <script src="../../../public/js/adminProduct.js"></script>
+
+  
 </body>
 </html>
