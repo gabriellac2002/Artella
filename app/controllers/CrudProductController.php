@@ -29,6 +29,7 @@ class CrudProductController
 
     public function create()
     {
+        var_dump($_POST);
     }
 
     public function store(){

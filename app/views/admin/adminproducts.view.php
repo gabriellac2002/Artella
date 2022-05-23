@@ -75,9 +75,9 @@
               <button id="addModalClose1Button" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form class="editingForm">
-                <label>Nome</label>
-                <input  placeholder="Nome">
+              <form class="editingForm" method="post" action="productsCreat">
+                <label for="nome">Nome</label>
+                <input name="nome" placeholder="Nome">
                 <label>Preço</label>
                 <input placeholder="Preço">
                 <label>Descrição</label>
@@ -101,12 +101,12 @@
                 <div id="imagesPreview">
                   
                 </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button id="addModalClose2Button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary">Salvar</button>
-            </div>
+              </div>
+              <div class="modal-footer">
+                <button id="addModalClose2Button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
