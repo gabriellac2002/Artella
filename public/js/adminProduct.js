@@ -220,10 +220,23 @@ document.querySelectorAll('.btn-close').forEach(element => {
   element.classList.add('btn-close-white')
 })
 
+
+/* Query para adicionar dados nos campo responsivos*/
 document.querySelectorAll('.fa-ellipsis').forEach(element => {
   
   element.addEventListener('click', () => {
-    document.getElementById('ActionsModal').click();
+    const data = element.parentElement.parentElement.querySelectorAll('td');
+      document.querySelector('#editingNameInput').value = data[0].textContent;
+      document.querySelector('#editingPriceInput').value = data[1].textContent;
+      document.querySelector('#editingDescriptionTextArea').value = data[2].innerText;
+      document.querySelector('#viewName').value = data[0].textContent;
+      document.querySelector('#viewPrice').value = data[1].textContent;
+      document.querySelector('#viewDescription').value = data[2].innerText;
+
+      
+      document.getElementById('ActionsModal').click();
     
   })
 })
+
+

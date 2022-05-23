@@ -50,14 +50,14 @@
             <td><?php echo $value["name"] ?></td>
             <td>R$ <?php echo $value["price"] ?></td>
             <td hidden>
-              Guernica is a large 1937 oil painting on canvas by Spanish artist Pablo Picasso. It is one of his best-known works, regarded by many art critics as the most moving and powerful anti-war painting in history. It is exhibited in the Museo Reina Sofía in Madrid
+            <?php echo $value["description"] ?>
             </td>
             <td class="actions">
-              <i class="fa-solid fa-eye"></i>
+              <i  class="fa-solid fa-eye"></i>
               <i class="fa-solid fa-pen"></i>
               <i class="fa-solid fa-trash"></i>
             </td>
-            <td class="actionsResponsive">
+            <td  class="actionsResponsive">
               <i class="fa-solid fa-ellipsis fa-xl"></i>
             </td>
           </tr>
@@ -179,9 +179,10 @@
             <label>Preço</label>
             <input id="viewPrice" disabled placeholder="Preço">
             <label>Descrição</label>
-            <span id="viewDescription">
-              
-            </span>
+            
+            <textarea id="viewDescription">
+                
+              </textarea>
             <div class="row">
               <label>Categoria </label>
               <select>
