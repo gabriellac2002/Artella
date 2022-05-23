@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Área administrativa produtos</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,16 +16,17 @@
   <link rel="stylesheet" href="../../../public/css/styles.css">
   <link rel="stylesheet" href="../../../public/css/adminproducts.css">
 </head>
+
 <body>
-  <?php include 'sidebarAdmin.php'?>
+  <?php include 'sidebarAdmin.php' ?>
   <main>
     <div class="container-xl">
       <h2>Produtos</h2>
       <div class="search">
         <i class="fa-solid fa-plus"></i>
         <div>
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input >
+          <i class="fa-solid fa-magnifying-glass" onclick="search();"></i>
+          <input type="search" id="search">
         </div>
       </div>
       <table class="table">
@@ -43,24 +44,24 @@
         </thead>
         <tbody>
 
-        <?php foreach ($products as $value) { ?>
+          <?php foreach ($products as $value) { ?>
 
-          <tr id="row1">
-            <th scope="row"><?php echo $value["id"] ?></th>
-            <td><?php echo $value["name"] ?></td>
-            <td>R$ <?php echo $value["price"] ?></td>
-            <td hidden>
-            <?php echo $value["description"] ?>
-            </td>
-            <td class="actions">
-              <i  class="fa-solid fa-eye"></i>
-              <i class="fa-solid fa-pen"></i>
-              <i class="fa-solid fa-trash"></i>
-            </td>
-            <td  class="actionsResponsive">
-              <i class="fa-solid fa-ellipsis fa-xl"></i>
-            </td>
-          </tr>
+            <tr id="row1">
+              <th scope="row"><?php echo $value["id"] ?></th>
+              <td><?php echo $value["name"] ?></td>
+              <td>R$ <?php echo $value["price"] ?></td>
+              <td hidden>
+                <?php echo $value["description"] ?>
+              </td>
+              <td class="actions">
+                <i class="fa-solid fa-eye"></i>
+                <i class="fa-solid fa-pen"></i>
+                <i class="fa-solid fa-trash"></i>
+              </td>
+              <td class="actionsResponsive">
+                <i class="fa-solid fa-ellipsis fa-xl"></i>
+              </td>
+            </tr>
 
           <?php } ?>
 
@@ -75,14 +76,14 @@
               <button id="addModalClose1Button" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form class="editingForm" method="post" action="productsCreat">
+              <form class="editingForm" method="post" action="productsCreate">
                 <label for="nome">Nome</label>
                 <input name="nome" placeholder="Nome">
                 <label>Preço</label>
-                <input placeholder="Preço">
+                <input name="price" placeholder="Preço">
                 <label>Descrição</label>
-                <textarea>
-                  
+                <textarea name="description">
+
                 </textarea>
                 <div class="row">
                   <label>Categoria </label>
@@ -99,18 +100,18 @@
                   <h5>Arraste seus arquivos aqui</h5>
                 </div>
                 <div id="imagesPreview">
-                  
+
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button id="addModalClose2Button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="submit" class="btn btn-primary">Salvar</button>
-              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="addModalClose2Button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
             </form>
           </div>
         </div>
       </div>
-      
+
     </div>
     <button id="EditingButton" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editingModal">
       Launch demo modal
@@ -131,7 +132,7 @@
               <input id="editingPriceInput" placeholder="Preço">
               <label>Descrição</label>
               <textarea id="editingDescriptionTextArea">
-                
+
               </textarea>
               <div class="row">
                 <label>Categoria </label>
@@ -148,7 +149,7 @@
                 <h5>Arraste seus arquivos aqui</h5>
               </div>
               <div id="imagesPreview">
-                
+
               </div>
             </form>
           </div>
@@ -159,85 +160,84 @@
         </div>
       </div>
     </div>
-    
-  </div>
-  <button id="ViewProductModal" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewModal">
-    Launch demo modal
-  </button>
 
-  <div id="viewModal" class="modal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Ver produto: </h5>
-          <button color="white" id="viewModalClose1Button" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form class="editingForm">
-            <label>Nome</label>
-            <input id="viewName" disabled placeholder="Nome">
-            <label>Preço</label>
-            <input id="viewPrice" disabled placeholder="Preço">
-            <label>Descrição</label>
-            
-            <textarea id="viewDescription">
-                
-              </textarea>
-            <div class="row">
-              <label>Categoria </label>
-              <select>
-                <option name="">NFT</option>
-                <option name="">Quadro</option>
-                <option name="">Aquarela</option>
-              </select>
-            </div>
-            <h4 style="margin-top: 10px;">Imagens</h4>
-            <div id="imagesPreview">
-              
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button id="viewModalClose2Button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary">Salvar</button>
-        </div>
-      </div>
     </div>
-  </div>
-  
-  </div>
-  <button id="NewProductButton" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
-    Launch demo modal
-  </button>
+    <button id="ViewProductModal" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewModal">
+      Launch demo modal
+    </button>
 
-  <div id="actionsModal" class="modal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div>
-            <i class="fa-solid fa-eye"></i>
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-trash"></i>
+    <div id="viewModal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Ver produto: </h5>
+            <button color="white" id="viewModalClose1Button" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="editingForm">
+              <label>Nome</label>
+              <input id="viewName" disabled placeholder="Nome">
+              <label>Preço</label>
+              <input id="viewPrice" disabled placeholder="Preço">
+              <label>Descrição</label>
+
+              <textarea id="viewDescription">
+
+              </textarea>
+              <div class="row">
+                <label>Categoria </label>
+                <select>
+                  <option name="">NFT</option>
+                  <option name="">Quadro</option>
+                  <option name="">Aquarela</option>
+                </select>
+              </div>
+              <h4 style="margin-top: 10px;">Imagens</h4>
+              <div id="imagesPreview">
+
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="viewModalClose2Button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Salvar</button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+    </div>
+    <button id="NewProductButton" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+      Launch demo modal
+    </button>
+
+    <div id="actionsModal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div>
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  </div>
-  <button id="ActionsModal" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#actionsModal">
-    
-  </button>
+
+    </div>
+    <button id="ActionsModal" hidden type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#actionsModal">
+
+    </button>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/91248aca6a.js" crossorigin="anonymous"></script>
   <script src="../../../public/js/adminProduct.js"></script>
 
-  
+
 </body>
+
 </html>

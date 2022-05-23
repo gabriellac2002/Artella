@@ -16,11 +16,13 @@ class CrudProductController
 
     public function index()
     {
-
+        if($_GET == "")
         $prepare = $this->queryBuilder->table("products")
             ->select("*");
             
-        
+        else $prepare = $this->queryBuilder->table("products") //TODO buscar com filtro
+        ->select("*");
+
         return view('admin/adminproducts', ['products' => $prepare->commit()]);
     }
 
@@ -31,6 +33,7 @@ class CrudProductController
     {
         var_dump($_POST);
     }
+
 
     public function store(){
     }
