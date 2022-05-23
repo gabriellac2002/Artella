@@ -54,3 +54,55 @@ Scrum Master:
 - Atualize a main: `git pull`
 - Faça o merge das alterações de sua branch com a main: `git merge suabranch`
 - Confirme o merge enviando para o servidor do GitHub: `git push origin main`
+### Query Builder DOCS:
+
+  -Para inserir um dado execute:
+  ```
+    queryBuilder->table("tabela selecionada")->insert([array na ordem do banco])
+  ```
+  -Para inserir multiplos dados execute:
+  ```
+    queryBuilder->table("tabela selecionada")->insert(
+      [
+        [array na ordem do banco], 
+        [array na ordem do banco], 
+        [array na ordem do banco]
+      ]
+    )
+  ```
+  -Para inserir multiplos dados execute:
+  ```
+    queryBuilder->table("tabela selecionada")->insert(
+      [
+        [array na ordem do banco], 
+        [array na ordem do banco], 
+        [array na ordem do banco]
+      ]
+    )
+  ```
+  -Para buscar dados:
+  ```
+    queryBuilder->table("tabela selecionada")->select("*")->commit()
+  ```
+  -Para buscar dados com condicionais:
+  ```
+    queryBuilder->table("tabela selecionada")->select("*")->where("nome da coluna do where", "condição {'=', '<' ...}", valor da condição {"Gustavo"})->where("nome da coluna do where", "condição {'=', '<' ...}", valor da condição {"Gustavo"})->commit();
+  ```
+  ### Por padrão a consulta where encadeada adiciona um and, para trocar para or use o comando 
+  ### orWhere
+   -Para buscar dados com condicionais (orWhere):
+  ```
+    queryBuilder->table("tabela selecionada")->select("*")->where("nome da coluna do where", "condição {'=', '<' ...}", valor da condição {"Gustavo"})->orWhere()->commit();
+  ```
+
+  ### Observação: Tanto faz o primeiro ser where ou orWhere
+
+  -Para paginar suas queries:
+    queryBuilder->table("tabela selecionada")->select("*")->limit(inicio, fim)->commit();
+
+  -Join
+  ```
+    queryBuilder->table("products")
+      ->select("*")
+      ->join("categories", "categoryId", "=", "id")->commit()
+  ```
