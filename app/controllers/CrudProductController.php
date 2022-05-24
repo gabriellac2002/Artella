@@ -16,14 +16,21 @@ class CrudProductController
 
     public function index()
     {
-        if($_GET == "")
-        $prepare = $this->queryBuilder->table("products")
-            ->select("*");
+        
+    $prepare = $this->queryBuilder->table("products")->select("*");
+    $aux = $prepare->commit();
+    $categorys = $this->queryBuilder->table("categories")->select("*"); 
             
-        else $prepare = $this->queryBuilder->table("products") //TODO buscar com filtro
-        ->select("*");
+        return view('admin/adminproducts', ['products' => $aux, 'categorys' => $categorys->commit()]);
+        
+    }
 
+    public function search(){
+        $seach = $_GET['search'];
+        $prepare = $this->queryBuilder->table("products") //TODO buscar com filtro
+        ->select("*")->where("name","=", "$seach");
         return view('admin/adminproducts', ['products' => $prepare->commit()]);
+
     }
 
     public function show(){

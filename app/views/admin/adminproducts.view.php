@@ -48,6 +48,7 @@
 
     </table>
 
+
     <?php require 'modals/products/modal-add-products.php' ?>
     <?php require 'modals/products/modal-adit-products.php' ?>
     <?php require 'modals/products/modal-view-products.php' ?>

@@ -247,7 +247,8 @@ var searchName = document.getElementById("search");
 searchName.addEventListener("keydown", function () {
   if (event.key == "Enter") search();
 });
+
 function search() {
   if (searchName.value != "")
-    window.location = "products?search=" + searchName.value;
+    window.location = "productsSearch?search=" + searchName.value;
 }

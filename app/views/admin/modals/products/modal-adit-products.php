@@ -19,10 +19,12 @@
               </textarea>
                     <div class="row">
                         <label>Categoria </label>
-                        <select>
-                            <option name="">NFT</option>
-                            <option name="">Quadro</option>
-                            <option name="">Aquarela</option>
+                        <select name="selection">
+                            <?php foreach ($categorys as $category): ?>
+
+                            <option  name="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                            
+                            <?php endforeach ?>
                         </select>
                     </div>
                     <h4 style="margin-top: 10px;">Imagens</h4>

@@ -16,24 +16,16 @@
                     <label>Descrição</label>
 
                     <textarea id="viewDescription"></textarea>
-                    <div class="row">
-                        <label>Categoria </label>
-                        <select>
-                            <option name="">NFT</option>
-                            <option name="">Quadro</option>
-                            <option name="">Aquarela</option>
-                        </select>
-                    </div>
+                    <label>Categoria </label>
+                    <input id="viewCategory" disabled placeholder="Category">
+
                     <h4 style="margin-top: 10px;">Imagens</h4>
                     <div id="imagesPreview">
 
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button id="viewModalClose2Button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
-            </div>
+
         </div>
     </div>
 </div>
