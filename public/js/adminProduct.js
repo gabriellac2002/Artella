@@ -23,6 +23,8 @@ function openViewModal(e) {
     viewName.value = parent.querySelectorAll("td")[0].textContent;
     const viewPrice = document.getElementById("viewPrice");
     viewPrice.value = parent.querySelectorAll("td")[1].textContent;
+    const viewDescription = document.getElementById("viewDescription");
+    viewDescription.value = parent.querySelectorAll("td")[2].textContent;
     document.getElementById("ViewProductModal").click();
   } else {
     document.getElementById("ViewProductModal").click();
@@ -228,15 +230,14 @@ document.querySelectorAll(".btn-close").forEach((element) => {
 /* Query para adicionar dados nos campo responsivos*/
 document.querySelectorAll(".fa-ellipsis").forEach((element) => {
   element.addEventListener("click", () => {
+    
     const data = element.parentElement.parentElement.querySelectorAll("td");
     document.querySelector("#editingNameInput").value = data[0].textContent;
     document.querySelector("#editingPriceInput").value = data[1].textContent;
-    document.querySelector("#editingDescriptionTextArea").value =
-      data[2].innerText;
+    document.querySelector("#editingDescriptionTextArea").value = data[2].innerText;
     document.querySelector("#viewName").value = data[0].textContent;
     document.querySelector("#viewPrice").value = data[1].textContent;
     document.querySelector("#viewDescription").value = data[2].innerText;
-
     document.getElementById("ActionsModal").click();
   });
 });
