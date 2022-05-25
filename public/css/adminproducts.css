@@ -184,8 +184,10 @@ h2 {
   width: 100%;
   border: 0px solid;
 }
-
-th span {
+.th{
+  font-weight: bold;
+}
+.th span {
   margin-left: 50px;
 }
 
@@ -203,16 +205,10 @@ th span {
     width: 100%;
   }
 
-  th {
-    display: hidden !important;
-  }
+  
 
   td {
     font-size: 12px;
-  }
-
-  td:nth-child(1) {
-    display: none;
   }
 
   .actions {
@@ -227,7 +223,7 @@ th span {
     margin-left: 24px;
   }
 
-  th span {
+  .th span {
     margin-left: 10px;
   }
 

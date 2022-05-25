@@ -26,7 +26,7 @@
     <?php foreach ($products as $value) : ?>
 
       <tr id="row1">
-        <th scope="row"><?php echo $value["id"] ?></th>
+        <td class="th"><?php echo $value["id"] ?></td>
         <td><?php echo $value["name"] ?></td>
         <td>R$ <?php echo $value["price"] ?></td>
         <td hidden>
@@ -52,6 +52,8 @@
     <?php require 'modals/products/modal-add-products.php' ?>
     <?php require 'modals/products/modal-adit-products.php' ?>
     <?php require 'modals/products/modal-view-products.php' ?>
+    <?php require 'modals/products/modal-delete-products.php' ?>
+
     <?php require 'modals/products/modal-mobile-products.php' ?>
 
 

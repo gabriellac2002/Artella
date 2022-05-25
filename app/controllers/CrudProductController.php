@@ -28,7 +28,7 @@ class CrudProductController
     public function search(){
         $seach = $_GET['search'];
         $prepare = $this->queryBuilder->table("products") //TODO buscar com filtro
-        ->select("*")->where("name","=", "$seach");
+        ->select("*")->where("name"," like", "$seach%");
         return view('admin/adminproducts', ['products' => $prepare->commit()]);
 
     }
@@ -52,5 +52,7 @@ class CrudProductController
     }
 
     public function delete(){
+        var_dump($_POST);
+
     }
 }
