@@ -8,7 +8,9 @@
                 <button color="white" id="editingModalClose1Button" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="editingForm">
+                <form class="editingForm" action="productsEdit" method="post">
+                
+                    <input name='id' id='form-edit' hidden></input>
                     <label>Nome</label>
                     <input name='name' id="editingNameInput" placeholder="Nome">
                     <label>Preço</label>
@@ -22,7 +24,7 @@
                         <select name="selection">
                             <?php foreach ($categorys as $category): ?>
 
-                            <option  name="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                            <option  name="<?php echo $category['id']; ?>" value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
                             
                             <?php endforeach ?>
                         </select>
@@ -38,7 +40,7 @@
                     </div>
                     <div class="modal-footer">
                         <button id="editingModalClose2Button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
                 </form>
             </div>

@@ -21,7 +21,7 @@ class CrudProductController
     $aux = $prepare->commit();
     $categorys = $this->queryBuilder->table("categories")->select("*"); 
             
-        return view('admin/adminproducts', ['products' => $aux, 'categorys' => $categorys->commit()]);
+    return view('admin/adminproducts', ['products' => $aux, 'categorys' => $categorys->commit()]);
         
     }
 
@@ -36,23 +36,33 @@ class CrudProductController
     public function show(){
     }
 
-    public function create()
-    {
-        var_dump($_POST);
+    public function create(){
+
+        $this->queryBuilder->table("products")->insert([$_POST['name'],$_POST['price'], $_POST['selection-category'],$_POST['description']]);
+        header("Location: /admin/products");
+
     }
 
 
     public function store(){
     }
 
-    public function edit(){
-    }
+
 
     public function update(){
+        var_dump($_POST);
+        $prepare = $this->queryBuilder->table("products")->update(['name','price'], [$_POST['name'],$_POST['price']]);
+
+        // header("Location: /admin/products");
+
+
     }
 
     public function delete(){
-        var_dump($_POST);
+
+        $prepare = $this->queryBuilder->table("products")->delete()->where('id','=',$_POST['id']);
+        $prepare->commit();
+        header("Location: /admin/products");
 
     }
 }

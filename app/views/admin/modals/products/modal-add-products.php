@@ -10,7 +10,7 @@
             <div class="modal-body">
                 <form class="editingForm" method="post" action="productsCreate">
                     <label for="nome">Nome</label>
-                    <input name="nome" placeholder="Nome">
+                    <input name="name" placeholder="Nome">
                     <label>Preço</label>
                     <input name="price" placeholder="Preço">
                     <label>Descrição</label>
@@ -19,10 +19,10 @@
                 </textarea>
                     <div class="row">
                         <label>Categoria </label>
-                        <select name="selection">
+                        <select name="selection-category">
                             <?php foreach ($categorys as $category): ?>
 
-                            <option  name="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                            <option  name="<?php echo $category['id']; ?>"  value="<?php echo $category['id']; ?>" ><?php echo $category['name']; ?></option>
                             
                             <?php endforeach ?>
                         </select>

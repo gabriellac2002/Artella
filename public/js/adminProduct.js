@@ -10,17 +10,6 @@ fa_trash.forEach((trash) => {
 });
 
 
-
-function deleteModal(e) {
-      if (e.target.parentElement.tagName != "DIV") {
-        const parent = e.target.parentElement.parentElement;
-        const idDeleted = document.getElementById("form-delete");
-        idDeleted.value = parent.querySelectorAll("td")[0].textContent;
-        document.getElementById("deleteActionModal").click();
-
-      }
-}
-
 const fa_eye = document.querySelectorAll(".fa-eye");
 
 const admin_responsive = document.querySelectorAll(".actionsResponsive");
@@ -68,10 +57,10 @@ document.querySelectorAll(".fa-pen").forEach((element) => {
   element.addEventListener("click", () => {
     if (element.parentElement.tagName != "DIV") {
       const data = element.parentElement.parentElement.querySelectorAll("td");
+      document.querySelector("#form-edit").value = data[0].textContent;
       document.querySelector("#editingNameInput").value = data[1].textContent;
       document.querySelector("#editingPriceInput").value = data[2].textContent;
-      document.querySelector("#editingDescriptionTextArea").value =
-        data[3].innerText;
+      document.querySelector("#editingDescriptionTextArea").value = data[3].innerText;
       document.getElementById("EditingButton").click();
     } else {
       document.getElementById("EditingButton").click();
@@ -239,21 +228,6 @@ document.querySelectorAll(".btn-close").forEach((element) => {
   element.classList.add("btn-close-white");
 });
 
-/* Query para adicionar dados nos campo responsivos*/
-document.querySelectorAll(".fa-ellipsis").forEach((element) => {
-  element.addEventListener("click", () => {
-    const data = element.parentElement.parentElement.querySelectorAll("td");
-    document.querySelector("#editingNameInput").value = data[1].textContent;
-    document.querySelector("#editingPriceInput").value = data[2].textContent;
-    document.querySelector("#editingDescriptionTextArea").value =
-      data[3].innerText;
-    document.querySelector("#viewName").value = data[1].textContent;
-    document.querySelector("#viewPrice").value = data[2].textContent;
-    document.querySelector("#viewDescription").value = data[3].innerText;
-    document.getElementById("ActionsModal").click();
-  });
-});
-
 //Função de busca
 var searchName = document.getElementById("search");
 searchName.addEventListener("keydown", function () {
@@ -266,6 +240,15 @@ function search() {
   else window.location = "products" + searchName.value;
 }
 
+//Função delete
+function deleteModal(e) {
+  if (e.target.parentElement.tagName != "DIV") {
+    const parent = e.target.parentElement.parentElement;
+    const idDeleted = document.getElementById("form-delete");
+    idDeleted.value = parent.querySelectorAll("td")[0].textContent;
+    document.getElementById("deleteActionModal").click();
+  }
+}
 document.querySelectorAll(".fa-trash").forEach((element) => {
   element.addEventListener("click", () => {
     if (element.parentElement.tagName != "DIV") {
@@ -275,5 +258,22 @@ document.querySelectorAll(".fa-trash").forEach((element) => {
     } else {
       document.getElementById("deleteActionModal").click();
     }
+  });
+});
+/* Query para adicionar dados nos campo responsivos*/
+document.querySelectorAll(".fa-ellipsis").forEach((element) => {
+  element.addEventListener("click", () => {
+    const data = element.parentElement.parentElement.querySelectorAll("td");
+    document.querySelector("#editingNameInput").value = data[1].textContent;
+    document.querySelector("#editingPriceInput").value = data[2].textContent;
+    document.querySelector("#editingDescriptionTextArea").value = data[3].innerText;
+    document.querySelector("#viewName").value = data[1].textContent;
+    document.querySelector("#viewPrice").value = data[2].textContent;
+    document.querySelector("#viewDescription").value = data[3].innerText;
+    document.querySelector("#form-delete").value = data[0].textContent;
+    document.querySelector("#form-edit").value = data[0].textContent;
+
+
+    document.getElementById("ActionsModal").click();
   });
 });
