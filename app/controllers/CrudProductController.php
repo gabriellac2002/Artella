@@ -51,9 +51,9 @@ class CrudProductController
 
     public function update(){
         var_dump($_POST);
-        $prepare = $this->queryBuilder->table("products")->update(['name','price'], [$_POST['name'],$_POST['price']]);
-
-        // header("Location: /admin/products");
+        $prepare = $this->queryBuilder->table("products")->update(['name','price','categoryId','description'], [$_POST['name'],$_POST['price'],$_POST['selection'],$_POST['description']])->where('id','=',$_POST['id']);
+        $prepare->commit();
+        header("Location: /admin/products");
 
 
     }

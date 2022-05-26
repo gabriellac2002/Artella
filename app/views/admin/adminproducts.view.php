@@ -27,7 +27,7 @@
 
       <tr id="row1">
         <td class="th"><?php echo $value["id"] ?></td>
-        <td><?php echo $value["name"] ?></td>
+        <td ><?php echo $value["name"] ?></td>
         <td>R$ <?php echo $value["price"] ?></td>
         <td hidden>
           <?php echo $value["description"] ?>
@@ -40,6 +40,8 @@
         <td class="actionsResponsive">
           <i class="fa-solid fa-ellipsis fa-xl"></i>
         </td>
+        <input hidden id='category-product-<?php echo $value["id"]?>'value="<?php echo $value["categoryId"]?>"></input>
+
       </tr>
 
     <?php endforeach; ?>
@@ -50,7 +52,7 @@
 
 
     <?php require 'modals/products/modal-add-products.php' ?>
-    <?php require 'modals/products/modal-adit-products.php' ?>
+    <?php require 'modals/products/modal-edit-products.php' ?>
     <?php require 'modals/products/modal-view-products.php' ?>
     <?php require 'modals/products/modal-delete-products.php' ?>
 

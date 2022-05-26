@@ -14,17 +14,18 @@
                     <label>Nome</label>
                     <input name='name' id="editingNameInput" placeholder="Nome">
                     <label>Preço</label>
-                    <input name='price' id="editingPriceInput" placeholder="Preço">
+                    <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" name='price' on id="editingPriceInput" placeholder="Preço">
                     <label>Descrição</label>
                     <textarea name='description' id="editingDescriptionTextArea">
 
               </textarea>
                     <div class="row">
                         <label>Categoria </label>
-                        <select name="selection">
+                        <select name="selection" id="select-categorys">
                             <?php foreach ($categorys as $category): ?>
-
-                            <option  name="<?php echo $category['id']; ?>" value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                            
+                    
+                            <option name="<?php echo $category['id']; ?>" value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
                             
                             <?php endforeach ?>
                         </select>

@@ -15,9 +15,9 @@
                     <input id="viewPrice" disabled placeholder="Preço">
                     <label>Descrição</label>
 
-                    <textarea id="viewDescription"></textarea>
+                    <textarea disabled id="viewDescription"></textarea>
                     <label>Categoria </label>
-                    <input id="viewCategory" disabled placeholder="Category">
+                    <input id="viewCategory" disabled>
 
                     <h4 style="margin-top: 10px;">Imagens</h4>
                     <div id="imagesPreview">
@@ -29,3 +29,4 @@
         </div>
     </div>
 </div>
+

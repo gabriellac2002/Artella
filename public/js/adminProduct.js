@@ -17,17 +17,24 @@ admin_responsive.forEach((element) => {
   element.addEventListener("click", () => {});
 });
 
+
 function openViewModal(e) {
   if (e.target.parentElement.tagName != "DIV") {
     const parent = e.target.parentElement.parentElement;
     const viewName = document.getElementById("viewName");
     viewName.value = parent.querySelectorAll("td")[1].textContent;
     const viewPrice = document.getElementById("viewPrice");
-    viewPrice.value = parent.querySelectorAll("td")[2].textContent;
+    viewPrice.value = parent.querySelectorAll("td")[2].textContent.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
     const viewDescription = document.getElementById("viewDescription");
     viewDescription.value = parent.querySelectorAll("td")[3].textContent;
-    document.getElementById("ViewProductModal").click();
-  } else {
+
+    document.querySelector('#select-categorys').value = document.getElementById("category-product-"+parent.querySelectorAll("td")[0].textContent).value;
+    var select = document.getElementById('select-categorys');
+    document.querySelector('#viewCategory').value = select.options[select.selectedIndex].text;
+
+  document.getElementById("ViewProductModal").click();
+  
+} else {
     document.getElementById("ViewProductModal").click();
   }
 }
@@ -59,8 +66,9 @@ document.querySelectorAll(".fa-pen").forEach((element) => {
       const data = element.parentElement.parentElement.querySelectorAll("td");
       document.querySelector("#form-edit").value = data[0].textContent;
       document.querySelector("#editingNameInput").value = data[1].textContent;
-      document.querySelector("#editingPriceInput").value = data[2].textContent;
+      document.querySelector("#editingPriceInput").value = data[2].textContent.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
       document.querySelector("#editingDescriptionTextArea").value = data[3].innerText;
+      document.querySelector('#select-categorys').value = document.getElementById("category-product-"+data[0].innerText).value;
       document.getElementById("EditingButton").click();
     } else {
       document.getElementById("EditingButton").click();
@@ -265,15 +273,16 @@ document.querySelectorAll(".fa-ellipsis").forEach((element) => {
   element.addEventListener("click", () => {
     const data = element.parentElement.parentElement.querySelectorAll("td");
     document.querySelector("#editingNameInput").value = data[1].textContent;
-    document.querySelector("#editingPriceInput").value = data[2].textContent;
+    document.querySelector("#editingPriceInput").value = data[2].textContent.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
     document.querySelector("#editingDescriptionTextArea").value = data[3].innerText;
     document.querySelector("#viewName").value = data[1].textContent;
-    document.querySelector("#viewPrice").value = data[2].textContent;
+    document.querySelector("#viewPrice").value = data[2].textContent.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
     document.querySelector("#viewDescription").value = data[3].innerText;
     document.querySelector("#form-delete").value = data[0].textContent;
     document.querySelector("#form-edit").value = data[0].textContent;
 
-
+    document.querySelector('#select-categorys').value = document.getElementById("category-product-"+data[0].innerText).value;
+    document.querySelector('#viewCategory').value = document.getElementById('select-categorys').options[document.getElementById('select-categorys').selectedIndex].text;
     document.getElementById("ActionsModal").click();
   });
 });
