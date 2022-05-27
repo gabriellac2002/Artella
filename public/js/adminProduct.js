@@ -175,7 +175,7 @@ dropzone.addEventListener("drop", (e) => {
     div.style.backgroundSize = "cover";
   }
   dropzone_input.files = dataTransfer.files;
-  console.log(fileObject);
+
 });
 
 function makeid(length) {

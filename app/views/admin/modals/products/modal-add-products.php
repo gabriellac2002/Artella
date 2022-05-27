@@ -8,7 +8,7 @@
                 <button id="addModalClose1Button" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="editingForm" method="post" action="productsCreate">
+                <form class="editingForm" method="post" action="productsCreate" enctype="multipart/form-data">
                     <label for="nome">Nome</label>
                     <input name="name" placeholder="Nome">
                     <label>Preço</label>
