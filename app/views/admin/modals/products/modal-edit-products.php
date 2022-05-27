@@ -31,12 +31,13 @@
                         </select>
                     </div>
                     <h4 style="margin-top: 10px;">Imagens</h4>
-                    <div id="dropzone" class="fileInput">
+
+                    <div id="dropzone2" class="fileInput">
                         <input type="file" multiple hidden name="files[]">
                         <i class="fa-solid fa-file"></i>
                         <h5>Arraste seus arquivos aqui</h5>
                     </div>
-                    <div id="imagesPreview">
+                    <div id="imagesPreview2">
 
                     </div>
                     <div class="modal-footer">

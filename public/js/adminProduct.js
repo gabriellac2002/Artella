@@ -1,6 +1,11 @@
 const dropzone = document.getElementById("dropzone");
 const imagesPreview = document.getElementById("imagesPreview");
 const dropzoneInput = dropzone.querySelector("input");
+
+const dropzone2 = document.getElementById("dropzone2");
+const imagesPreview2 = document.getElementById("imagesPreview2");
+const dropzoneInput2 = dropzone2.querySelector("input");
+
 let fileObject = {};
 
 const fa_trash = document.querySelectorAll(".fa-trash");
@@ -113,11 +118,50 @@ dropzoneInput.addEventListener("input", (e) => {
   }
 });
 
+dropzoneInput2.addEventListener("input", (e) => {
+  const files = dropzoneInput2.files;
+  const dataTransfer = new DataTransfer();
+  for (let i = 0; i < files.length; i++) {
+    const file = files.item(i);
+    if (!file.type.includes("image")) {
+      continue;
+    }
+    const fileId = makeid(12);
+    fileObject[fileId] = file;
+    dataTransfer.items.add(file);
+    const imgElement = document.createElement("img");
+    const div = document.createElement("div");
+    div.style.backgroundSize = "contain";
+    div.classList.add("imagePreviewed2");
+    const divMouseOver = document.createElement("div");
+    divMouseOver.classList.add("divMouseOver");
+    const iElem = document.createElement("i");
+    iElem.classList.add("fa-solid");
+    iElem.classList.add("fa-xmark");
+    iElem.width = "80px";
+    iElem.height = "80px";
+    iElem.target = fileId;
+    iElem.addEventListener("click", deleteImage);
+    const url = URL.createObjectURL(file);
+    imagesPreview2.insertAdjacentElement("beforeend", div);
+    div.insertAdjacentElement("beforeend", divMouseOver);
+    divMouseOver.insertAdjacentElement("beforeend", iElem);
+    div.style.background = `url("${url}") no-repeat `;
+    div.style.backgroundSize = "cover";
+  }
+});
+
 dropzone.addEventListener("dragover", () => {
   dropzone.style.borderColor = "green";
   dropzone.style.backgroundColor = "rgba(0,168, 0 ,0.2)";
   dropzone.querySelector("i").style.color = "green";
   dropzone.querySelector("h5").style.color = "green";
+});
+dropzone2.addEventListener("dragover", () => {
+  dropzone2.style.borderColor = "green";
+  dropzone2.style.backgroundColor = "rgba(0,168, 0 ,0.2)";
+  dropzone2.querySelector("i").style.color = "green";
+  dropzone2.querySelector("h5").style.color = "green";
 });
 
 dropzone.addEventListener("dragleave", () => {
@@ -126,10 +170,21 @@ dropzone.addEventListener("dragleave", () => {
   dropzone.querySelector("i").style.color = "black";
   dropzone.querySelector("h5").style.color = "black";
 });
+dropzone2.addEventListener("dragleave", () => {
+  dropzone2.style.borderColor = "#ccc";
+  dropzone2.style.backgroundColor = "white";
+  dropzone2.querySelector("i").style.color = "black";
+  dropzone2.querySelector("h5").style.color = "black";
+});
 
 dropzone.addEventListener("click", () => {
   const dropzone_input = dropzone.querySelector("input");
   dropzone_input.click();
+});
+
+dropzone2.addEventListener("click", () => {
+  const dropzone_input2 = dropzone2.querySelector("input");
+  dropzone_input2.click();
 });
 
 dropzone.addEventListener("drop", (e) => {
@@ -177,6 +232,51 @@ dropzone.addEventListener("drop", (e) => {
   dropzone_input.files = dataTransfer.files;
 
 });
+dropzone2.addEventListener("drop", (e) => {
+  const dropzone_input2 = dropzone2.querySelector("input");
+  e.preventDefault();
+  e.stopPropagation();
+  dropzone2.style.borderColor = "#ccc";
+  dropzone2.style.backgroundColor = "white";
+  dropzone2.querySelector("i").style.color = "black";
+  dropzone2.querySelector("h5").style.color = "black";
+  const files = e.dataTransfer.files;
+  const dataTransfer = new DataTransfer();
+  const baseHtml = `
+    <div class="imagePreviewed2">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+  `;
+  for (let i = 0; i < files.length; i++) {
+    const file = files.item(i);
+    if (!file.type.includes("image")) {
+      continue;
+    }
+    const fileId = makeid(12);
+    fileObject[fileId] = file;
+    dataTransfer.items.add(file);
+    const div = document.createElement("div");
+    div.style.backgroundSize = "contain";
+    div.classList.add("imagePreviewed2");
+    const divMouseOver = document.createElement("div");
+    divMouseOver.classList.add("divMouseOver");
+    const iElem = document.createElement("i");
+    iElem.classList.add("fa-solid");
+    iElem.classList.add("fa-xmark");
+    iElem.width = "80px";
+    iElem.height = "80px";
+    iElem.target = fileId;
+    iElem.addEventListener("click", deleteImage);
+    const url = URL.createObjectURL(file);
+    imagesPreview2.insertAdjacentElement("beforeend", div);
+    div.insertAdjacentElement("beforeend", divMouseOver);
+    divMouseOver.insertAdjacentElement("beforeend", iElem);
+    div.style.background = `url("${url}") no-repeat `;
+    div.style.backgroundSize = "cover";
+  }
+  dropzone_input2.files = dataTransfer.files;
+
+});
 
 function makeid(length) {
   let result = "";
@@ -201,23 +301,18 @@ function deleteImage(e) {
   dropzoneInput.files = dataTransfer.files;
 }
 
-function deleteRow(e) {
-  if (e.target.parentElement.tagName != "DIV") {
-    e.target.parentElement.parentElement.remove();
-  }
-}
 
 function clearPreviewedImages() {
   document.querySelectorAll(".imagePreviewed").forEach((image) => {
     image.remove();
   });
   const keys = Object.keys(fileObject);
-  dropzoneInput.files = new DataTransfer().files;
+  dropzoneInput2.files = new DataTransfer().files;
   keys.forEach((key) => {
     delete fileObject[key];
   });
- 
 }
+
 
 document
   .querySelector("#addModalClose1Button")
