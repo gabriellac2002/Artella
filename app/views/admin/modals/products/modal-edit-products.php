@@ -8,7 +8,7 @@
                 <button color="white" id="editingModalClose1Button" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="editingForm" action="productsEdit" method="post">
+                <form class="editingForm" action="productsEdit" method="post" enctype="multipart/form-data">
                 
                     <input name='id' id='form-edit' hidden></input>
                     <label>Nome</label>
@@ -32,7 +32,7 @@
                     </div>
                     <h4 style="margin-top: 10px;">Imagens</h4>
                     <div id="dropzone" class="fileInput">
-                        <input type="file" multiple hidden>
+                        <input type="file" multiple hidden name="files[]">
                         <i class="fa-solid fa-file"></i>
                         <h5>Arraste seus arquivos aqui</h5>
                     </div>

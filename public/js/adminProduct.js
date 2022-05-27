@@ -216,8 +216,7 @@ function clearPreviewedImages() {
   keys.forEach((key) => {
     delete fileObject[key];
   });
-  console.log(dropzoneInput);
-  console.log(fileObject);
+ 
 }
 
 document
