@@ -48,23 +48,23 @@ class CrudProductController
         // $prepare = $this->queryBuilder->table("images")->delete()->where('productId', '=', $idProduct);
         // $prepare->commit();
 
-       
-        // Arquivos permitidos de
-        $arquivosPermitidos = ['jpg','png','jpeg'];
-        // arquivos
-        $arquivo = $_FILES['files'];
-        //Nomes
-        $nomes = $arquivo['name'];
-        for($i = 0;$i < count($nomes); $i++):
-            $extension = explode('.', $nomes[$i]);
+        $allowedFiles = ['jpg', 'png', 'jpeg'];
+
+        $files = $_FILES['files'];
+
+        $names = $files['name'];
+        for ($i = 0; $i < count($names); $i++) :
+            $extension = explode('.', $names[$i]);
             $extension = end($extension);
-            //Verificar extension
-            if(in_array($extension, $arquivosPermitidos)):
-                $this->queryBuilder->table("images")->insert([$nomes[$i], $idProduct]);
+
+            if (in_array($extension, $allowedFiles)) :
+                $this->queryBuilder->table("images")->insert([$names[$i], $idProduct]);
+                $destino = "public/assets/products/" . $names[$i];
+                move_uploaded_file($files['tmp_name'][$i], $destino);
             endif;
         endfor;
-       
-        
+
+
         header("Location: /admin/products");
     }
 
@@ -77,9 +77,11 @@ class CrudProductController
 
     public function update()
     {
-        var_dump($_POST);
+        
         $prepare = $this->queryBuilder->table("products")->update(['name', 'price', 'categoryId', 'description'], [$_POST['name'], $_POST['price'], $_POST['selection'], $_POST['description']])->where('id', '=', $_POST['id']);
         $prepare->commit();
+
+        
         header("Location: /admin/products");
     }
 
