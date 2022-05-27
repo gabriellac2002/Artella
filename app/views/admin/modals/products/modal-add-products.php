@@ -29,7 +29,7 @@
                     </div>
                     <h4 style="margin-top: 10px;">Imagens</h4>
                     <div id="dropzone" class="fileInput">
-                        <input type="file" multiple hidden>
+                        <input type="file" multiple hidden name="files[]">
                         <i class="fa-solid fa-file"></i>
                         <h5>Arraste seus arquivos aqui</h5>
                     </div>

@@ -29,6 +29,7 @@ class CrudProductController
         $seach = $_GET['search'];
         $prepare = $this->queryBuilder->table("products") //TODO buscar com filtro
         ->select("*")->where("name"," like", "$seach%");
+
         return view('admin/adminproducts', ['products' => $prepare->commit()]);
 
     }
@@ -37,8 +38,19 @@ class CrudProductController
     }
 
     public function create(){
-
+        
+        
         $this->queryBuilder->table("products")->insert([$_POST['name'],$_POST['price'], $_POST['selection-category'],$_POST['description']]);
+        $idProduct = $this->queryBuilder->table("products")->select("*")->where("name","=",$_POST['name']);
+        $idProduct = $idProduct->commit()[0]['id'];
+        echo $idProduct;
+        $prepare = $this->queryBuilder->table("images")->delete()->where('productId','=', $idProduct);
+        $prepare->commit();
+        foreach($_POST['files'] as $file){
+        
+            $this->queryBuilder->table("images")->insert([$file, $idProduct]);
+        }
+        
         header("Location: /admin/products");
 
     }
