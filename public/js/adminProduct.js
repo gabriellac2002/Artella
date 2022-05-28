@@ -398,3 +398,62 @@ document.querySelectorAll(".fa-ellipsis").forEach((element) => {
     document.getElementById("ActionsModal").click();
   });
 });
+
+function bgToBlock(id) {
+
+  let myImg = document.getElementById('img-' + id);
+
+  myImg.classList.add("display-block");
+  myImg.classList.remove("display-none");
+
+};
+
+function bgToNone(id) {
+  let myImg = document.getElementById('img-' + id);
+
+  myImg.classList.add("display-none");
+  myImg.classList.remove("display-block");
+
+};
+
+document.querySelectorAll(".fa-ellipsis").forEach((element) => {
+  element.addEventListener("click", () => {
+
+      const data = element.parentElement.parentElement.querySelectorAll("td");
+
+      for (var i = 0; i < jav.length; i++) {
+          if (jav[i]['productId'] == data[0].innerHTML) {
+
+              bgToBlock(jav[i]['id']);
+
+          }
+      };
+
+  });
+});
+
+document.querySelectorAll(".fa-eye").forEach((element) => {
+  element.addEventListener("click", () => {
+
+      const data = element.parentElement.parentElement.querySelectorAll("td");
+
+      for (var i = 0; i < jav.length; i++) {
+          if (jav[i]['productId'] == data[0].innerHTML) {
+
+              bgToBlock(jav[i]['id']);
+
+          }
+      }
+
+  });
+});
+
+$('#viewModal').on('hide.bs.modal', function(event) {
+
+  for (var i = 0; i < jav.length; i++) {
+
+      bgToNone(jav[i]['id']);
+
+  };
+
+});

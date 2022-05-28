@@ -21,7 +21,11 @@
 
                     <h4 style="margin-top: 10px;">Imagens</h4>
                     <div id="imagesPreview">
-
+                        <?php foreach ($images as $img) {
+                            echo "<img src='";
+                            echo "../../../public/assets/products/" . $img['url'];
+                            echo "' alt='' class='display-none pd-" . $img['productId'] . "' id='img-" . $img['id'] . "'>";
+                        } ?>
                     </div>
                 </form>
             </div>
@@ -29,4 +33,3 @@
         </div>
     </div>
 </div>
-

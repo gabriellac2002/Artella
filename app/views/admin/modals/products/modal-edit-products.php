@@ -35,7 +35,7 @@
                     <div id="dropzone2" class="fileInput">
                         <input type="file" multiple hidden name="files[]">
                         <i class="fa-solid fa-file"></i>
-                        <h5>Arraste suas novas fotos</h5>
+                        <h5 style="text-align: center;">Arraste suas novas imagens</h5>
                     </div>
                     <div id="imagesPreview2">
 

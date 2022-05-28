@@ -17,11 +17,14 @@ class CrudProductController
     public function index()
     {
 
-        $prepare = $this->queryBuilder->table("products")->select("*");
-        $aux = $prepare->commit();
+        $products = $this->queryBuilder->table("products")->select("*");
+        $auxProducts = $products->commit();
         $categorys = $this->queryBuilder->table("categories")->select("*");
+        $categorys = $categorys->commit();
+        $images = $this->queryBuilder->table("images")->select("*");
+        $images  = $images->commit();
 
-        return view('admin/adminproducts', ['products' => $aux, 'categorys' => $categorys->commit()]);
+        return view('admin/adminproducts', ['products' => $auxProducts, 'categorys' => $categorys, 'images' => $images]);
     }
 
     public function search()
@@ -31,10 +34,6 @@ class CrudProductController
             ->select("*")->where("name", " like", "$seach%");
 
         return view('admin/adminproducts', ['products' => $prepare->commit()]);
-    }
-
-    public function show()
-    {
     }
 
     public function create()
@@ -65,25 +64,16 @@ class CrudProductController
         header("Location: /admin/products");
     }
 
-
-    public function store()
-    {
-    }
-
-
-
     public function update(){
-        
+        $allowedFiles = ['jpg', 'png', 'jpeg'];
+        $files = $_FILES['files'];
+        $names = $files['name'];
+
         $prepare = $this->queryBuilder->table("products")->update(['name', 'price', 'categoryId', 'description'], [$_POST['name'], $_POST['price'], $_POST['selection'], $_POST['description']])->where('id', '=', $_POST['id']);
         $prepare->commit();
         $idProduct = $this->queryBuilder->table("products")->select("*")->where("name", "=", $_POST['name'])->commit()[0]['id'];
 
-        $allowedFiles = ['jpg', 'png', 'jpeg'];
-       
-        $files = $_FILES['files'];
-        $names = $files['name'];
-
-        if($_FILES['files']['error'][0] != 4 && $_FILES['files']['size'][0] != 0): //!Verifica se os arquivos foram alterados, se sim deleta os anteriores
+        if($_FILES['files']['error'][0] != 4 && $_FILES['files']['size'][0] != 0):
             $prepare = $this->queryBuilder->table("images")->delete()->where('productId', '=', $idProduct);
             $prepare->commit();
         endif;
