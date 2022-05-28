@@ -14,7 +14,6 @@ fa_trash.forEach((trash) => {
   trash.addEventListener("click", deleteModal);
 });
 
-
 const fa_eye = document.querySelectorAll(".fa-eye");
 
 const admin_responsive = document.querySelectorAll(".actionsResponsive");
@@ -22,24 +21,28 @@ admin_responsive.forEach((element) => {
   element.addEventListener("click", () => {});
 });
 
-
 function openViewModal(e) {
   if (e.target.parentElement.tagName != "DIV") {
     const parent = e.target.parentElement.parentElement;
     const viewName = document.getElementById("viewName");
     viewName.value = parent.querySelectorAll("td")[1].textContent;
     const viewPrice = document.getElementById("viewPrice");
-    viewPrice.value = parent.querySelectorAll("td")[2].textContent.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+    viewPrice.value = parent
+      .querySelectorAll("td")[2]
+      .textContent.replace(/[^0-9.]/g, "")
+      .replace(/(\..*?)\..*/g, "$1");
     const viewDescription = document.getElementById("viewDescription");
     viewDescription.value = parent.querySelectorAll("td")[3].textContent;
 
-    document.querySelector('#select-categorys').value = document.getElementById("category-product-"+parent.querySelectorAll("td")[0].textContent).value;
-    var select = document.getElementById('select-categorys');
-    document.querySelector('#viewCategory').value = select.options[select.selectedIndex].text;
+    document.querySelector("#select-categorys").value = document.getElementById(
+      "category-product-" + parent.querySelectorAll("td")[0].textContent
+    ).value;
+    var select = document.getElementById("select-categorys");
+    document.querySelector("#viewCategory").value =
+      select.options[select.selectedIndex].text;
 
-  document.getElementById("ViewProductModal").click();
-  
-} else {
+    document.getElementById("ViewProductModal").click();
+  } else {
     document.getElementById("ViewProductModal").click();
   }
 }
@@ -71,9 +74,13 @@ document.querySelectorAll(".fa-pen").forEach((element) => {
       const data = element.parentElement.parentElement.querySelectorAll("td");
       document.querySelector("#form-edit").value = data[0].textContent;
       document.querySelector("#editingNameInput").value = data[1].textContent;
-      document.querySelector("#editingPriceInput").value = data[2].textContent.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
-      document.querySelector("#editingDescriptionTextArea").value = data[3].innerText;
-      document.querySelector('#select-categorys').value = document.getElementById("category-product-"+data[0].innerText).value;
+      document.querySelector("#editingPriceInput").value = data[2].textContent
+        .replace(/[^0-9.]/g, "")
+        .replace(/(\..*?)\..*/g, "$1");
+      document.querySelector("#editingDescriptionTextArea").value =
+        data[3].innerText;
+      document.querySelector("#select-categorys").value =
+        document.getElementById("category-product-" + data[0].innerText).value;
       document.getElementById("EditingButton").click();
     } else {
       document.getElementById("EditingButton").click();
@@ -230,7 +237,6 @@ dropzone.addEventListener("drop", (e) => {
     div.style.backgroundSize = "cover";
   }
   dropzone_input.files = dataTransfer.files;
-
 });
 dropzone2.addEventListener("drop", (e) => {
   const dropzone_input2 = dropzone2.querySelector("input");
@@ -275,7 +281,6 @@ dropzone2.addEventListener("drop", (e) => {
     div.style.backgroundSize = "cover";
   }
   dropzone_input2.files = dataTransfer.files;
-
 });
 
 function makeid(length) {
@@ -299,20 +304,23 @@ function deleteImage(e) {
     dataTransfer.items.add(fileObject[key]);
   });
   dropzoneInput.files = dataTransfer.files;
+  dropzoneInput2.files = dataTransfer.files;
 }
-
 
 function clearPreviewedImages() {
   document.querySelectorAll(".imagePreviewed").forEach((image) => {
     image.remove();
   });
+  document.querySelectorAll(".imagePreviewed2").forEach((image) => {
+    image.remove();
+  });
   const keys = Object.keys(fileObject);
   dropzoneInput2.files = new DataTransfer().files;
+  dropzoneInput.files = new DataTransfer().files;
   keys.forEach((key) => {
     delete fileObject[key];
   });
 }
-
 
 document
   .querySelector("#addModalClose1Button")
@@ -367,16 +375,26 @@ document.querySelectorAll(".fa-ellipsis").forEach((element) => {
   element.addEventListener("click", () => {
     const data = element.parentElement.parentElement.querySelectorAll("td");
     document.querySelector("#editingNameInput").value = data[1].textContent;
-    document.querySelector("#editingPriceInput").value = data[2].textContent.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
-    document.querySelector("#editingDescriptionTextArea").value = data[3].innerText;
+    document.querySelector("#editingPriceInput").value = data[2].textContent
+      .replace(/[^0-9.]/g, "")
+      .replace(/(\..*?)\..*/g, "$1");
+    document.querySelector("#editingDescriptionTextArea").value =
+      data[3].innerText;
     document.querySelector("#viewName").value = data[1].textContent;
-    document.querySelector("#viewPrice").value = data[2].textContent.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+    document.querySelector("#viewPrice").value = data[2].textContent
+      .replace(/[^0-9.]/g, "")
+      .replace(/(\..*?)\..*/g, "$1");
     document.querySelector("#viewDescription").value = data[3].innerText;
     document.querySelector("#form-delete").value = data[0].textContent;
     document.querySelector("#form-edit").value = data[0].textContent;
 
-    document.querySelector('#select-categorys').value = document.getElementById("category-product-"+data[0].innerText).value;
-    document.querySelector('#viewCategory').value = document.getElementById('select-categorys').options[document.getElementById('select-categorys').selectedIndex].text;
+    document.querySelector("#select-categorys").value = document.getElementById(
+      "category-product-" + data[0].innerText
+    ).value;
+    document.querySelector("#viewCategory").value =
+      document.getElementById("select-categorys").options[
+        document.getElementById("select-categorys").selectedIndex
+      ].text;
     document.getElementById("ActionsModal").click();
   });
 });
