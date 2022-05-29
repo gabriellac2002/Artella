@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 use App\Core\Database\QueryBuilder;
-
+session_start();
 class CrudProductController
 {
     protected $queryBuilder;
@@ -23,22 +23,25 @@ class CrudProductController
         $categorys = $categorys->commit();
         $images = $this->queryBuilder->table("images")->select("*");
         $images  = $images->commit();
-
         return view('admin/adminproducts', ['products' => $auxProducts, 'categorys' => $categorys, 'images' => $images]);
     }
 
     public function search()
     {
         $seach = $_GET['search'];
-        $prepare = $this->queryBuilder->table("products") //TODO buscar com filtro
+        $products = $this->queryBuilder->table("products")
             ->select("*")->where("name", " like", "$seach%");
 
-        return view('admin/adminproducts', ['products' => $prepare->commit()]);
+        $auxProducts = $products->commit();
+        $categorys = $this->queryBuilder->table("categories")->select("*");
+        $categorys = $categorys->commit();
+        $images = $this->queryBuilder->table("images")->select("*");
+        $images  = $images->commit();
+
+        return view('admin/adminproducts', ['products' => $auxProducts, 'categorys' => $categorys, 'images' => $images]);
     }
 
-    public function create()
-    {
-
+    public function create(){
 
         $this->queryBuilder->table("products")->insert([$_POST['name'], $_POST['price'], $_POST['selection-category'], $_POST['description']]);
         $idProduct = $this->queryBuilder->table("products")->select("*")->where("name", "=", $_POST['name'])->commit()[0]['id'];
@@ -60,11 +63,14 @@ class CrudProductController
             endif;
         endfor;
 
+        $_SESSION['ALT'] = "yes";
+        $_SESSION["INFO"]=["status"=>"salve", "msg1"=>"Sucesso!",  "msg2" => "produto adicionado com sucesso", "tag" => "success"];
 
         header("Location: /admin/products");
     }
 
-    public function update(){
+    public function update()
+    {
         $allowedFiles = ['jpg', 'png', 'jpeg'];
         $files = $_FILES['files'];
         $names = $files['name'];
@@ -73,7 +79,7 @@ class CrudProductController
         $prepare->commit();
         $idProduct = $this->queryBuilder->table("products")->select("*")->where("name", "=", $_POST['name'])->commit()[0]['id'];
 
-        if($_FILES['files']['error'][0] != 4 && $_FILES['files']['size'][0] != 0):
+        if ($_FILES['files']['error'][0] != 4 && $_FILES['files']['size'][0] != 0) :
             $prepare = $this->queryBuilder->table("images")->delete()->where('productId', '=', $idProduct);
             $prepare->commit();
         endif;

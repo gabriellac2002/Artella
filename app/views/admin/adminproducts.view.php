@@ -1,3 +1,4 @@
+<!-- <?php session_start(); ?> -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,7 +22,7 @@
 <script>
   <?php
   $array = json_encode($images);
-  echo "var jav = " . $array . ";\n";
+  echo "var images = " . $array . ";\n";
   ?>
 </script>
 
@@ -29,7 +30,12 @@
 
   <?php include 'sidebarAdmin.php' ?>
   <main>
-
+    <?php if($_SESSION['ALT'] == "yes"):?>
+    <div class="alert alert-<?php echo $_SESSION["INFO"]['tag'] ?> alert-dismissible fade show mt-5" role="alert">
+      <strong><?php echo $_SESSION["INFO"]['msg1']; ?></strong> <?php echo $_SESSION["INFO"]['msg2']; ?>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif;?>
     <?php require 'tables/table-products.php' ?>
 
     <?php foreach ($products as $value) : ?>
