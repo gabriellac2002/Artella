@@ -170,7 +170,7 @@
         </div>
 
         <!-- conteúdo do modal -->
-
+      <form method="post" action="">
         <div class="form-group mt-5 mb-3 mx-3">
           <label class="modals-label">Nome</label>
           <input type="text" class="form-control modals-input">
@@ -187,7 +187,7 @@
           <label class="modals-label">Senha</label>
           <input type="password" class="form-control modals-input">
         </div>
-
+      </form>
       </div>
 
       <div class="modal-footer mt-3">
