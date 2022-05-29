@@ -30,12 +30,8 @@
 
   <?php include 'sidebarAdmin.php' ?>
   <main>
-    <?php if($_SESSION['ALT'] == "yes"):?>
-    <div class="alert alert-<?php echo $_SESSION["INFO"]['tag'] ?> alert-dismissible fade show mt-5" role="alert">
-      <strong><?php echo $_SESSION["INFO"]['msg1']; ?></strong> <?php echo $_SESSION["INFO"]['msg2']; ?>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <?php endif;?>
+    <?php require 'modals/products/messages.php' ?>
+
     <?php require 'tables/table-products.php' ?>
 
     <?php foreach ($products as $value) : ?>
@@ -61,11 +57,8 @@
 
     <?php endforeach; ?>
 
-
     </tbody>
-
     </table>
-
 
     <?php require 'modals/products/modal-add-products.php' ?>
     <?php require 'modals/products/modal-edit-products.php' ?>
