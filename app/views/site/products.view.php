@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,10 +37,12 @@
         </span>
         <span class="rowMain">
           <label>Categoria: </label>
-          <select style="margin-left: 0px;">
-            <option value="nft" name="nft">NFT</option>
-            <option value="painting" name="painting">Quadro</option>
-            <option value="watercolor" name="watercolor">Aquarela</option>
+          <select style="margin-left: 0px;" id="select-category" >
+          <option selected value="none" name="none">All</option>
+
+          <?php foreach ($categorys as $category):?>
+            <option value="<?php echo $category['id']?>" name="<?php echo $category['name']?>"><?php echo $category['name']?></option>
+          <?php endforeach;?>
           </select>
         </span>
       </div>
@@ -166,8 +167,8 @@
       </div>
       <div class="container-xl">
         <div class="refine">
-          <input value="" placeholder="Pesquisar produto" />
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="searchProduct" placeholder="Pesquisar produto" />
+          <i class="fa-solid fa-magnifying-glass" onclick="search();"></i>
         </div>
         <div class="row row-cols-lg-2" style="flex-wrap: wrap;">
 
@@ -206,6 +207,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/91248aca6a.js" crossorigin="anonymous"></script>
   <script src="../../../public/js/productsFilters.js"></script>
+
 </body>
 
 </html>

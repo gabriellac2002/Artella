@@ -10,3 +10,5 @@ $router->post("admin/productsEdit", "CrudProductController@update");
 $router->post("admin/productsDelete", "CrudProductController@delete");
 //------------------------- Rotas products --------------------------------
 $router->get("products", "ProductController@index");
+$router->get("productsSearch", "ProductController@search");
+
