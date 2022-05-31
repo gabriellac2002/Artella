@@ -51,8 +51,7 @@
       </ul>
     </div>
     <section class="home-section">
-        <div class="text">Página fica AQUI</div>
-    </section>
+        
 
     <script src="../../../public/js/sidebarAdmin.js"></script>
   </body>
