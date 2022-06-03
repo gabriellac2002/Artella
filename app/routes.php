@@ -12,3 +12,6 @@ $router->post("admin/productsDelete", "CrudProductController@delete");
 $router->get("products", "ProductController@index");
 $router->get("productsSearch", "ProductController@search");
 
+//------------------------- Rotas dos crud categorias --------------------------------
+
+$router->get("admin/categorias", "Categorias_Controller@index");

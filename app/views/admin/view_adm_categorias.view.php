@@ -1,5 +1,9 @@
 <?php
 
+include '../modals/categorias/modal-add-categorias.php';
+include '../modals/categorias/modal-delete-categorias.php';
+include '../modals/categorias/modal-edit-categorias.php';
+include '../modals/categorias/modal-view-categorias.php';
 
 ?>
 <!DOCTYPE html>
