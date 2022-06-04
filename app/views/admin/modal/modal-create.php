@@ -11,11 +11,11 @@
                 <div class="formulario-adiciona">
                     <h2>Preencha o formulário para adicionar novos Usuários</h2>
                     <form action="/admin/create" method="POST">
-                      <div class="form-group">
+                      <!--<div class="form-group">
                             <label for="exampleInputEmail1">ID:</label>
                             <input type="text" class="form-control" id="nameFormInput" name='id' placeholder=":)">
                             <small id="emailHelp" class="form-text text-muted">Indique o ID para o cadastro</small>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nome de usuário:</label>
                             <input type="text" class="form-control" id="nameFormInput" name='name' placeholder=":)">

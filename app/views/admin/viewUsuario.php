@@ -35,10 +35,10 @@
       <?php require 'modal/modal-edit.php' ?>
 
           <tr>
-            <th scope="row" id="td"><?=$function->id?></th>
-            <td id="td"><?=$function->name?></td>
-            <td id="td"><?=$function->email?></td>
-            <td id="tdbutton"><button class="btn btn-outline-primary  botaozinho" data-toggle="modal" data-target="#modal-view-<?=$function->id?>" id="usubutton" type="submit"> <i class="far fa-eye iconebotao"></i></button><button class="btn btn-outline-success  botaozinho" data-toggle="modal" data-target="#modal-edit-<?=$function->id?>" id="editbutton"><i class="far fa-edit iconebotao"></i></button><button type="button" id="excluibutton" class="btn btn-outline-danger  botaozinho" data-toggle="modal" data-target="#modal-delete-<?=$function->id?>"><i class="far fa-trash-alt iconebotao"></i></button></td>
+            <th scope="row" id="td"><?=$function['id']?></th>
+            <td id="td"><?=$function['name']?></td>
+            <td id="td"><?=$function['email']?></td>
+            <td id="tdbutton"><button class="btn btn-outline-primary  botaozinho" data-toggle="modal" data-target="#modal-view-<?=$function['id']?>" id="usubutton" type="submit"> <i class="far fa-eye iconebotao"></i></button><button class="btn btn-outline-success  botaozinho" data-toggle="modal" data-target="#modal-edit-<?=$function['id']?>" id="editbutton"><i class="far fa-edit iconebotao"></i></button><button type="button" id="excluibutton" class="btn btn-outline-danger  botaozinho" data-toggle="modal" data-target="#modal-delete-<?=$function['id']?>"><i class="far fa-trash-alt iconebotao"></i></button></td>
           </tr>
       <?php endforeach; ?>
     </table>

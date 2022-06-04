@@ -16,14 +16,12 @@ class UserControl
     public function view()
     {
         $users = $this->queryBuilder->table('users')->select("*");
-        //$users = App::get('database')->selectAll('users');
-        /*
-        $table = [
-           'users' => $users,
-        ]; 
-        */
-        $auxUsers = $users->commit();
-        return view('admin/viewUsuario', $auxUsers);
+        $users = $users->commit();
+        $tabela = [
+            'users' => $users,
+        ];
+
+        return view('admin/viewUsuario', $tabela);
     }
     public function index()
     {
@@ -38,12 +36,12 @@ class UserControl
     public function create()
     {
         $parameters = [
-            'id' => $_POST['id'],
             'name' => $_POST['name'],
             'email' => $_POST['email'],
             'password' => $_POST['password'],
         ];
-        App::get('database')->insert('users', $parameters);
+
+        $this->queryBuilder->table("users")->insert([$_POST['name'], $_POST['email'], $_POST['password']]);
 
         header('Location: /admin/viewusuario');
     }
@@ -55,26 +53,21 @@ class UserControl
 
     public function edit()
     {
-        $parameters = [
-            'name' => $_POST['name'],
-            'email' => $_POST['email'],
-            'password' => $_POST['password'],
-        ];
-        App::get('database')->edit('users', $_POST['id'] ,$parameters);
+
+        $this->queryBuilder->table("users")->update(['name', 'email','password'], [$_POST['name'], $_POST['email'], $_POST['password']])->where('id', '=', $_POST['id'])->commit();
 
         header('Location: /admin/viewusuario');
     }
 
     public function update()
     {
-
+        
     }
 
     public function delete()
     {
-        $id = $_POST['id'];
+        $this->queryBuilder->table("users")->delete()->where('id', '=', $_POST['id'])->commit();
 
-        App::get('database')->delete('users', $id);
 
         header('Location: /admin/viewusuario');
     }
