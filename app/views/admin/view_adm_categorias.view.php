@@ -1,9 +1,11 @@
 <?php
 
-include '../modals/categorias/modal-add-categorias.php';
-include '../modals/categorias/modal-delete-categorias.php';
-include '../modals/categorias/modal-edit-categorias.php';
-include '../modals/categorias/modal-view-categorias.php';
+require 'modals\categorias\modal-add-categorias.php';
+require 'modals/categorias/modal-delete-categorias.php';
+require 'modals/categorias/modal-edit-categorias.php';
+require 'modals/categorias/modal-view-categorias.php';
+
+include 'sidebarAdmin.php';
 
 ?>
 <!DOCTYPE html>

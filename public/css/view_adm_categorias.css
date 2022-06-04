@@ -152,6 +152,8 @@
     text-transform: uppercase;
   }
   
+  @media (max-width: 540px){}
+
   @media (max-width: 540px) {
     .title {
       font-size: 20px;
