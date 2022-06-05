@@ -1,7 +1,7 @@
 <?php 
   namespace App\Controllers;
 
-  class PostController {
+  class ProController {
     
     function __construct()
     {
