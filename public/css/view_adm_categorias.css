@@ -152,7 +152,9 @@
     text-transform: uppercase;
   }
   
-  @media (max-width: 540px){}
+  @media (max-width: 540px){
+    
+  }
 
   @media (max-width: 540px) {
     .title {

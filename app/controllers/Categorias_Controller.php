@@ -8,9 +8,20 @@ use App\Core\Database\QueryBuilder;
 
 class Categorias_Controller
 {
+    protected $queryBuilder;
+    function __construct()
+    {
+        $this->queryBuilder = new QueryBuilder();
+    }
+
     public function index()
     {
-        return view('admin/view_adm_categorias');
+        $categorias=$this->queryBuilder->table('categories')->select('*');
+        $categorias=$categorias->commit();
+        $tables=[
+            'categories'=>$categorias,
+        ];
+        return view('admin/view_adm_categorias', $tables);
     }
 
     public function show()

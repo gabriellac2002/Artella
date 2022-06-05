@@ -64,7 +64,9 @@ include 'sidebarAdmin.php';
                     <th>Ações</th>
                 </tr>
             </thead>
-    
+
+            <?php foreach($categorias as $categoria) :?>
+
             <tbody class="bodyTable">
                 <tr class="rowTable1">
                     <td>1</td>
@@ -94,173 +96,10 @@ include 'sidebarAdmin.php';
                     </button>
                     </td>
                 </tr>
-  
-                <tr class="rowTable2">
-                    <td>2</td>
-                    <td colspan="2">NFT</td>
-                    <td class="btn-row">   
-                    <!--desktop-->
-                    <div class="btns-desktop">
-
-                        <button class="btn btnView" data-bs-toggle="modal" data-bs-target="#viewAction"><i
-                            class="fa-solid fa-eye mx-1">
-                            <p class="mt-3">Vizualizar</p>
-                          </i></button>
-
-                        <button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction"><i
-                           class="fa fa-pencil mx-1">
-                           <p class="mt-3">Editar</p>
-                          </i></button>                           
-                        <button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction"><i
-                            class="fa-solid fa-trash mx-1">
-                            <p class="mt-3">Deletar</p>
-                        </i></button>   
-                    </div>
-
-                    <!--mobile-->
-                    <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
-                        <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
-                    </button>
-                </td>
-            </tr>
-
-              <tr class="rowTable1">
-                <td>3</td>
-                <td colspan="2">Artes digitais</td>
-                <td class="btn-row">
-    
-                  <!--desktop-->
-    
-                  <div class="btns-desktop">
-    
-                    <button class="btn btnView" data-bs-toggle="modal" data-bs-target="#viewAction"><i
-                        class="fa-solid fa-eye mx-1">
-                        <p class="mt-3">Vizualizar</p>
-                      </i></button>
-
-                    <button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction"><i
-                        class="fa fa-pencil mx-1">
-                        <p class="mt-3">Editar</p>
-                      </i></button>
-    
-                    <button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction"><i
-                        class="fa-solid fa-trash mx-1">
-                        <p class="mt-3">Deletar</p>
-                      </i></button>
-    
-                  </div>
-    
-                  <!--mobile-->
-                  <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
-                    <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
-                  </button>
-    
-                </td>
-              </tr>
-
-              <tr class="rowTable2">
-                <td>4</td>
-                <td colspan="2">Exposições</td>
-                <td class="btn-row">
-    
-                  <!--desktop-->
-    
-                  <div class="btns-desktop">
-    
-                    <button class="btn btnView" data-bs-toggle="modal" data-bs-target="#viewAction"><i
-                        class="fa-solid fa-eye mx-1">
-                        <p class="mt-3">Vizualizar</p>
-                      </i></button>
-
-                    <button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction"><i
-                        class="fa fa-pencil mx-1">
-                        <p class="mt-3">Editar</p>
-                      </i></button>
-    
-                    <button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction"><i
-                        class="fa-solid fa-trash mx-1">
-                        <p class="mt-3">Deletar</p>
-                      </i></button>
-    
-                  </div>
-    
-                  <!--mobile-->
-                  <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
-                    <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
-                  </button>
-    
-                </td>
-              </tr>
-
-              <tr class="rowTable1">
-                <td>5</td>
-                <td colspan="2">Quadros brancos</td>
-                <td class="btn-row">
-    
-                  <!--desktop-->
-    
-                  <div class="btns-desktop">
-
-                    <button class="btn btnView" data-bs-toggle="modal" data-bs-target="#viewAction"><i
-                        class="fa-solid fa-eye mx-1">
-                        <p class="mt-3">Vizualizar</p>
-                      </i></button>
-
-                    <button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction"><i
-                        class="fa fa-pencil mx-1">
-                        <p class="mt-3">Editar</p>
-                      </i></button>
-    
-                    <button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction"><i
-                        class="fa-solid fa-trash mx-1">
-                        <p class="mt-3">Deletar</p>
-                      </i></button>
-    
-                  </div>
-    
-                  <!--mobile-->
-                  <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
-                    <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
-                  </button>
-    
-                </td>
-              </tr>
-
-              <tr class="rowTable2">
-                <td>6</td>
-                <td colspan="2">Pinceis</td>
-                <td class="btn-row">
-    
-                  <!--desktop-->
-    
-                  <div class="btns-desktop">
-
-                    <button class="btn btnView" data-bs-toggle="modal" data-bs-target="#viewAction"><i
-                        class="fa-solid fa-eye mx-1">
-                        <p class="mt-3">Vizualizar</p>
-                      </i></button>
-    
-                    <button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction"><i
-                        class="fa fa-pencil mx-1">
-                        <p class="mt-3">Editar</p>
-                      </i></button>
-    
-                    <button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction"><i
-                        class="fa-solid fa-trash mx-1">
-                        <p class="mt-3">Deletar</p>
-                      </i></button>
-    
-                  </div>
-    
-                  <!--mobile-->
-                  <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
-                    <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
-                  </button>
-    
-                </td>
-              </tr>
-
             </tbody>
+          
+            <?php endforeach;?>
+
           </table>
         </div>
       </div>
