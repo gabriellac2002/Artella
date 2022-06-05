@@ -39,7 +39,7 @@
           <?php 
             for($value = 0; $value < 10; $value++) :
           ?>
-            <li class="page-item"><a class="page-link" href="#"><?php echo $value;?></a></li>
+            <li class="page-item pageNumber" ><a style="background-color: #e4e4e4;" class="page-link" href="#"><?php echo $value + 1;?></a></li>
           <?php 
             endfor;
           ?>

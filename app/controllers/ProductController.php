@@ -20,6 +20,7 @@ class ProductController
   {
 
     $products = $this->queryBuilder->table("products")->select("*")->commit();
+    
 
     $itens = [];
 
