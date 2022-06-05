@@ -11,6 +11,7 @@ class QueryBuilder
     protected $rootQuery = "";
     protected $storedValues = array();
     protected $index = 0;
+    private $countOperation = false;
 
 
     public function __construct()
@@ -37,6 +38,13 @@ class QueryBuilder
     public function select(string $query) {
         $baseQuery = "SELECT ".$query." FROM ".$this->table;
         $this->rootQuery = $baseQuery;
+        return $this;
+    }
+
+    public function count(string $query) {
+        $baseQuery = "SELECT count(".$query.") FROM ".$this->table;
+        $this->rootQuery = $baseQuery;
+        $this->countOperation = true;
         return $this;
     }
 
@@ -130,13 +138,26 @@ class QueryBuilder
         $this->storedValues = [];
         $this->rootQuery = "";
         $this->index = 0;
+        $this->countOperation = false;
     }
 
     public function commit() {
-        $statement = $this->pdo->prepare($this->rootQuery);
-        $statement->execute($this->storedValues);
-        $this->cleanup();
-        return $statement->fetchAll();
+        if(!$this->countOperation) {
+            $statement = $this->pdo->prepare($this->rootQuery);
+            $statement->execute($this->storedValues);
+            $this->cleanup();
+            return $statement->fetchAll();
+        }
+        else {
+            $statement = $this->pdo->prepare($this->rootQuery);
+            $statement->execute($this->storedValues);
+            $this->cleanup();
+            return $statement->fetchColumn();
+        }
+    }
+
+    public function commitCount() {
+        
     }
 
     public function selectAll()

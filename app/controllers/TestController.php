@@ -16,16 +16,7 @@ class TestController
 
     public function index()
     {
-        $prepare = $this->queryBuilder->table("products")
-        ->select("*")
-        ->join("categories", "categoryId", "=", "id")
-        ->where("products.categoryId", "=", 3)
-        ->orWhere("products.categoryId", "=", 4)
-        ->limit(1, 1)
-        ;
-        foreach($prepare->commit() as $value) {
-            echo $value["name"];
-        }
+        echo ceil($this->queryBuilder->table("products")->count("*")->commit() / 10);
     }
 
     public function show()
