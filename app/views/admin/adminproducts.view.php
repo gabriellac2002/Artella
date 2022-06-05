@@ -33,6 +33,18 @@
     <?php require 'modals/products/messages.php' ?>
 
     <?php require 'tables/table-products.php' ?>
+    
+    <div class="alignLeft">
+      <ul class="pagination">
+          <?php 
+            for($value = 0; $value < 10; $value++) :
+          ?>
+            <li class="page-item"><a class="page-link" href="#"><?php echo $value;?></a></li>
+          <?php 
+            endfor;
+          ?>
+      </ul>
+    </div>
 
     <?php foreach ($products as $value) : ?>
 

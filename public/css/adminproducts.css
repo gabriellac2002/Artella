@@ -2,6 +2,9 @@ body {
   background-color: #d9d9d9;
 }
 
+.sidebar li i {
+  margin: 0;
+}
 
 tr:nth-child(even) {
   background-color: #A4C2C6 !important;
@@ -242,4 +245,14 @@ h2 {
   .search > i {
     margin-left: 2px;
   }
+}
+
+.pagination {
+  margin-top: 18px;
+  background-color: #999 !important;
+}
+
+.alignLeft {
+  display: flex;
+  justify-content: end;
 }
