@@ -16,10 +16,10 @@ class Categorias_Controller
 
     public function index()
     {
-        $categorias=$this->queryBuilder->table('categories')->select('*');
+        $categorias=$this->queryBuilder->table("categories")->select("*");
         $categorias=$categorias->commit();
         $tables=[
-            'categories'=>$categorias,
+            'categorias'=>$categorias,
         ];
         return view('admin/view_adm_categorias', $tables);
     }
