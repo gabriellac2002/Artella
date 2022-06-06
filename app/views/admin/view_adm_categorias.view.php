@@ -62,7 +62,7 @@ include 'sidebarAdmin.php';
             <tr class="rowTable1">
               <td> <?php echo $categoria['id']; ?> </td>
               <td colspan="2"> <?php echo $categoria['name']; ?> </td>
-              <td class="btn-row">
+              <td class="btn-row botoes_de">
                 <!--desktop-->
                 <div class="btns-desktop">
 

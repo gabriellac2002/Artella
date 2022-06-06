@@ -1,196 +1,273 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    background: #d9d9d9;
-    text-align: center;
-  }
-  
-  h1{
-      margin-top: 1.25rem;
-      font-size: 3rem;
-      margin-bottom: 1.25rem;
-  }
-  .spaceTable { 
-    width: 100%;
-    height: 100%;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #d9d9d9;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 1.25rem;
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.spaceTable {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  margin-top: 5vh;
+  text-align: center;
+  font: 34px "Poppins", sans-serif;
+  font-weight: 100;
+  letter-spacing: 4px;
+  color: #0f606b;
+  text-shadow: #402857 0.05em 0.1em 0.1em;
+}
+
+.tableBar {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  margin-top: 1.25rem;
+  height: 50px;
+  border-radius: 0.8em;
+  background: #051d40;
+  border: 1px solid #071c3a;
+}
+
+.tableBarForm {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.nova_categoria {
+  margin-top: 1rem !important;
+}
+
+.formSeach {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 370px;
+  height: 20px;
+  padding: 20px;
+  border-radius: 1.2em;
+  background-color: #1d3353;
+  border: 1px solid #073035;
+}
+
+.seachBar {
+  width: 100%;
+  height: 30px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #d9d9d9;
+}
+
+.tableUsers {
+  border-collapse: collapse;
+  border-radius: 0.8em;
+  overflow: hidden;
+}
+
+.tableUsers thead {
+  background: #0f606b;
+  color: #d9d9d9;
+}
+
+.spaceTable table tr {
+  border-style: normal;
+  text-align: center;
+}
+
+.rowTable1 {
+  background: #fff;
+}
+
+.rowTable2 {
+  background: #cccccc;
+}
+
+.button-action {
+  border: none;
+  background: none;
+  display: none;
+  align-items: center;
+}
+
+.btn-row {
+  min-width: 200px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.btnView,
+.btnEdit,
+.btnDelete {
+  font: 12px "Poppins", sans-serif;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.btnView i p,
+.btnEdit i p,
+.btnDelete i p {
+  display: none;
+  font: 12px "Poppins", sans-serif;
+}
+
+.btnView:hover,
+.btnEdit:hover,
+.btnDelete:hover {
+  transform: scale(1.2);
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modals .modal-dialog .modal-content,
+.modals .modal-dialog {
+  background-color: #266f79;
+  border-radius: 20px;
+  border: none;
+}
+
+.modals .modal-dialog {
+  border: 1px solid #0f606b;
+}
+
+.modals .modal-dialog .modal-content .modal-header h5 {
+  color: #d9d9d9;
+  font: 20px "Poppins", sans-serif;
+}
+
+.modals-input {
+  border-radius: 10px;
+}
+
+.modals-label {
+  color: #d9d9d9;
+  font: 14px "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.modals-text {
+  color: #d9d9d9;
+  font: 18px "Poppins", sans-serif;
+}
+
+.modals-button {
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 540px) {
   .title {
-    margin-top: 5vh;
-    text-align: center;
-    font: 34px "Poppins", sans-serif;
-    font-weight: 100;
-    letter-spacing: 4px;
-    color: #0f606b;
-    text-shadow: #402857 0.05em 0.1em 0.1em;
+    font-size: 20px;
   }
-  .tableBar {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    align-items: center;
-    margin-top: 1.25rem;
-    height: 50px;
-    border-radius: 0.8em;
-    background: #051d40;
-    border: 1px solid #071c3a;
-  }
-  
-  .tableBarForm {
-    width: 100%;
-    justify-content: flex-end;
-  }
-  .nova_categoria{
-      margin-top: 1rem!important;
-  }
-  .formSeach {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 370px;
-    height: 20px;
-    padding: 20px;
-    border-radius: 1.2em;
-    background-color: #1d3353;
-    border: 1px solid #073035;
-  }
-  
-  .seachBar {
-    width: 100%;
-    height: 20px;
-    border: none;
-    background: none;
-    outline: none;
-    color: #d9d9d9;
-  }
-  
-  .tableUsers {
-    border-collapse: collapse;
-    border-radius: 0.8em;
-    overflow: hidden;
-  }
-  
-  .tableUsers thead {
-    background: #0f606b;
-    color: #d9d9d9;
-  }
-  
-  .spaceTable table tr {
-    border-style: normal;
-    text-align: center;
-  }
-  
-  .rowTable1 {
-    background: #fff;
-  }
-  .rowTable2 {
-    background: #cccccc;
-  }
-  
+
   .button-action {
-    border: none;
-    background: none;
+    display: inline;
+    margin-right: 0px;
+  }
+
+  .btns-desktop {
     display: none;
-    align-items: center;
   }
-  
-  .btn-row {
-    min-width: 200px;
-  }
-  
-  .btnView,
-  .btnEdit,
-  .btnDelete {
-    font: 12px "Poppins", sans-serif;
-  }
-  
+
   .btnView i p,
   .btnEdit i p,
   .btnDelete i p {
-    display: none;
-    font: 12px "Poppins", sans-serif;
+    display: block;
   }
-  
-  .btnView:hover,
-  .btnEdit:hover,
-  .btnDelete:hover {
-    transform: scale(1.2);
-  }
-  
-  .modal-body {
-    text-align: center;
-  }
-  
-  .modals .modal-dialog .modal-content,
-  .modals .modal-dialog {
-    background-color: #266f79;
-    border-radius: 20px;
-    border: none;
-  }
-  .modals .modal-dialog {
-    border: 1px solid #0f606b;
-  }
-  
-  .modals .modal-dialog .modal-content .modal-header h5 {
+
+  .btnView i,
+  .btnEdit i,
+  .btnDelete i {
     color: #d9d9d9;
-    font: 20px "Poppins", sans-serif;
   }
-  .modals-input {
-    border-radius: 10px;
+
+  .btn-row {
+    min-width: 0;
+    max-width: 30px;
   }
-  .modals-label {
-    color: #d9d9d9;
-    font: 14px "Poppins", sans-serif;
-    text-transform: uppercase;
-  }
-  .modals-text {
-    color: #d9d9d9;
+
+  .headTable {
     font: 18px "Poppins", sans-serif;
   }
-  .modals-button {
-    border-radius: 10px;
-    text-transform: uppercase;
-  }
-  
-  @media (max-width: 540px){
-    
+
+  .bodyTable {
+    font: 18px "Poppins", sans-serif;
   }
 
-  @media (max-width: 540px) {
-    .title {
-      font-size: 20px;
-    }
-    .button-action {
-      display: inline;
-      margin-right: 0px;
-    }
-  
-    .btns-desktop {
-      display: none;
-    }
-  
-    .btnView i p,
-    .btnEdit i p,
-    .btnDelete i p {
-      display: block;
-    }
-    .btnView i,
-    .btnEdit i,
-    .btnDelete i {
-      color: #d9d9d9;
-    }
-    .btn-row {
-      min-width: 0;
-      max-width: 30px;
-
-    }
-    .headTable {
-      font: 12px "Poppins", sans-serif;
-    }
-    .bodyTable {
-      font: 12px "Poppins", sans-serif;
-    }
-    .formSeach {
-      width: 300px;
-    }
+  .formSeach {
+    width: 300px;
   }
+}
+
+@media (max-width: 380px) {
+  h1{
+    font-size: 40px !important;
+  }
+
+  .headTable {
+    font: 16px "Poppins", sans-serif;
+  }
+
+  .bodyTable {
+    font: 16px "Poppins", sans-serif;
+  }
+}
+
+@media (max-width: 360px) {
+  .headTable {
+    font: 14px "Poppins", sans-serif;
+  }
+
+  .bodyTable {
+    font: 14px "Poppins", sans-serif;
+  }
+}
+
+/*------EDIÇOES DA SIDE BAR PARA FICAR RESPINSIVO------*/
+
+@media (max-width: 360px) {
+  .sidebar {
+    width: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  a{
+    width: 50px !important;
+    margin-left: 5px;
+  }
+  .bx-menu{
+    margin-right: 5px;
+  }
+
+  .bx-log-out{
+    width: 60px !important;
+    position: relative;
+    left: 0px;
+  }
+
+  .profile{
+    width: 60px !important;
+  }
+
+  .home-section{
+    position: relative;
+    left: 60px !important;
+    width: calc(100% - 60px) !important;
+  }
+}
+
+  
