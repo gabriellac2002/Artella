@@ -15,3 +15,5 @@ $router->get("productsSearch", "ProductController@search");
 //------------------------- Rotas dos crud categorias --------------------------------
 
 $router->get("admin/categorias", "Categorias_Controller@index");
+
+$router->post('admin/create', "Categorias_Controller@create");

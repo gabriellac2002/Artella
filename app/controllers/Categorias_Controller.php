@@ -31,7 +31,13 @@ class Categorias_Controller
 
     public function create()
     {
- 
+        $parameters = [
+            'name' => $_POST['name'],
+        ];
+
+        $this->queryBuilder->table("categories")->insert([$_POST['name']]);
+
+        header('Location: /admin/categorias');
     }
 
     public function store()
