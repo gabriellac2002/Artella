@@ -23,20 +23,22 @@
                 </p>
             </div>
 
+            <form id="form_deleta" action="/admin/categorias-delete" method="POST">
+                <input type="hidden" value="<?= $categoria['id'] ?>" name="id">
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-primary modals-button" id="conf-modal">
+                        <i class="fa-solid fa-check" > </i> CONFIRMAR        
+                    </button>
+
+                    <button type="button" class="btn btn-danger  modals-button" data-dismiss="modal">
+                        <i  class="fa-solid fa-close" > </i> CANCELAR        
+                    </button>
+                    
+                </div>
+            </form>    
         </div>
 
-        <div class="modal-footer">
-
-            <button type="button" class="btn btn-primary modals-button">
-                <i class="fa-solid fa-check"> </i> CONFIRMAR
-
-            </button>
-            <button type="button" class="btn btn-danger  modals-button">
-                <i class="fa-solid fa-close"> </i> CANCELAR
-
-            </button>
-
-        </div>
 
     </div>
 </div>

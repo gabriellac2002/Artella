@@ -34,9 +34,7 @@ class Categorias_Controller
         $parameters = [
             'name' => $_POST['name'],
         ];
-
         $this->queryBuilder->table("categories")->insert([$_POST['name']]);
-
         header('Location: /admin/categorias');
     }
 
@@ -47,7 +45,9 @@ class Categorias_Controller
 
     public function edit()
     {
-  
+        $prepare=$this->queryBuilder->table("categories")->update(['name'], [$_POST['name']])->where('id', '=', $_POST['id']);
+        $prepare->commit();
+        header('Location: /admin/categorias');
     }
 
     public function update()
@@ -57,6 +57,7 @@ class Categorias_Controller
 
     public function delete()
     {
- 
+        $this->queryBuilder->table("categories")->delete()->where('id', '=', $_POST['id'])->commit();
+        header('Location: /admin/categorias');
     }
 }

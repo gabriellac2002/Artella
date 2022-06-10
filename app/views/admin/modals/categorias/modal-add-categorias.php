@@ -17,7 +17,7 @@
                 </div>
 
                 <!-- conteúdo do modal -->
-                <form action="/admin/create" method="POST">
+                <form action="/admin/categorias-create" method="POST">
                     <div class="form-group mt-5 mb-3 mx-3 nova_categoria">
                             <label class="modals-label">Nova categoria</label>
                             <input type="text" class="form-control modals-input" id="nameFormInput" name="name" placeholder="Nome da nova categoria">

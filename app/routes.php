@@ -16,4 +16,8 @@ $router->get("productsSearch", "ProductController@search");
 
 $router->get("admin/categorias", "Categorias_Controller@index");
 
-$router->post('admin/create', "Categorias_Controller@create");
+$router->post('admin/categorias-create', "Categorias_Controller@create");
+
+$router->post('admin/categorias-edit', 'Categorias_Controller@edit');
+
+$router->post('admin/categorias-delete', 'Categorias_Controller@delete');
