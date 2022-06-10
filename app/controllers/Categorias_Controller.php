@@ -18,6 +18,11 @@ class Categorias_Controller
     {
         $categorias=$this->queryBuilder->table("categories")->select("*");
         $categorias=$categorias->commit();
+
+        usort($categorias, function ($cat1, $cat2) {
+            return $cat1["id"] > $cat2["id"];
+        });
+
         $tables=[
             'categorias'=>$categorias,
         ];
@@ -59,5 +64,20 @@ class Categorias_Controller
     {
         $this->queryBuilder->table("categories")->delete()->where('id', '=', $_POST['id'])->commit();
         header('Location: /admin/categorias');
+    }
+    public function search()
+    {
+        $seach = $_GET['search'];
+        $categorias = $this->queryBuilder->table("categories")->select("*")->where("name", " like", "$seach%");
+        $categorias = $categorias->commit();
+        usort($categorias, function ($cat1, $cat2) {
+            return $cat1["id"] > $cat2["id"];
+        });
+
+        $tables=[
+            'categorias'=>$categorias,
+        ];
+
+        return view('admin/view_adm_categorias', $tables);
     }
 }

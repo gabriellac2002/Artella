@@ -39,15 +39,15 @@ include 'sidebarAdmin.php';
       <?php require 'modals/categorias/modal-add-categorias.php' ?>
 
       <div class="tableBarForm d-flex">
-        <form class="formSeach me-2">
-          <input class="seachBar mx-2" type="search" aria-label="Search">
+        <form class="formSeach me-2" method="GET" action='categorias-search'>
+          <input class="seachBar mx-2" type="search" aria-label="Search" name="search">
           <button class="btn ms-1" type="submit"><i class="fa-solid fa-magnifying-glass" style="color:#d9d9d9;"></i></button>
         </form>
       </div>
     </div>
 
     <div class="spaceTable">
-      <table class="table tableUsers mx-0">
+      <table class="table  tableUsers mx-0">
         <thead class="headTable">
           <tr>
             <th>Id</th>
