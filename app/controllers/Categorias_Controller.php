@@ -18,6 +18,10 @@ class Categorias_Controller
     {
         $categorias=$this->queryBuilder->table("categories")->select("*");
         $categorias=$categorias->commit();
+        
+        usort($categorias, function ($cat1, $cat2) {
+            return $cat1["id"] > $cat2["id"];
+        });
 
         $tables=[
             'categorias'=>$categorias,
@@ -67,6 +71,9 @@ class Categorias_Controller
         $categorias = $this->queryBuilder->table("categories")->select("*")->where("name", " like", "$seach%");
         $categorias = $categorias->commit();
 
+        usort($categorias, function ($cat1, $cat2) {
+            return $cat1["id"] > $cat2["id"];
+        });
 
         $tables=[
             'categorias'=>$categorias,

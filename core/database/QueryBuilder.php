@@ -35,7 +35,7 @@ class QueryBuilder
     }
 
     public function select(string $query) {
-        $baseQuery = "SELECT ".$query." FROM ".$this->table." ORDER BY id ";
+        $baseQuery = "SELECT ".$query." FROM ".$this->table;
         $this->rootQuery = $baseQuery;
         return $this;
     }
