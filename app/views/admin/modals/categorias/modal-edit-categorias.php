@@ -1,4 +1,4 @@
-<button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction">
+<button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction-<?= $categoria['id']; ?>">
     <i class="fa fa-pencil mx-1">
         <p class="mt-3">Editar</p>
     </i>
@@ -6,7 +6,7 @@
 
 
 <!-- edit -->
-<div class="modal modals fade mt-5" id="editAction" tabindex="-1" aria-hidden="true">
+<div class="modal modals fade mt-5" id="editAction-<?= $categoria['id']; ?>" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <!-- cabeçalho do modal -->

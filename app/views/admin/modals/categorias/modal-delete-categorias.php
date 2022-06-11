@@ -1,4 +1,4 @@
-<button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction">
+<button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction-<?= $categoria['id']; ?>">
     <i class="fa-solid fa-trash mx-1">
         <p class="mt-3">Deletar</p>
     </i>
@@ -6,7 +6,7 @@
 
 
 <!-- delete -->
-<div class="modal modals fade mt-5" id="deleteAction" tabindex="-1" aria-hidden="true">
+<div class="modal modals fade mt-5" id="deleteAction-<?= $categoria['id']; ?>" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
 
