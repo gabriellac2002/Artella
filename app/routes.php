@@ -19,6 +19,7 @@ $router->get("login", "LoginController@index");
 $router->post("login/valida", "LoginController@valida");
 
 $router->get("dashadm", "LoginController@dashadm");
+$router->get("login/logout", "LoginController@logout");
 
 
 
