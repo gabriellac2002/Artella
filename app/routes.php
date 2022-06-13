@@ -15,5 +15,12 @@ $router->get("productsSearch", "ProductController@search");
 $router->get("contato", "ContatoController@index");
 $router->post("contato/enviar", "ContatoController@send");
 
+$router->get("home", "HomeController@index");
+$router->get("about", "AboutUsController@index");
+
+
+
+
+
 
 

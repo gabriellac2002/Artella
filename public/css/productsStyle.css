@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: #d9d9d9;
+  font-family: "Poppins", sans-serif;
+ 
+}
 
 main {
   display: flex;
@@ -133,14 +138,6 @@ select {
   text-decoration: line-through;
   color: #777;
   font-size: 0.8em;
-}
-
-.container a  {
-  margin-top: 10px;
-}
-
-.container-md a {
-  margin-top: 14px;
 }
 
 .rowMain {
