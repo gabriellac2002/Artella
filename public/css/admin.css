@@ -1,0 +1,23 @@
+html, body{
+    background-color: #343434;
+    background-attachment: fixed;
+    background-size:100% 100%;
+    background-repeat: no-repeat;}
+
+#adicionar {
+    width: 40%;
+    color: #fbfbfb;
+    background-color: 0;
+}
+
+.table {
+    text-align: end;
+}
+
+.botaozinho {
+    margin-left: 4px;
+}
+
+.botao {
+    margin-top: 100px;
+}
