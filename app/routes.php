@@ -15,5 +15,10 @@ $router->get("productsSearch", "ProductController@search");
 $router->get("contato", "ContatoController@index");
 $router->post("contato/enviar", "ContatoController@send");
 
+$router->get("login", "LoginController@index");
+$router->post("login/valida", "LoginController@valida");
+
+$router->get("dashadm", "LoginController@dashadm");
+
 
 
