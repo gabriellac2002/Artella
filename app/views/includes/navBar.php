@@ -105,11 +105,10 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end">
 
-            <!-- Login button ainda sem funcionalidade -->
-            <li><a href="#" class="dropdown-item disabled"><i class="bi bi-box-arrow-in-right itens-profile"></i>
+            <li><a href="login" class="dropdown-item "><i class="bi bi-box-arrow-in-right itens-profile"></i>
                 Login</a></li>
-            <li><a href="#" class="dropdown-item"><i class="bi bi-person itens-profile"></i> Perfil</a></li>
-            <li><a href="#" class="dropdown-item"><i class="bi bi-gear-fill itens-profile"></i> Configurações</a></li>
+            <!-- <li><a href="#" class="dropdown-item"><i class="bi bi-person itens-profile"></i> Perfil</a></li> -->
+            <!-- <li><a href="#" class="dropdown-item"><i class="bi bi-gear-fill itens-profile"></i> Configurações</a></li> -->
 
             <hr class="dropdown-divider">
             </li>

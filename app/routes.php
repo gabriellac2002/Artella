@@ -10,7 +10,7 @@ $router->post('admin/create', "UserControl@create");
 $router->post('admin/delete', 'UserControl@delete');
 
 $router->post('admin/update', 'UserControl@edit');
-?>
+
 
 //--------------------Rotas dos crud products----------------------------
 $router->get("admin/products", "CrudProductController@index");
