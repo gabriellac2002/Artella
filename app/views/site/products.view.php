@@ -170,7 +170,10 @@
           <input type="search" id="searchProduct" placeholder="Pesquisar produto" />
           <i class="fa-solid fa-magnifying-glass" onclick="search();"></i>
         </div>
-        <div class="row row-cols-lg-2" style="flex-wrap: wrap;">
+        <ul class="pagination">
+            
+        </ul>
+        <div id="allProducts" class="row row-cols-lg-2" style="flex-wrap: wrap;">
 
           <?php foreach ($itens as $iten):?>
 

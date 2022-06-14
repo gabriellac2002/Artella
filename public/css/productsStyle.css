@@ -189,7 +189,8 @@ select {
   padding: 6px;
   font-size: 1em;
   display: flex;
-  width: 4.5rem;
+  width: 100%;
+  max-width: 10rem;
   align-items: center;
   justify-content: center;
   font-weight: bold;

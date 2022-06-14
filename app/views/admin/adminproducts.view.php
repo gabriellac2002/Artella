@@ -37,9 +37,22 @@
     <div class="alignLeft">
       <ul class="pagination">
           <?php 
-            for($value = 0; $value < 10; $value++) :
+            for($value = 0; $value < $count; $value++) :
           ?>
-            <li class="page-item pageNumber" ><a style="background-color: #e4e4e4;" class="page-link" href="#"><?php echo $value + 1;?></a></li>
+            <li style="background-color: #e4e4e4 !important;"  class="page-item pageNumber <?php if($selectedPage == $value + 1) echo 'active';?>" >
+              <a style="background-color: #e4e4e4 !important;" class="page-link" 
+              href="<?php 
+                if(isset($_GET["search"])) {
+                  echo "http://localhost:8080/admin/productsSearch?search=".$_GET["search"]."&page=".$value + 1;
+                }
+                else {
+                  echo "http://localhost:8080/admin/products?page=".$value + 1;
+                }
+              ?>
+              ">
+              <?php echo $value + 1;?>
+              </a>
+            </li>
           <?php 
             endfor;
           ?>

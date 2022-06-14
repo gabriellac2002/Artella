@@ -256,3 +256,14 @@ h2 {
   display: flex;
   justify-content: end;
 }
+
+.active {
+  background-color: #051d40 !important;
+  color: white !important;
+}
+
+@media only screen and (max-width: 560px) {
+  .pagination {
+    display: none;
+  }
+}

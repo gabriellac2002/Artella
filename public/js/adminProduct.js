@@ -423,3 +423,17 @@ $("#viewModal").on("hide.bs.modal", function (event) {
     bgToNone(images[i]["id"]);
   }
 });
+
+let page = 1;
+
+window.addEventListener('scroll', () => {
+  const {
+    scrollTop,
+    scrollHeight,
+    clientHeight
+  } = document.documentElement;
+
+  if(scrollTop + clientHeight >= scrollHeight - 5) {
+    page++;
+  }
+}, {passive: true})
