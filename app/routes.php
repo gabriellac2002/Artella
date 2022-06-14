@@ -24,7 +24,7 @@ $router->get("productsSearch", "ProductController@search");
 //------------------------- Contato ---------------------------------------
 $router->get("contato", "ContatoController@index");
 $router->post("contato/enviar", "ContatoController@send");
-
+$router->get("", "HomeController@index");
 $router->get("home", "HomeController@index");
 $router->get("about", "AboutUsController@index");
 

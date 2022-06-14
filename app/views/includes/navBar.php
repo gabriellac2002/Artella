@@ -110,9 +110,9 @@
             <!-- <li><a href="#" class="dropdown-item"><i class="bi bi-person itens-profile"></i> Perfil</a></li> -->
             <!-- <li><a href="#" class="dropdown-item"><i class="bi bi-gear-fill itens-profile"></i> Configurações</a></li> -->
 
-            <hr class="dropdown-divider">
+            <!-- <hr class="dropdown-divider">
             </li>
-            <li><a href="#" class="dropdown-item"><i class="bi bi-box-arrow-right itens-profile"></i> Sign out</a></li>
+            <li><a href="#" class="dropdown-item"><i class="bi bi-box-arrow-right itens-profile"></i> Sign out</a></li> -->
           </ul>
         </div>
       </div>

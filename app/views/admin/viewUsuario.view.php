@@ -34,8 +34,6 @@
 <body>
   <!-- NAV -->
 
-
-
   <!-- TABLE  -->
   <div class="container">
     <h1 class="title">USUÁRIOS</h1>

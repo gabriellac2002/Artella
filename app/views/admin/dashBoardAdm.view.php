@@ -38,18 +38,18 @@
     </div>
 
     <div class="cards-area text-universal my-4">
-      <a href="#" class="cards mx-3 my-lg-3 my-4">
+      <a href="admin/products" class="cards mx-3 my-lg-3 my-4">
         <h4>Gerenciar Produtos</h4>
         <i class="fa-solid fa-cart-shopping"></i>
         <div class="next"><i class="fa-solid fa-angle-right"></i></div>
       </a>
-      <a href="#" class="cards mx-3  my-lg-3 my-4">
+      <a href="admin/categorias" class="cards mx-3  my-lg-3 my-4">
         <h4>Gerenciar categorias</h4>
         <i class="fa-solid fa-sitemap"></i>
         <div class="next"><i class="fa-solid fa-angle-right"></i></div>
       </a>
 
-      <a href="#" class="cards mx-3 my-lg-3 my-4">
+      <a href="admin/viewusuario" class="cards mx-3 my-lg-3 my-4">
         <h4>Gerenciar usuarios</h4>
         <i class="fa-solid fa-users"></i>
         <div class="next"><i class="fa-solid fa-angle-right"></i></div>
