@@ -32,7 +32,7 @@ class ProductController
     endforeach;
 
     $categorys = $this->queryBuilder->table("categories")->select("*")->commit();
-    return view('site/products', ['itens' => $itens, 'categorys' => $categorys]);
+    return view('site/contato', ['itens' => $itens, 'categorys' => $categorys]);
   }
 
   public function search(){

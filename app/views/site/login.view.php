@@ -23,13 +23,13 @@
       <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_jmn5frwv.json" background="white"  speed="1" class="animationComponent" loop autoplay></lottie-player>
     </section>
     <section style="" class="form">
-      <form>
+      <form action="login/valida" method="POST">
         <h2>Entre na área administrativa</h2>
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label>
           <div class="inputRow">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
           </div>
           <small id="emailHelp" class="form-text">Não compartilhe dados sensíveis com ninguém</small>
         </div>
@@ -37,7 +37,7 @@
           <label for="exampleInputPassword1">Senha</label>
           <div class="inputRow">
             <i class="fa-solid fa-key"></i>
-            <input type="password" class="form-control" id="password" placeholder="Senha">
+            <input name="password" type="password" class="form-control" id="password" placeholder="Senha">
             <i style="color: grey;" class="fa-solid fa-eye"></i>
           </div>
           <small class="message form-text"></small>

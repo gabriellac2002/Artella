@@ -1,6 +1,16 @@
 <?php
 
 use App\Core\Router;
+use App\Controllers\UserControl;
+
+$router->get('admin/viewusuario', 'UserControl@view');
+
+$router->post('admin/create', "UserControl@create");
+
+$router->post('admin/delete', 'UserControl@delete');
+
+$router->post('admin/update', 'UserControl@edit');
+?>
 
 //--------------------Rotas dos crud products----------------------------
 $router->get("admin/products", "CrudProductController@index");
@@ -18,9 +28,8 @@ $router->post("contato/enviar", "ContatoController@send");
 $router->get("home", "HomeController@index");
 $router->get("about", "AboutUsController@index");
 
+$router->get("login", "LoginController@index");
+$router->post("login/valida", "LoginController@valida");
 
-
-
-
-
-
+$router->get("dashadm", "LoginController@dashadm");
+$router->get("login/logout", "LoginController@logout");

@@ -1,3 +1,4 @@
+<?php include 'login.php';?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,7 +31,7 @@
 <body>
   <div class="container">
     <div class="topBar">
-      <a href="#" class="btn btn-logout border-dark">
+      <a href="login/logout" class="btn btn-logout border-dark">
         <i class="fa fa-window-close" style="margin: 0; padding: 0">
           logout</i>
       </a>
