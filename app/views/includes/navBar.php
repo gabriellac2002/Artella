@@ -66,10 +66,10 @@
               <li><a class="dropdown-item " href="#">NFTs</a></li>
 
 
-              <li>
+              <!-- <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item " href="#">Mais procurados</a></li>
+              <li><a class="dropdown-item " href="#">Mais procurados</a></li> -->
 
             </ul>
           </li>

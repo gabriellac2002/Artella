@@ -32,7 +32,7 @@ include 'sidebarAdmin.php';
 
 <body class="bg-universal text-universal">
 
-  <h1>Categorias</h1>
+  <h1 class='titleU'>Categorias</h1>
 
   <div class="container">
     <div class="tableBar mb-3 mx-0">
