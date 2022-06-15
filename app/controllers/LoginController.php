@@ -46,7 +46,7 @@ class LoginController
     public function logout()
     {
         session_destroy();
-        header('Location: /login');
+        header('Location: /home');
         exit();
     }
 }
