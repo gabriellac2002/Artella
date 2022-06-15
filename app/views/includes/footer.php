@@ -43,16 +43,16 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="title-footer mb-2 mb-lg-4 mt-2 mt-lg-0">Produtos</h6>
           <p>
-            <a href="#" class="text-reset text-footer">Obras</a>
+            <a href="products" class="text-reset text-footer">Obras</a>
           </p>
           <p>
-            <a href="#" class="text-reset text-footer">NFTs</a>
+            <a href="products" class="text-reset text-footer">NFTs</a>
           </p>
           <p>
-            <a href="#" class="text-reset text-footer">Artistas</a>
+            <a href="products" class="text-reset text-footer">Artistas</a>
           </p>
           <p>
-            <a href="#" class="text-reset text-footer">Exposições</a>
+            <a href="products" class="text-reset text-footer">Exposições</a>
           </p>
         </div>
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -60,13 +60,13 @@
             Sobre Artella
           </h6>
           <p>
-            <a href="#" class="text-reset text-footer">Quem somos?</a>
+            <a href="about" class="text-reset text-footer">Quem somos?</a>
           </p>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <h6 class="title-footer mb-2 mb-lg-4 mt-2 mt-lg-0">Contato</h6>
           <p>
-            <a href="" class="text-reset text-footer">
+            <a class="text-reset text-footer">
               <i class="fa-brands fa-whatsapp mx-lg-3 mx-1"></i>
               +55 (32) 99999-9999
             </a>
@@ -78,7 +78,7 @@
             </a>
           </p>
           <p>
-            <a href="" class="text-reset text-footer">
+            <a href="contato" class="text-reset text-footer">
               <i class="fas fa-phone mx-lg-3 mx-1"></i>
               Fale conosco
             </a>

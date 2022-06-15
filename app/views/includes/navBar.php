@@ -61,9 +61,9 @@
 
             <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end mx-1">
 
-              <li><a class="dropdown-item " href="#">Quadros</a></li>
-              <li><a class="dropdown-item " href="#">Pinturas</a></li>
-              <li><a class="dropdown-item " href="#">NFTs</a></li>
+              <li><a class="dropdown-item "href="products">Quadros</a></li>
+              <li><a class="dropdown-item " href="products">Pinturas</a></li>
+              <li><a class="dropdown-item " href="products">NFTs</a></li>
 
 
               <!-- <li>
