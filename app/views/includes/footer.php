@@ -74,7 +74,7 @@
           <p>
             <a href="" class="text-reset text-footer">
               <i class="fas fa-envelope mx-lg-3 mx-1"></i>
-              Artella@email.com
+              artella.contato@gmail.com
             </a>
           </p>
           <p>
