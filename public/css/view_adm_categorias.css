@@ -170,7 +170,7 @@ h1 {
 
 @media (max-width: 540px) {
   .title {
-    font-size: 20px;
+    font-size: 2.5s rem !important;
   }
 
   .button-action {
@@ -214,7 +214,7 @@ h1 {
 
 @media (max-width: 380px) {
   h1{
-    font-size: 40px !important;
+    font-size: 30px !important;
   }
 
   .headTable {
