@@ -5,7 +5,7 @@
           <h5 class="modal-title" style="text-transform: uppercase;">Usuário</h5>
           <button data-bs-dismiss="modal" class="btn-close btnClose" aria-label="Close"></button>
         </div>
-        <div class="modal-body my-2">
+        <div class="modal-body my-5">
             <form action="/admin/show" method="GET">
               <input type="hidden" value="<?=$function['id']?>" name="id">
                 <div class="form-group mt-2 mb-2 mx-5">

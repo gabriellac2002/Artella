@@ -1,4 +1,4 @@
-
+<?php include 'sidebarAdmin.php' ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -70,7 +70,7 @@
           <tr>
             <th>ID</th>
             <th>NOME</th>
-            <th>EMAIL</th>
+            <th id="hiddenEmail">EMAIL</th>
             <th>AÇÕES</th>
           </tr>
         </thead>
@@ -86,7 +86,7 @@
           <tr class="rowTable2">
             <td><?=$function['id']?></td>
             <td><?=$function['name']?></td>
-            <td><?=$function['email']?></td>
+            <td id="hiddenEmail"><?=$function['email']?></td>
             <td class="btn-row">
 
               <!-- Botões desktop -->
@@ -121,16 +121,11 @@
           </tr>
 
               <?php endforeach; ?>
-              <!-- Botões para mobile -->
-              <!-- <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
-                <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
-              </button> -->
 
-            </td>
           </tr>
         </tbody>
-      </table>
-    </div>
+        </table>
+    </div>  
   </div>
 
 </body>
