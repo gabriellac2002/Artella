@@ -1,9 +1,9 @@
-<button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
+<button class="button-action " data-bs-toggle="modal" data-bs-target="#usersAction-<?= $categoria['id']; ?>">
     <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
 </button>
 
 <!-- modal ações mobile -->
-<div class="modal modals my-5" id="userAction" tabindex="-1" aria-hidden="true">
+<div class="modal modals my-5" id="usersAction-<?= $categoria['id']; ?>" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
 
@@ -19,9 +19,17 @@
 
                 <!-- Botões do modal -->
 
-                <?php require 'modal-view-categorias.php'; ?>
-                <?php require 'modal-edit-categorias.php'; ?>
-                <?php require 'modal-delete-categorias.php'; ?>
+                <button class="btn btnView" data-bs-toggle="modal" data-bs-target="#viewAction-<?= $categoria['id']; ?>"> <i class="fa-solid fa-eye mx-1">
+                        <p class="mt-3">Vizualizar</p>
+                    </i></button>
+
+                <button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction-<?= $categoria['id']; ?>"><i class="fa fa-pencil">
+                        <p class="mt-3 modals-text">Editar</p>
+                    </i></button>
+
+                <button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction-<?= $categoria['id']; ?>"><i class="fa-solid fa-trash">
+                        <p class="mt-3 modals-text">Deletar</p>
+                    </i></button>
 
             </div>
         </div>

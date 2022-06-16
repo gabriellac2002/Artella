@@ -1,4 +1,4 @@
-<button class="btn btnEdit" data-bs-toggle="modal" data-bs-target="#editAction-<?= $categoria['id']; ?>">
+<button class="btn btnEdit btns-desktop" data-bs-toggle="modal" data-bs-target="#editAction-<?= $categoria['id']; ?>">
     <i class="fa fa-pencil mx-1">
         <p class="mt-3">Editar</p>
     </i>

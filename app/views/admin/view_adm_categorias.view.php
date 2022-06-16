@@ -1,8 +1,4 @@
-<?php
 
-include 'sidebarAdmin.php';
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,9 +7,13 @@ include 'sidebarAdmin.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,15 +24,15 @@ include 'sidebarAdmin.php';
   <!-- FONTAWESOME -->
   <link rel="stylesheet" href="../../../public/fontawesome/css/all.css" />
 
-  <link rel="stylesheet" href="..\..\..\public\css\styles.css">
-  <link rel="stylesheet" href="..\..\..\public\css\view_adm_categorias.css">
+  <!-- <link rel="stylesheet" href="../../../public/css/styles.css"> -->
+  <link rel="stylesheet" href="../../../public/css/view_adm_categorias.css">
 
   <title>Categorias</title>
 </head>
 
 <body class="bg-universal text-universal">
-
-  <h1 class='title'>Categorias</h1>
+<?php include 'sidebarAdmin.php' ?>
+  <h1 class='titleU'>Categorias</h1>
 
   <div class="container">
     <div class="tableBar mb-3 mx-0">
@@ -64,17 +64,17 @@ include 'sidebarAdmin.php';
               <td colspan="2"> <?php echo $categoria['name']; ?> </td>
               <td class="btn-row botoes_de">
                 <!--desktop-->
-                <div class="btns-desktop">
+                <div class="">
 
                   <?php require 'modals/categorias/modal-view-categorias.php'; ?>
                   <?php require 'modals/categorias/modal-edit-categorias.php'; ?>
                   <?php require 'modals/categorias/modal-delete-categorias.php'; ?>
 
                 </div>
+                <?php require 'modals/categorias/modal-mobile-categorias.php'; ?>
 
                 <!--mobile-->
 
-                <?php require 'modals/categorias/modal-mobile-categorias.php'; ?>
 
               </td>
             </tr>
@@ -84,9 +84,7 @@ include 'sidebarAdmin.php';
 
 
       </table>
-      <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
-        <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
-      </button>
+     
 
 <!-- modal ações mobile -->
     <div class="modal modals my-5" id="userAction" tabindex="-1" aria-hidden="true">
