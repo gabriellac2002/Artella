@@ -17,24 +17,24 @@
 </head>
 
 <body class=" text-universal">
-<?php include __DIR__ .'/../includes/navBar.php' ?>
+  <?php include __DIR__ . '/../includes/navBar.php' ?>
 
   <main>
     <section class="productsList">
       <h2>Artes</h2>
       <div class="ordenated">
-        <span>Exibindo 1-20 de 200 resultados</span>
+        <span> Exibindo 10 resultados por rolagem</span>
         <span class="rowMain">
-          
+
         </span>
         <span class="rowMain">
           <label>Categoria: </label>
-          <select style="margin-left: 0px;" id="select-category" >
-          <option selected value="none" name="none">All</option>
+          <select style="margin-left: 0px;" id="select-category">
+            <option selected value="none" name="none">All</option>
 
-          <?php foreach ($categorys as $category):?>
-            <option value="<?php echo $category['id']?>" name="<?php echo $category['name']?>"><?php echo $category['name']?></option>
-          <?php endforeach;?>
+            <?php foreach ($categorys as $category) : ?>
+              <option value="<?php echo $category['id'] ?>" name="<?php echo $category['name'] ?>"><?php echo $category['name'] ?></option>
+            <?php endforeach; ?>
           </select>
         </span>
       </div>
@@ -163,43 +163,44 @@
           <i class="fa-solid fa-magnifying-glass" onclick="search();"></i>
         </div>
         <ul class="pagination">
-            
+
         </ul>
         <div id="allProducts" class="row row-cols-lg-2" style="flex-wrap: wrap;">
 
-          <?php foreach ($itens as $iten):?>
+          <?php foreach ($itens as $iten) : ?>
 
-          <a class="col-md-6 col-sm-12 col-lg-4 align-items-center justify-content-center" style="text-decoration: none; color: black" href="product-view?id=<?php echo $iten[0]['id']?>">
-            <div class="card cardWidth">
-              <img class="card-img-top" src=" <?php if(!empty($iten[1][0]['url'])) echo "../../../public/assets/products/". $iten[1][0]['url']; else echo "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9jdXN8ZW58MHx8MHx8&w=1000&q=80"?>" alt="Card image cap" style="max-width:600px;max-height:240px;">
-              <div class="card-body">
+            <a class="col-md-6 col-sm-12 col-lg-4 align-items-center justify-content-center" style="text-decoration: none; color: black" href="product-view?id=<?php echo $iten[0]['id'] ?>">
+              <div class="card cardWidth">
+                <img class="card-img-top" src=" <?php if (!empty($iten[1][0]['url'])) echo "../../../public/assets/products/" . $iten[1][0]['url'];
+                                                else echo "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9jdXN8ZW58MHx8MHx8&w=1000&q=80" ?>" alt="Card image cap" style="max-width:600px;height:240px;">
+                <div class="card-body">
 
-                <h5 class="card-title"><?php echo $iten[0]['name']?></h5>
-                <div style="display: flex; flex-direction: row; margin-bottom: 10px; margin-top: 5px;">
-                  <i class="fa-solid fa-star starChecked"></i>
-                  <i class="fa-solid fa-star starChecked"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+                  <h5 class="card-title"><?php echo $iten[0]['name'] ?></h5>
+                  <div style="display: flex; flex-direction: row; margin-bottom: 10px; margin-top: 5px;">
+                    <i class="fa-solid fa-star starChecked"></i>
+                    <i class="fa-solid fa-star starChecked"></i>
+                    <i class="fa-solid fa-star starChecked"></i>
+                    <i class="fa-solid fa-star starChecked"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div style="display: flex; flex-direction: column;">
+                    <span class="oldPrice">R$ <?php echo round($iten[0]['price'] * 1.2, 2) ?></span>
+                    <span style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ <?php echo $iten[0]['price'] ?></span>
+                    <span class="secondPrice">ou 5x de R$ <?php echo round(($iten[0]['price'] * 1.05) / 5, 2) ?> </span>
+                    <span class="category">
+                      <?php echo $iten[2][0]['name'] ?>
+                    </span>
+                  </div>
+
                 </div>
-                <div style="display: flex; flex-direction: column;">
-                  <span class="oldPrice">R$ <?php echo $iten[0]['price'] * 1.2?></span>
-                  <span style="margin-bottom: 4px; margin-top: 0px" class="card-text">R$ <?php echo $iten[0]['price']?></span>
-                  <span class="secondPrice">ou 5x de R$ <?php echo ($iten[0]['price'] * 1.05)/5?> </span>
-                  <span class="category">
-                  <?php echo $iten[2][0]['name']?>
-                  </span>
-                </div>
-
               </div>
-            </div>
-          </a>
-            <?php endforeach; ?>
+            </a>
+          <?php endforeach; ?>
         </div>
       </div>
     </section>
   </main>
-  <?php include __DIR__ .'/../includes/footer.php' ?>
+  <?php include __DIR__ . '/../includes/footer.php' ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/91248aca6a.js" crossorigin="anonymous"></script>

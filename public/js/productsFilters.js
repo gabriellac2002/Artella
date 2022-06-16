@@ -47,7 +47,7 @@ async function getProducts() {
 }
 
 function getImageLink(image) {
-  return image ? "../../../public/assets/products/" + image : "//https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9jdXN8ZW58MHx8MHx8&w=1000&q=80";
+  return image ? "../../../public/assets/products/" + image : "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9jdXN8ZW58MHx8MHx8&w=1000&q=80";
 }
 
 window.addEventListener('scroll', async () => {
@@ -64,9 +64,9 @@ window.addEventListener('scroll', async () => {
       data.forEach(element => {
         console.log(element?.product?.name);
         const html = `
-        <a class="col-md-6 col-sm-12 col-lg-4 align-items-center justify-content-center" style="text-decoration: none; color: black" href="products/1">
+        <a class="col-md-6 col-sm-12 col-lg-4 align-items-center justify-content-center" style="text-decoration: none; color: black" href="product-view?id=${element?.product?.id}">
             <div class="card cardWidth">
-              <img class="card-img-top" src='${getImageLink(element?.images[0]?.url)}' alt="Card image cap" style="max-width:600px;max-height:240px;">
+              <img class="card-img-top" src='${getImageLink(element?.images[0]?.url)}' alt="Card image cap" style="max-width:600px;height:240px;">
               <div class="card-body">
 
                 <h5 class="card-title">${element?.product?.name}</h5>
