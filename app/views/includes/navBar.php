@@ -61,9 +61,11 @@
 
             <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end mx-1">
 
-              <li><a class="dropdown-item "href="products">Quadros</a></li>
-              <li><a class="dropdown-item " href="products">Pinturas</a></li>
-              <li><a class="dropdown-item " href="products">NFTs</a></li>
+              <li><a class="dropdown-item "href="productsSearch?category=23&">Esculturas</a></li>
+              <li><a class="dropdown-item " href="productsSearch?category=22&">NFTs</a></li>
+              <li><a class="dropdown-item " href="productsSearch?category=21&">Pinturas</a></li>
+              <li><a class="dropdown-item " href="productsSearch?category=20&">Telas</a></li>
+
 
 
               <!-- <li>

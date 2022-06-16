@@ -43,16 +43,16 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="title-footer mb-2 mb-lg-4 mt-2 mt-lg-0">Produtos</h6>
           <p>
-            <a href="products" class="text-reset text-footer">Obras</a>
+            <a class="text-reset text-footer"href="productsSearch?category=23&">Esculturas</a>
           </p>
           <p>
-            <a href="products" class="text-reset text-footer">NFTs</a>
+            <a class="text-reset text-footer"href="productsSearch?category=22&">NFTs</a></a>
           </p>
           <p>
-            <a href="products" class="text-reset text-footer">Artistas</a>
+            <a class="text-reset text-footer" href="productsSearch?category=21&">Pintura</a>
           </p>
           <p>
-            <a href="products" class="text-reset text-footer">Exposições</a>
+            <a class="text-reset text-footer"href="productsSearch?category=20&">Telas</a>
           </p>
         </div>
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
