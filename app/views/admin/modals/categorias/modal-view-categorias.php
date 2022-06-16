@@ -6,8 +6,8 @@
 
 <!--modal view -->
 
-<div class="modal modals fade mt-5" id="viewAction-<?= $categoria['id'];?>"  tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
+<div class=" modal modals fade mt-5" id="viewAction-<?= $categoria['id'];?>"  tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modalforce">
         <div class="modal-content">
 
             <!-- cabeçalho do modal -->

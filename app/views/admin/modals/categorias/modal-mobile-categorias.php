@@ -1,9 +1,9 @@
-<button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction-<?= $categoria['id']; ?>">
+<button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
     <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
 </button>
 
 <!-- modal ações mobile -->
-<div class="modal modals my-5" id="userAction-<?= $categoria['id']; ?>" tabindex="-1" aria-hidden="true">
+<div class="modal modals my-5" id="userAction" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
 

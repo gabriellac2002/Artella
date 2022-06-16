@@ -165,6 +165,21 @@ class QueryBuilder
       
     }
 
+    public function orderBy($table, $desc = false) {
+        $query = $this->rootQuery;
+        $query = $query.' ORDER BY '.$table;
+        if($desc) {
+            $query = $query.' DESC';
+        }
+        $this->rootQuery = $query;
+        return $this;
+    }
+
+    public function size($limit) {
+        $this->rootQuery = $this->rootQuery." limit ".$limit;
+        return $this;
+    }
+
     public function update($names, $values)
     {
         $this->rootQuery = "UPDATE ".$this->table." set ";

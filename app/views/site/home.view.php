@@ -50,60 +50,20 @@
     <!--Lançamentos-->
     <div class="two my-5 ms-0 mx-xl-5 ms-lg-3 ms-md-1">
         <div class="row  mx-2 cards_todos">
+          <?php 
+            foreach($data as $element) :
+          ?>
           <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-4 mx-0 cards">
             <div class="card mx-auto">
-              <a href="#"><img src="https://2.bp.blogspot.com/-xqirkw3AdWE/UC1hr7Atu_I/AAAAAAAAD08/cQ2SMPUMdzM/s1600/abaporu.jpeg" class="card-img-top" alt="Abaporu"></a>
+              <a href="#"><img src="<?php if(isset($element["url"])) { echo '../../../public/assets/products/'.$element["url"]; } else { echo 'https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9jdXN8ZW58MHx8MHx8&w=1000&q=80'; }?>" class="card-img-top" alt="Abaporu"></a>
               <div class="card-body">
-                <h5 class="card-title">Abaporu</h5>
-                <p class="card-text">R$100</p>
+                <h5 class="card-title"><?php if(strlen($element["name"]) > 15) echo substr($element["name"], 0, 10).'...'; else echo $element["name"];?></h5>
+                <p class="card-text">R$<?php echo $element["price"]?></p>
+                <?php ?>
               </div>
             </div>
           </div>
-          <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-4 mx-0 cards">
-            <div class="card mx-auto">
-              <a href="#"><img src="https://2.bp.blogspot.com/-xqirkw3AdWE/UC1hr7Atu_I/AAAAAAAAD08/cQ2SMPUMdzM/s1600/abaporu.jpeg" class="card-img-top" alt="Abaporu"></a>
-              <div class="card-body">
-                <h5 class="card-title">Abaporu</h5>
-                <p class="card-text">R$100</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-4 mx-0 cards">
-            <div class="card mx-auto">
-              <a href="#"><img src="https://2.bp.blogspot.com/-xqirkw3AdWE/UC1hr7Atu_I/AAAAAAAAD08/cQ2SMPUMdzM/s1600/abaporu.jpeg" class="card-img-top" alt="Abaporu"></a>
-              <div class="card-body">
-                <h5 class="card-title">Abaporu</h5>
-                <p class="card-text">R$100</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-4 mx-0 cards">
-            <div class="card mx-auto">
-              <a href="#"><img src="https://2.bp.blogspot.com/-xqirkw3AdWE/UC1hr7Atu_I/AAAAAAAAD08/cQ2SMPUMdzM/s1600/abaporu.jpeg" class="card-img-top" alt="Abaporu"></a>
-              <div class="card-body">
-                <h5 class="card-title">Abaporu</h5>
-                <p class="card-text">R$100</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-4 mx-0 cards">
-            <div class="card mx-auto">
-              <a href="#"><img src="https://2.bp.blogspot.com/-xqirkw3AdWE/UC1hr7Atu_I/AAAAAAAAD08/cQ2SMPUMdzM/s1600/abaporu.jpeg" class="card-img-top" alt="Abaporu"></a>
-              <div class="card-body">
-                <h5 class="card-title">Abaporu</h5>
-                <p class="card-text">R$100</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 mb-4 mx-0 cards">
-            <div class="card mx-auto">
-              <a href="#"><img src="https://2.bp.blogspot.com/-xqirkw3AdWE/UC1hr7Atu_I/AAAAAAAAD08/cQ2SMPUMdzM/s1600/abaporu.jpeg" class="card-img-top" alt="Abaporu"></a>
-              <div class="card-body">
-                <h5 class="card-title">Abaporu</h5>
-                <p class="card-text">R$100</p>
-              </div>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
 
