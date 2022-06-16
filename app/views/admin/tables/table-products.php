@@ -1,5 +1,5 @@
 <div class="container-xl">
-      <h2>Produtos</h2>
+      <h2 class="titleU">Produtos</h2>
       <div class="search">
         <i class="fa-solid fa-plus"></i>
         <div>

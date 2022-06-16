@@ -1,236 +1,140 @@
-body{
-    background-color: #d9d9d9;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    color: #051D40 !important;
+body {
+  background-color: #d9d9d9;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #051d40 !important;
 }
-h1{
-    margin-left: 3.125rem;
-}
-h2{
-    margin-left: 5rem;
-}
-.container_home{
-    display: inline;
-    width: 80%;
-    margin-right: 10%;
-    margin-left: 10%;
-    align-content: center;
-    justify-content: center;
-    background-color: #d9d9d9;
-    max-width: 1320px;
-    max-height: auto;
-}
-.one{
-    display: flex;
-}
-.slide{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 960px;
-    max-height: 320px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.slide img{
-    height: 320px; 
-    max-width: 960px;
-    max-height: 320px;     
-}
-.two{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-.cards_todos{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-.card{
-    width: 13rem;
-    align-items: center;
-    background-color: #d9d9d9;
-    color: #051D40;
-    border: #d9d9d9;
-}
-.cards{
-    width: 13rem;
-    padding: 0px;
-    height: 100%;
 
+.title {
+  margin-left: 6rem;
 }
-.card img{
-    height: 8.75rem;
-    width: 7.75rem;
-}    
-.card-body{
-        padding: 0.25rem;
+.sub-title {
+  margin-left: 6rem;
 }
-.three{
-    display: flex;
-    justify-content: center;
-    height: auto;
-    background-color: #051D40;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    margin-left: 2rem;
-    margin-right: 2rem;
+.two {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 0;
 }
-.three img{
-    height: 10rem;
+
+.container_home {
+  width: 100%;
+  align-content: center;
+  justify-content: center;
 }
-.img1{
-    margin-top:30px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+
+.slide {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  max-height: 560px;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
-.img2{
-    margin: 20px;
+.slide img {
+  max-height: 560px;
 }
-.four{
-    height: 320px;
-    margin-left: 28px;
-    border-radius: 15px;
+.cards_todos {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
-.four img{
-    width: 90%;
-    max-width: 620px;
-    margin-top: 30px;
+.card {
+  height: 14rem;
+  width: 11rem;
+  align-items: center;
+  border-radius: 10px !important;
+  color: #051d40;
 }
-@media ( max-width: 1260px){
-    .cards_todos{
-        width: 100%;
-    }
+.cards {
+  padding: 0px;
+  height: 100%;
+}
+.card img {
+  height: 8.75rem;
+  width: 7.75rem;
+}
+
+.three {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  background-color: #051d40;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.three img {
+  height: 10rem;
+}
+.img1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.img2 {
+  margin: 20px;
+}
+.four {
+  height: 320px;
+  margin-left: 28px;
+  border-radius: 15px;
+}
+.four img {
+  width: 90%;
+  max-width: 620px;
+  margin-top: 30px;
 }
 @media ( max-width: 1247px){
-    .cards img{
-        height: 8.75rem;
-        width: 7.75rem;
-    }
+  .cards img{
+      height: 8.75rem;
+      width: 7.75rem;
+  }
 
-    .card{
-        height: 13.75rem;
-    }
+  .card{
+      height: 13.75rem;
+  }
 }
-@media ( max-width: 1200px){
-    .slide{
-        width: 100%;
-        max-width: 700px;
-    }
+@media (max-width: 900px) {
+  .title {
+    text-align: center;
+    margin-left: 0;
+  }
+  .four img {
+    margin-top: 80px;
+  }
+  
 }
-@media ( max-width: 900px){
-    .slide{
-        width: 100%;
-        max-width: 500px;
-        max-height: 222px;
-        height: 100%; 
-    }
-    .slide img{
-        max-height: 222px;
-        height: 100%; 
-    }
-    .container_home{
-        max-height: 100%;
-        margin-left: 40px;
-    }
-    .four img{
-        margin-top: 80px;
-    }
+@media (max-width: 693px) {
+  .three img {
+    height: 7rem;
+  }
+  .sub-title {
+    margin-left: 0;
+    text-align: center;
+  }
+  .slide img {
+    height: 150px;
+  }
 }
-@media ( max-width: 693px){
-    .slide{
-        width: 100%;
-        max-width: 500px;
-        max-height: 177px;
-        height: 100%; 
-    }
-    .slide img{
-        max-height: 177px;
-        height: 100%; 
-    }
-    .container_home{
-        margin-left: 40px;
-    }
-    .three img{
-        height: 7rem;
-    }
-    h1{
-        margin-left: 2rem;
-    }
-    h2{
-        margin-left: 3rem;
-    }
+@media (max-width: 550px) {
+  .three img {
+    height: 5rem;
+  }
+  .card {
+    height: 13rem;
+    width: 10rem;
+  }
 }
-@media ( max-width: 550px){
-    .slide{
-        width: 100%;
-        max-width: 400px;
-        max-height: 133px;
-        height: 100%;
-    }
-    .slide img{
-        max-height: 133px;
-        height: 100%; 
-    }
-    .container_home{
-        margin-left: 20px;
-    }  
-    .three img{
-        height: 5rem;
-    }
-}
-@media ( max-width: 462px){
-    
-    .three{
-        display: block;
-        text-align: center;
-    }
-    .three img{
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    
-}
-@media ( max-width: 415px){
-    .slide{
-        width: 100%;
-        max-width: 300px;
-        max-height: 177px;
-        height: 100%; 
-    }
-    .slide img{
-        max-height: 133.33px;
-        height: 100%; 
-    }
-    h1{
-        text-align: center;
-        margin-left: 0px;
-    }
-    h2{
-        text-align: center;
-        margin-left: 0px;
-    }
-}
-@media (max-width: 360px){
-    .slide{
-        height: 133px;
-    }
-    .slide img{
-        height: 133px;
-    }
-}
-@media ( max-width: 320px){
-    .slide{
-        width: 100%;
-        max-width: 250px;
-        max-height: 177px;
-        height: 100%; 
-    }
-    .slide img{
-        max-height: 111.11px;
-        height: 100%; 
-    }
+@media (max-width: 462px) {
+  .three {
+    display: block;
+    text-align: center;
+  }
+  .three img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
 }

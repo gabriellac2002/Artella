@@ -12,3 +12,18 @@
   font-size: 20px;
   color: #051d40 !important;
 }
+
+.titleU {
+  margin-top: 5vh;
+  text-align: center;
+  font: 34px "Poppins", sans-serif;
+  font-weight: 100;
+  letter-spacing: 4px;
+  color: #0f606b;
+  text-shadow: #402857 0.05em 0.1em 0.1em;
+}
+@media (max-width: 540px) {
+  .titleU {
+    font-size: 20px;
+  }
+}

@@ -18,51 +18,25 @@ class CrudProductController
 
     public function index()
     {
-        $selectedPage = 1;
-        if(isset($_SERVER['QUERY_STRING'])) {
-            $queries = array();
-            parse_str($_SERVER['QUERY_STRING'], $queries);
-            if(isset($queries["page"])) {
-                $selectedPage = $queries["page"];
-            }
-        }
 
-        $products = $this->queryBuilder->table("products")->select("*")->limit(($selectedPage - 1) * 10, $selectedPage * 10);
+        $products = $this->queryBuilder->table("products")->select("*");
         $products = $products->commit();
 
         $categorys = $this->queryBuilder->table("categories")->select("*");
         $categorys = $categorys->commit();
+
         $images = $this->queryBuilder->table("images")->select("*");
         foreach ($products as $product) :
             $images->orWhere("productId", "=", $product['id']);
         endforeach;
         $images  = $images->commit();
-        $count = ceil($this->queryBuilder->table("products")->count('*')->commit() / 10);
-        return view(
-            'admin/adminproducts', 
-            ['products' => $products, 
-            'categorys' => $categorys, 
-            'images' => $images,
-            'count' => $count,
-            'selectedPage' => $selectedPage
-            ]
-        );
+        return view('admin/adminproducts', ['products' => $products, 'categorys' => $categorys, 'images' => $images]);
     }
 
     public function search()
     {
-        $selectedPage = 1;
-        if(isset($_SERVER['QUERY_STRING'])) {
-            $queries = array();
-            parse_str($_SERVER['QUERY_STRING'], $queries);
-            if(isset($queries["page"])) {
-                $selectedPage = $queries["page"];
-            }
-        }
         $seach = $_GET['search'];
-        $count = ceil($this->queryBuilder->table("products")->count('*')->where("name", " like", "%$seach%")->commit() / 10);
-        
-        $products = $this->queryBuilder->table("products")->select("*")->where("name", " like", "%$seach%")->limit(($selectedPage - 1) * 10, $selectedPage * 10);
+        $products = $this->queryBuilder->table("products")->select("*")->where("name", " like", "$seach%");
         $products = $products->commit();
 
         $categorys = $this->queryBuilder->table("categories")->select("*");
@@ -73,12 +47,7 @@ class CrudProductController
             $images->orWhere("productId", "=", $product['id']);
         endforeach;
         $images  = $images->commit();
-        return view('admin/adminproducts', ['products' => $products, 
-        'categorys' => $categorys, 
-        'images' => $images, 'count' => $count,
-        'selectedPage' => $selectedPage,
-
-        ]);
+        return view('admin/adminproducts', ['products' => $products, 'categorys' => $categorys, 'images' => $images]);
     }
 
     public function create()
