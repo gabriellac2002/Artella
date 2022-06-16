@@ -1,4 +1,4 @@
-<button class="btn btnView" data-bs-toggle="modal" data-bs-target="#viewAction-<?= $categoria['id']; ?>">
+<button class="btn btnView btns-desktop" data-bs-toggle="modal" data-bs-target="#viewAction-<?= $categoria['id']; ?>">
     <i class="fa-solid fa-eye mx-1">
         <p class="mt-3">Vizualizar</p>
     </i>

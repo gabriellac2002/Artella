@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -121,9 +122,9 @@
 
               <?php endforeach; ?>
               <!-- Botões para mobile -->
-              <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
+              <!-- <button class="button-action" data-bs-toggle="modal" data-bs-target="#userAction">
                 <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
-              </button>
+              </button> -->
 
             </td>
           </tr>

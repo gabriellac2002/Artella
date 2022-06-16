@@ -1,4 +1,4 @@
-<button class="btn btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction-<?= $categoria['id']; ?>">
+<button class="btn btns-desktop btnDelete" data-bs-toggle="modal" data-bs-target="#deleteAction-<?= $categoria['id']; ?>">
     <i class="fa-solid fa-trash mx-1">
         <p class="mt-3">Deletar</p>
     </i>
@@ -24,7 +24,7 @@
             </div>
 
             <form id="form_deleta" action="/admin/categorias-delete" method="POST">
-                <input type="hidden" value="<?= $categoria['id'] ?>" name="id">
+                <input type="hidden" value="<?= $categoria['id']; ?>" name="id">
                 <div class="modal-footer">
 
                     <button type="submit" class="btn btn-primary modals-button" id="conf-modal">
