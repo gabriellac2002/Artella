@@ -25,12 +25,7 @@
       <div class="ordenated">
         <span>Exibindo 1-20 de 200 resultados</span>
         <span class="rowMain">
-          <label>Ordenar por: </label>
-          <select name="orderBy" style="margin-left: 0px;">
-            <option value="greaterPrice">Maior preço</option>
-            <option value="lowerPrice">Menor preço</option>
-            <option value="new">Lançamento</option>
-          </select>
+          
         </span>
         <span class="rowMain">
           <label>Categoria: </label>
